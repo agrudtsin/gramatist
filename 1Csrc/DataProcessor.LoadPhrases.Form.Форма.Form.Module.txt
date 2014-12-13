@@ -1,5 +1,6 @@
 ﻿
 &НаКлиенте
+
 Процедура ConvertTextToPhrases(Команда)
 	ЭтаФорма.ТекущийЭлемент = Элементы.PhrasesFromText;
 	PhrasesFromText.Очистить();
