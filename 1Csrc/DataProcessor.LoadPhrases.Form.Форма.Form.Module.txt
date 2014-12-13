@@ -1,0 +1,104 @@
+﻿
+&НаКлиенте
+Процедура ConvertTextToPhrases(Команда)
+	ЭтаФорма.ТекущийЭлемент = Элементы.PhrasesFromText;
+	PhrasesFromText.Очистить();
+	copyOriginalText = Объект.OriginalText+Символы.ПС;
+	while Найти(copyOriginalText, Символы.ПС) <> 0 do
+		line1 = getFirstLineFromText(copyOriginalText);
+		line2 = getFirstLineFromText(copyOriginalText); 
+		If line2 = "" then break; endif;
+		newLine = PhrasesFromText.Добавить();
+		If isEnglish(line1) then 
+			newLine.NativeLanguage 	= line2;
+			newLine.EnglishPhrase 	= line1;
+		else
+			newLine.NativeLanguage 	= line1;
+			newLine.EnglishPhrase 	= line2;
+		endif;
+	enddo;	
+	checkDuplicates();
+КонецПроцедуры
+
+Function getFirstLineFromText(mText)
+	position = Найти(mText, символы.ПС);
+	If position = 0 then return ""; endif;
+	firstLine = СокрЛП(Сред(mText, 1, position));
+	mText = Сред(mText, position+1);
+	If firstLine = "" then 
+		getFirstLineFromText(mText);
+	else
+		return firstLine;
+	endif;
+EndFunction
+
+Function isEnglish(mText)
+	
+	numberOfRussianSymbols = 0;
+	for i = 1 to СтрДлина(mText) do
+		symbol = КодСимвола(Сред(mText,i,1));
+		if symbol>=1040 and symbol<1103 then
+			numberOfRussianSymbols = numberOfRussianSymbols +1;
+		endif;
+	enddo;
+	If  numberOfRussianSymbols>5 then
+		return false;
+	else
+		return true;
+	endif
+EndFunction
+
+&НаКлиенте
+Процедура AddPhrasesToCatalog(Команда)
+	If НЕ ЗначениеЗаполнено(Объект.PhrasesGroup) then
+		Предупреждение("Fill the group field");
+		return;	
+	endif;
+	If НЕ ЗначениеЗаполнено(Объект.Author) then
+		Предупреждение("Fill the author field");
+		return;	
+	endif;	
+	for i=1 to PhrasesFromText.Количество() do
+		if PhrasesFromText.Получить(i-1).Duplicated = true then
+			continue;
+		endif;
+		AddPhrasesToCatalogServer(i-1);	
+	enddo;
+	Предупреждение("Succsessfully added!");
+	PhrasesFromText.Очистить();
+КонецПроцедуры
+
+&НаСервере
+Процедура AddPhrasesToCatalogServer(number)
+		newElement = Справочники.Phrases.СоздатьЭлемент();
+		newElement.Родитель = Объект.PhrasesGroup;
+		newElement.Author   = Объект.Author;
+		newElement.NativeLanguagePhrase = PhrasesFromText.Получить(number).NativeLanguage;
+		newElement.EnglishPhrase 		= PhrasesFromText.Получить(number).EnglishPhrase;
+		newElement.DateAdded = ТекущаяДата();
+		newElement.Записать();				
+КонецПроцедуры	
+
+&НаСервере
+Procedure checkDuplicates()
+	for i=1 to PhrasesFromText.Количество() do
+		Запрос = Новый Запрос;
+		Запрос.УстановитьПараметр("EnglishPhrase", PhrasesFromText.Получить(i-1).EnglishPhrase);
+		//Поставь РАЗРЕШЕННЫЕ!
+		Запрос.Текст = "ВЫБРАТЬ
+		               |	Phrases.Ссылка
+		               |ИЗ
+		               |	Справочник.Phrases КАК Phrases
+		               |ГДЕ
+		               |	Phrases.EnglishPhrase = &EnglishPhrase
+		               |	И Phrases.ЭтоГруппа = ЛОЖЬ";
+		Результат = Запрос.Выполнить();
+		PhrasesFromText.Получить(i-1).Duplicated = НЕ Результат.Пустой(); 
+	enddo;
+	
+EndProcedure
+
+&НаКлиенте
+Процедура ПриОткрытии(Отказ)
+	
+КонецПроцедуры
