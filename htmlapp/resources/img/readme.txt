@@ -1,0 +1,1 @@
+Folder for .jpg files backrounds, images e.t.c.
