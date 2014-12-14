@@ -3,27 +3,25 @@
 <head>
     <meta content="text/html; charset=utf-8; IE=edge" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="app.css">
-    <title>Gramatist</title>
+    <title>Граматист - практическое изучение английского языка</title>
 </head>
 <body ng-controller="mainCtrl">
     <!-- Background  -->
     <img class="background" id="background_div" src="resources/img/CommonPicture.Background_1000.Picture.Picture.jpg">
     <img class="propersign" id="propersign" src="resources/img/CommonPicture.properPhrase.Picture.Picture.png">
 
-    <div id="NativeLanguagePhrase" class="DivNativeText"
-            style="PADDING-BOTTOM: 5px; BORDER-RIGHT-WIDTH: 1px; PADDING-LEFT: 5px; WIDTH: 89%; PADDING-RIGHT: 5px; BACKGROUND: #fafafa; BORDER-TOP-WIDTH: 1px; BORDER-BOTTOM-WIDTH: 1px; MARGIN-LEFT: 4.5%; BORDER-LEFT-WIDTH: 1px; PADDING-TOP: 5px">
+    <div id="NativeLanguagePhrase" class="DivNativeText">
         {{nativeLanguagePhrase}}
     </div>
 
     <!-- RED! text -->
-    <div id="WrongLettersForPhrase" class="TextDIVs"
-            style="Z-INDEX: -10; BORDER-BOTTOM: 1px solid; BORDER-LEFT: 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fafafa; COLOR: #fdd; BORDER-TOP: 1px solid; BORDER-RIGHT: 1px solid; PADDING-TOP: 10px" >
-      {{anotherRedText}}
+    <div id="WrongLettersForPhrase" class="TextDIVs" style="Z-INDEX: -10; color: red " >
+      {{redText}}
      </div>
 
     <!-- Spaces and markup -->
     <div id="UnderlinesForPhrase" class="TextDIVs" style="Z-INDEX: -4; COLOR: #999" >
-        {{underlineText}}
+        {{underlinesText}}
     </div>
 
     <!-- underline -->
@@ -33,15 +31,14 @@
 
     <!-- GrayedText -->
     <div style="Z-INDEX: 1; COLOR: #00f" class="TextDIVs">
-
+        {{blueText}}
     </div>
 
-    <textarea id="usertext" ng-model="userText"
-        style="Z-INDEX: 2; filter: alpha(opacity: 0); PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 50px; OVERFLOW: hidden; TOP: 78px; PADDING-TOP: 10px; LEFT: 5%">
-    </textarea>
+    <input id="usertext" ng-model="userText" ng-change="onUserTextChange()" style="Z-INDEX: 2; filter: alpha(opacity: 0)">
+    </input>
 
     <div style="Z-INDEX: -1; COLOR: #000; TOP: 78px; CURSOR: none; pointer-events: none" id="RedText"
-      class="TextDIVs">{{redText}}</div>
+      class="TextDIVs">{{anotherRedText}}</div>
     <!-- red text -->
 
     <script src="bower_components/angular/angular.js"></script>
