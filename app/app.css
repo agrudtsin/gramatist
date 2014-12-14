@@ -56,3 +56,17 @@ TEXTAREA {
     opacity: 0;
     -moz-opacity: 0
 }
+.background {
+    Z-INDEX: -100;
+    POSITION: absolute;
+    WIDTH: 101%;
+    HEIGHT: 114%;
+    TOP: 1px;
+    LEFT: 1px
+}
+.propersign {
+    Z-INDEX: 100;
+    POSITION: absolute;
+    TOP: 78px;
+    LEFT: 10px
+}
