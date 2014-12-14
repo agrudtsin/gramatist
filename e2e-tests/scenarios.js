@@ -4,39 +4,33 @@
 
 describe('my app', function() {
 
-  browser.get('index.html');
-
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
-  });
-
-
-  describe('view1', function() {
+  describe('Стресс тесты: ', function () {
 
     beforeEach(function() {
-      browser.get('index.html#/view1');
+      browser.get('index.html');
     });
 
 
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+    it('Должен быть правильный заголовок', function () {
+      expect(browser.getTitle()).toBe("Граматист - практическое изучение английского языка");
+    });
+
+    it('Позволяет ввоить пользовательски текст', function () {
+      element(by.model('userText')).sendKeys("Test");
+      expect(element(by.id('userText')).getAttribute("value")).toBe("Test");
     });
 
   });
 
-
-  describe('view2', function() {
+  describe('Система делает подсказки при нажатии на Enter: ', function () {
 
     beforeEach(function() {
-      browser.get('index.html#/view2');
+      browser.get('index.html');
     });
 
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
+    it('Не позволяет вводить Enter', function () {
+      element(by.model('userText')).sendKeys(protractor.Key.ENTER);
+      expect(element(by.id('userText')).getAttribute("value")).toBe("");
     });
-
   });
 });

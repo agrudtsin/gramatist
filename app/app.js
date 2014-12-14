@@ -16,6 +16,19 @@ angular.module('myApp', []).
 
         }
     }).
+    directive('ngEnter', function () {  //http://stackoverflow.com/questions/17470790/how-to-use-a-keypress-event-in-angularjs
+        return function (scope, element, attrs) {
+            element.bind("keydown keypress", function (event) {
+                if (event.which === 13) {
+                    scope.$apply(function () {
+                        scope.$eval(attrs.ngEnter);
+                    });
+
+                    event.preventDefault();
+                }
+            });
+        };
+    }).
     controller('mainCtrl', ['$scope', 'phrases', function($scope, phrases) {
         $scope.isDefined = true;
         $scope.nativeLanguagePhrase = phrases.getCurrent().text.ru;
@@ -40,6 +53,9 @@ angular.module('myApp', []).
             }
             $scope.redText = $scope.userText;
 
-        }
+        };
 
+        $scope.onUserTextEnter = function () {
+            console.log($scope.userText);
+        }
     }]);
