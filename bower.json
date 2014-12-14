@@ -1,0 +1,10 @@
+{
+  "name": "gramatist",
+  "version": "0.0.1",
+  "description": "Web-app for studing gramar in practise exersises",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x"
+  }
+}

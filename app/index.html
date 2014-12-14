@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<html ng-app="myApp">
 <head>
     <meta content="text/html; charset=utf-8; IE=edge" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="app.css">
     <title>Gramatist</title>
 </head>
-<body>
+<body ng-controller="mainCtrl">
     <!-- Background  -->
     <img id="background_div" src="resources/img/CommonPicture.Background_1000.Picture.Picture.jpg"
          style="Z-INDEX: -100; POSITION: absolute; WIDTH: 101%; HEIGHT: 114%; TOP: 1px; LEFT: 1px">
@@ -41,6 +41,9 @@
     <div style="Z-INDEX: -1; COLOR: #000; TOP: 78px; CURSOR: none; pointer-events: none" id="RedText"
       class="TextDIVs"></div>
     <!-- red text -->
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>
