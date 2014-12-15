@@ -1,60 +1,51 @@
 .DivNativeText {
-    BORDER-BOTTOM: #888 solid;
-    BORDER-LEFT: #888 solid;
     FONT-FAMILY: Georgia, Verdana, Times;
     MARGIN-BOTTOM: 20px;
     COLOR: #00a;
     FONT-SIZE: 24px;
-    BORDER-TOP: #888 solid;
-    BORDER-RIGHT: #888 solid
+    BORDER: #88F solid 1px;
+    border-radius: 10px;
+    PADDING: 10px;
+    WIDTH: 85%;
+    left: 70px;
+    box-shadow: -1px -1px 10px 2px rgba(0, 0, 0, 0.1) inset;
+    background: #FFF;
 }
 
 .TextDIVs {
     BORDER-BOTTOM: #888 1px;
     POSITION: absolute;
-    BORDER-LEFT: #888 1px;
-    PADDING-BOTTOM: 10px;
-    PADDING-LEFT: 10px;
+    BORDER: #888 1px;
     WIDTH: 85%;
-    PADDING-RIGHT: 10px;
+    height: 100px;
     FONT-FAMILY: "Verily Serif Mono", monospace;
     BACKGROUND: none transparent scroll repeat 0% 0%;
     FONT-SIZE: 24px;
-    BORDER-TOP: #888 1px;
-    BORDER-RIGHT: #888 1px;
-    PADDING-TOP: 10px;
-    LEFT: 5%;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 7px;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px
+    PADDING: 10px;
+    left: 70px;
+    border-radius: 10px;
 }
 
 #usertext {
-    BORDER-BOTTOM: #888 1px;
+    BORDER: #88F solid 1px;
     POSITION: absolute;
-    BORDER-LEFT: #888 1px;
-    PADDING-BOTTOM: 10px;
-    PADDING-LEFT: 10px;
-    WIDTH: 85%;
-    PADDING-RIGHT: 10px;
+    PADDING: 10px;
+    WIDTH: 87%;
+    height: 120px;
     FONT-FAMILY: "Verily Serif Mono", monospace;
     BACKGROUND: none transparent scroll repeat 0% 0%;
     FONT-SIZE: 24px;
-    BORDER-TOP: #888 1px;
-    BORDER-RIGHT: #888 1px;
-    PADDING-TOP: 10px;
-    LEFT: 5%;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 7px;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px
+    Z-INDEX: 2; 
+    filter: alpha(opacity: 0);
+    border-radius: 10px;
+    left: 70px;
 }
 
 .textarea {
     filter: alpha(opacity:0);
     opacity: 0;
     -moz-opacity: 0
+    BORDER: #88F 1px;    
 }
 .background {
     Z-INDEX: -100;
@@ -69,4 +60,10 @@
     POSITION: absolute;
     TOP: 78px;
     LEFT: 10px
+}
+
+.backgroundInput {
+    background: #FFF;
+    box-shadow: 3px 3px 7px #CCC inset;
+    left: 70px;
 }

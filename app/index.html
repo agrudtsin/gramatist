@@ -15,7 +15,7 @@
     </div>
 
     <!-- RED! text -->
-    <div id="WrongLettersForPhrase" class="TextDIVs" style="Z-INDEX: -10; color: red " >
+    <div id="WrongLettersForPhrase" class="TextDIVs backgroundInput" style="Z-INDEX: -10; color: red " >
       {{redText}}
      </div>
 
@@ -34,8 +34,7 @@
         {{blueText}}
     </div>
 
-    <textarea id="userText" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()"
-              style="Z-INDEX: 2; filter: alpha(opacity: 0)">
+    <textarea id="userText" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()">
     </textarea>
 
     <div style="Z-INDEX: -1; COLOR: #000; TOP: 78px; CURSOR: none; pointer-events: none" id="RedText"
