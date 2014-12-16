@@ -15,9 +15,9 @@
 
 .TextDIVs {
     POSITION: absolute;
-    BORDER: #888 1px;
+    BORDER: #88F solid 1px;
     WIDTH: 85%;
-    height: 100px;
+    height: 34px;
     FONT-FAMILY: "Verily Serif Mono", monospace;
     BACKGROUND: none transparent scroll repeat 0% 0%;
     FONT-SIZE: 24px;
@@ -40,6 +40,7 @@
     filter: alpha(opacity: 0.5);    
     top: 128px;
     left: 70px;
+    spellcheck:false;
 }
 .CommonFormat {
     border-radius: 4px;
@@ -54,13 +55,6 @@
     height: 1em;
     top: 128px;
 }
-.background {
-    Z-INDEX: -100;
-    POSITION: absolute;
-    TOP: 0px;
-    LEFT: 0px
-    background-repeat: repeat;
-}
 .propersign {
     Z-INDEX: 100;
     POSITION: absolute;
@@ -74,6 +68,7 @@
     left: 70px;
     top: 128px;
     height: 34px;
+    box-shadow: 0px 0px 20px 16px #8F8 inset;
 }
 
 body {

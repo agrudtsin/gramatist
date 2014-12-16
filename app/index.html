@@ -16,12 +16,12 @@
         </div>
         
         <!-- Spaces and markup -->
-        <div id="UnderlinesForPhrase" class="TextDIVs CommonFormat backgroundInput" style="Z-INDEX: -4; COLOR: #FFF" >
+        <div id="UnderlinesForPhrase" class="TextDIVs CommonFormat backgroundInput" style="Z-INDEX: -4; COLOR: #999" >
             {{underlinesText}}
         </div>
 
         <!-- underline -->
-        <div id="GrayedText" class="TextDIVs CommonFormat" style="Z-INDEX: -3; COLOR: #bbb; TOP: 78px; CURSOR: none; pointer-events: none" >
+        <div id="GrayedText" class="TextDIVs CommonFormat" style="Z-INDEX: -3; COLOR: #bbb; CURSOR: none; pointer-events: none" >
             {{grayText}}
         </div>
 
@@ -30,11 +30,11 @@
             {{blueText}}
         </div>
 
-        <textarea id="userText" class="CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()">
+        <textarea id="userText" class="CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">
         </textarea>
 
         <!-- RED! text -->
-        <div style="Z-INDEX: -1; COLOR: #F00; TOP: 78px; CURSOR: none; pointer-events: none" id="RedText"
+        <div style="Z-INDEX: -1; COLOR: #F00; CURSOR: none; pointer-events: none" id="RedText"
           class="TextDIVs CommonFormat">{{RedText}}</div>
         
     </div> <!-- Middle column -->

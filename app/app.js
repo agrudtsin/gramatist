@@ -50,11 +50,16 @@ angular.module('myApp', []).
                     $scope.underlinesText += "_";
                 }
             }
-            $scope.RedText = $scope.userText;
+            
+            
 
-        };
 
         $scope.onUserTextEnter = function () {
             console.log($scope.userText);
         }
+        markRedText(mText) = function {
+            return "<span style="+Символ(34)+"color:red"+Символ(34)+">"+mText+"</span>";
+        }
+
+        
     }]);
