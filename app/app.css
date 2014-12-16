@@ -3,71 +3,55 @@
     MARGIN-BOTTOM: 20px;
     COLOR: #00a;
     FONT-SIZE: 24px;
-    BORDER: #88F solid 1px;
-    border-radius: 5px;
-    PADDING: 10px;
-    WIDTH: 85%;
-    left: 70px;    
-    POSITION: absolute;
+    BORDER: #88F solid 1px;    
     background: rgba(255,255,200,0.6); ;
     top: 70px;
-}
-
-.TextDIVs {
-    POSITION: absolute;
-    BORDER: #88F solid 1px;
-    WIDTH: 85%;
-    height: 34px;
-    FONT-FAMILY: "Verily Serif Mono", monospace;
-    BACKGROUND: none transparent scroll repeat 0% 0%;
-    FONT-SIZE: 24px;
-    PADDING: 10px;
-    left: 70px;
-    top: 128px;
-    border-radius: 5px;
+    height: 2em;
 }
 
 #usertext {
-    BORDER: #88F solid 1px;
-    POSITION: absolute;
-    PADDING: 10px;
-    WIDTH: 87%;
-    height: 55px;
-    FONT-FAMILY: "Verily Serif Mono", monospace;
-    BACKGROUND: none transparent scroll repeat 0% 0%;
-    FONT-SIZE: 24px;
     Z-INDEX: 2; 
     filter: alpha(opacity: 0.5);    
-    top: 128px;
-    left: 70px;
-    spellcheck:false;
 }
 .CommonFormat {
-    border-radius: 4px;
-    filter: alpha(opacity: 0.5);    
+    border-radius: 4px;    
+    left: 70px;    
+    WIDTH: 85%;
+    PADDING: 10px;    
+    BORDER: #88F 1px;    
+    POSITION: absolute;
+    overflow:hidden;
+    resize: none; 
+    BORDER: #88F solid 1px;
+}
+.AllTextAreas {    
+    border-color: rgba(0,0,255,0.1);
+    height: 55px;
+    FONT-FAMILY: "Verily Serif Mono", monospace;
+    FONT-SIZE: 24px;
+    BACKGROUND: none transparent scroll repeat 0% 0%;
+    FONT-SIZE: 24px;    
+    top: 128px;
+    BACKGROUND: none transparent scroll repeat 0% 0%;
 }
 
 .textarea {
     filter: alpha(opacity:0);
     opacity: 0;
     -moz-opacity: 0
-    BORDER: #88F 1px;    
-    height: 1em;
     top: 128px;
+    POSITION: absolute;
 }
 .propersign {
     Z-INDEX: 100;
     POSITION: absolute;
-    TOP: 128px;
+    TOP: 132px;
     LEFT: 10px;
-
 }
 
 .backgroundInput {
     background: #FFF;   
-    left: 70px;
     top: 128px;
-    height: 34px;
     box-shadow: 0px 0px 20px 16px #8F8 inset;
 }
 
@@ -92,4 +76,8 @@ body {
  box-shadow: 0px 0px 20px 1px #888;
  border-bottom: solid 1px #999;
  PADDING: 5px;
+}
+
+textarea:focus{
+    outline: 0;
 }

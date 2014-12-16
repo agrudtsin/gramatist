@@ -11,31 +11,31 @@
 
     <div class="Header"> Menu        learned phrases</div>
     <div id="MiddleColumn" class="MiddleColumn">
-        <div id="NativeLanguagePhrase" class="DivNativeText CommonFormat">
+        <textarea id="NativeLanguagePhrase" class="DivNativeText CommonFormat">
             {{nativeLanguagePhrase}}
-        </div>
+        </textarea>
         
         <!-- Spaces and markup -->
-        <div id="UnderlinesForPhrase" class="TextDIVs CommonFormat backgroundInput" style="Z-INDEX: -4; COLOR: #999" >
+        <textarea id="UnderlinesForPhrase" class="AllTextAreas CommonFormat backgroundInput" style="Z-INDEX: -4; COLOR: #999" >
             {{underlinesText}}
-        </div>
+        </textarea>
 
         <!-- underline -->
-        <div id="GrayedText" class="TextDIVs CommonFormat" style="Z-INDEX: -3; COLOR: #bbb; CURSOR: none; pointer-events: none" >
+        <textarea id="GrayedText" class="AllTextAreas CommonFormat" style="Z-INDEX: -3; COLOR: #bbb; CURSOR: none; pointer-events: none" >
             {{grayText}}
-        </div>
+        </textarea>
 
         <!-- GrayedText -->
-        <div style="Z-INDEX: 1; COLOR: #00f" class="TextDIVs CommonFormat">
+        <textarea style="Z-INDEX: 1; COLOR: #00f" class="AllTextAreas CommonFormat">
             {{blueText}}
-        </div>
+        </textarea>
 
-        <textarea id="userText" class="CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">
+        <textarea id="userText" class="AllTextAreas CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">
         </textarea>
 
         <!-- RED! text -->
-        <div style="Z-INDEX: -1; COLOR: #F00; CURSOR: none; pointer-events: none" id="RedText"
-          class="TextDIVs CommonFormat">{{RedText}}</div>
+        <textarea style="Z-INDEX: -1; COLOR: #F00; CURSOR: none; pointer-events: none" id="RedText"
+          class="AllTextAreas CommonFormat">{{RedText}}</textarea>
         
     </div> <!-- Middle column -->
     <!-- Angular scripts-->
