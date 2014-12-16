@@ -4,16 +4,16 @@
     COLOR: #00a;
     FONT-SIZE: 24px;
     BORDER: #88F solid 1px;
-    border-radius: 10px;
+    border-radius: 5px;
     PADDING: 10px;
     WIDTH: 85%;
-    left: 70px;
-    box-shadow: -1px -1px 10px 2px rgba(0, 0, 0, 0.1) inset;
-    background: #FFF;
+    left: 70px;    
+    POSITION: absolute;
+    background: rgba(255,255,200,0.6); ;
+    top: 70px;
 }
 
 .TextDIVs {
-    BORDER-BOTTOM: #888 1px;
     POSITION: absolute;
     BORDER: #888 1px;
     WIDTH: 85%;
@@ -23,7 +23,7 @@
     FONT-SIZE: 24px;
     PADDING: 10px;
     left: 70px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #usertext {
@@ -31,14 +31,18 @@
     POSITION: absolute;
     PADDING: 10px;
     WIDTH: 87%;
-    height: 120px;
+    height: 55px;
     FONT-FAMILY: "Verily Serif Mono", monospace;
     BACKGROUND: none transparent scroll repeat 0% 0%;
     FONT-SIZE: 24px;
     Z-INDEX: 2; 
-    filter: alpha(opacity: 0);
-    border-radius: 10px;
+    filter: alpha(opacity: 0.5);    
+    top: 128px;
     left: 70px;
+}
+.CommonFormat {
+    border-radius: 4px;
+    filter: alpha(opacity: 0.5);    
 }
 
 .textarea {
@@ -46,25 +50,54 @@
     opacity: 0;
     -moz-opacity: 0
     BORDER: #88F 1px;    
+    height: 1em;
 }
 .background {
     Z-INDEX: -100;
     POSITION: absolute;
-    WIDTH: 101%;
-    HEIGHT: 114%;
-    TOP: 1px;
-    LEFT: 1px
+    TOP: 0px;
+    LEFT: 0px
+    background-repeat: repeat;
 }
 .propersign {
     Z-INDEX: 100;
     POSITION: absolute;
-    TOP: 78px;
+    TOP: 128px;
     LEFT: 10px
 }
 
 .backgroundInput {
-    background: #FFF;
-    box-shadow: 3px 3px 7px #CCC inset;
-    left: 71px;
-    TOP: 78px;
+    background: #FFF;   
+    left: 70px;
+    TOP: 128px;
+    height: 34px;
+}
+
+.background_div1 {
+    Z-INDEX: 90;
+    background-repeat: repeat-x, repeat-y;   
+    background-image: url("resources/img/waves2.jpg");
+}
+
+body {
+    background-image: url("resources/img/fon11.png");   
+}
+
+.MiddleColumn {
+    width: 85%;
+    left: 5%;
+}
+
+.Header {
+ POSITION: absolute; 
+ FONT-FAMILY: Georgia, Verdana, Times;
+ FONT-SIZE: 20px;
+ top:0px;  
+ left: 0px;
+ width:2000px;
+ height: 25px;
+ background: rgba(0,0,0,0.3);
+ box-shadow: 0px 0px 10px 4px #77A;
+ border-bottom: solid 1px #777;
+ PADDING: 5px;
 }

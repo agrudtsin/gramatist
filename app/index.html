@@ -1,46 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html ng-app="myApp">
 <head>
-    <meta content="text/html; charset=utf-8; IE=edge" http-equiv="Content-Type">
+    <meta content="text/html; charset=utf-8;" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="app.css">
     <title>Граматист - практическое изучение английского языка</title>
 </head>
 <body ng-controller="mainCtrl">
     <!-- Background  -->
-    <img class="background" id="background_div" src="resources/img/CommonPicture.Background_1000.Picture.Picture.jpg">
     <img class="propersign" id="propersign" src="resources/img/CommonPicture.properPhrase.Picture.Picture.png">
 
-    <div id="NativeLanguagePhrase" class="DivNativeText">
-        {{nativeLanguagePhrase}}
-    </div>
+    <div class="Header"> Menu        learned phrases</div>
+    <div id="MiddleColumn" class="MiddleColumn">
+        <div id="NativeLanguagePhrase" class="DivNativeText CommonFormat">
+            {{nativeLanguagePhrase}}
+        </div>
+        
+        <!-- Spaces and markup -->
+        <div id="UnderlinesForPhrase" class="TextDIVs CommonFormat backgroundInput" style="Z-INDEX: -4; COLOR: #FFF" >
+            {{underlinesText}}
+        </div>
 
-    <!-- RED! text -->
-    <div id="WrongLettersForPhrase" class="TextDIVs backgroundInput" style="Z-INDEX: -10; color: red " >
-      {{redText}}
-     </div>
+        <!-- underline -->
+        <div id="GrayedText" class="TextDIVs CommonFormat" style="Z-INDEX: -3; COLOR: #bbb; TOP: 78px; CURSOR: none; pointer-events: none" >
+            {{grayText}}
+        </div>
 
-    <!-- Spaces and markup -->
-    <div id="UnderlinesForPhrase" class="TextDIVs" style="Z-INDEX: -4; COLOR: #999" >
-        {{underlinesText}}
-    </div>
+        <!-- GrayedText -->
+        <div style="Z-INDEX: 1; COLOR: #00f" class="TextDIVs CommonFormat">
+            {{blueText}}
+        </div>
 
-    <!-- underline -->
-    <div id="GrayedText" class="TextDIVs" style="Z-INDEX: -3; COLOR: #bbb; TOP: 78px; CURSOR: none; pointer-events: none" >
-        {{grayText}}
-    </div>
+        <textarea id="userText" class="CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()">
+        </textarea>
 
-    <!-- GrayedText -->
-    <div style="Z-INDEX: 1; COLOR: #00f" class="TextDIVs">
-        {{blueText}}
-    </div>
-
-    <textarea id="userText" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()">
-    </textarea>
-
-    <div style="Z-INDEX: -1; COLOR: #000; TOP: 78px; CURSOR: none; pointer-events: none" id="RedText"
-      class="TextDIVs">{{anotherRedText}}</div>
-    <!-- red text -->
-
+        <!-- RED! text -->
+        <div style="Z-INDEX: -1; COLOR: #F00; TOP: 78px; CURSOR: none; pointer-events: none" id="RedText"
+          class="TextDIVs CommonFormat">{{RedText}}</div>
+        
+    </div> <!-- Middle column -->
+    <!-- Angular scripts-->
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
 

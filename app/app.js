@@ -33,7 +33,6 @@ angular.module('myApp', []).
         $scope.isDefined = true;
         $scope.nativeLanguagePhrase = phrases.getCurrent().text.ru;
 
-        $scope.anotherRedText = "";
         $scope.blueText = "";
         $scope.redText = "";
         $scope.underlinesText = "";
@@ -51,7 +50,7 @@ angular.module('myApp', []).
                     $scope.underlinesText += "_";
                 }
             }
-            $scope.redText = $scope.userText;
+            $scope.RedText = $scope.userText;
 
         };
 
