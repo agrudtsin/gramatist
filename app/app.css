@@ -23,6 +23,7 @@
     FONT-SIZE: 24px;
     PADDING: 10px;
     left: 70px;
+    top: 128px;
     border-radius: 5px;
 }
 
@@ -51,6 +52,7 @@
     -moz-opacity: 0
     BORDER: #88F 1px;    
     height: 1em;
+    top: 128px;
 }
 .background {
     Z-INDEX: -100;
@@ -63,20 +65,15 @@
     Z-INDEX: 100;
     POSITION: absolute;
     TOP: 128px;
-    LEFT: 10px
+    LEFT: 10px;
+    
 }
 
 .backgroundInput {
     background: #FFF;   
     left: 70px;
-    TOP: 128px;
+    top: 128px;
     height: 34px;
-}
-
-.background_div1 {
-    Z-INDEX: 90;
-    background-repeat: repeat-x, repeat-y;   
-    background-image: url("resources/img/waves2.jpg");
 }
 
 body {
