@@ -31,6 +31,7 @@ angular.module('myApp', []).
     }).
     controller('mainCtrl', ['$scope', 'phrases', function($scope, phrases) {
         $scope.isDefined = true;
+
         $scope.nativeLanguagePhrase = phrases.getCurrent().text.ru;
 
         $scope.blueText = "";

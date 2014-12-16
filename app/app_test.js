@@ -16,7 +16,6 @@ describe('myApp stress tests', function() {
     });
 
     describe('myApp controller', function(){
-
         var $scope;
         beforeEach(module('myApp'));
         beforeEach(inject(function($rootScope, $controller) {
@@ -27,9 +26,6 @@ describe('myApp stress tests', function() {
         it('mainCtrl should be defined', function() {
             expect($scope.isDefined).toBeTruthy();
         });
-
-
-
 
     });
 });
