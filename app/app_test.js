@@ -5,10 +5,14 @@
 
 describe('myApp stress tests', function() {
 
-    describe('jasmine stress test', function(){
+    describe('ext libs stress tests', function(){
 
         it('jasmine stress test', function() {
             expect(true).toBeTruthy();
+        });
+
+        it('underscore stress test', function() {
+            expect(_).toBeDefined();
         });
     });
 
