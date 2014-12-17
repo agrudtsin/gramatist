@@ -38,7 +38,7 @@ angular.module('myApp', []).
                     return "_";
                 }
             },
-            buildRedText:function(targetPhrase, userText){
+            buildRedText : function(targetPhrase, userText){
                 var redText = "";
                 for(var i=0; i < userText.length; i +=1){
                     if(targetPhrase[i] !== userText[i]){
@@ -49,6 +49,28 @@ angular.module('myApp', []).
                 }
                 return redText;
 
+            },
+            cropUserTextIfContainErrors : function(targetPhrase, userText){
+                var croppedUserText = userText.slice();
+                var isContainErrors = [' '].toString() != _.uniq(this.buildRedText(targetPhrase, userText)).toString();
+                var isContainErrorsInPreviousWord = [" "].toString() != _.uniq(this.buildRedText(targetPhrase, cropLastWord(userText))).toString();
+                if(isContainErrors && isContainErrorsInPreviousWord) {
+                    croppedUserText = cropLastWord(croppedUserText);
+                }
+                return croppedUserText;
+
+                function cropLastWord(str){
+                    var lastIndex = str.lastIndexOf(' '); //pre last index of space
+                    if(lastIndex > 0 ){
+                        return str.substring(0, lastIndex) + ' ';
+                    } else {
+                        return str;
+                    }
+                };
+
+                function isWordEnded(croppedUserText){
+                    return _.last(croppedUserText) === ' ';
+                };
             },
 
             getCurrent: function () {
@@ -88,6 +110,7 @@ angular.module('myApp', []).
 
         $scope.onUserTextChange = function (){
             $scope.phraseComponents.underlinesText = phrases.underlineUserText($scope.phraseComponents.userText);
+            $scope.phraseComponents.userText = phrases.cropUserTextIfContainErrors($scope.phraseComponents.targetLanguagePhrase, $scope.phraseComponents.userText);
             $scope.phraseComponents.redText = phrases.buildRedText($scope.phraseComponents.targetLanguagePhrase, $scope.phraseComponents.userText);
         };
 

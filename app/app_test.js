@@ -59,7 +59,7 @@ describe('phrases service test', function () {
         });
 
     });
-    describe('Тесты логики формирования подчеркнутого текста', function () {
+    describe('Тесты формирования компонентов фразы', function () {
         it('Каждое пользовательское слово должно быть подчеркнуто', function () {
             expect(phrases.underlineUserText("Вася")).toEqual("____");
             expect(phrases.underlineUserText("Ва")).toEqual("__");
@@ -77,18 +77,23 @@ describe('phrases service test', function () {
 
 
         });
-
         it('Неправильные символы выделяем красным, остальные символы - пробелы', function () {
             expect(phrases.buildRedText('My name is Nikolay', "My Name")).toEqual("   N   ");
             expect(phrases.buildRedText('My name is Nikolay', "")).toEqual("");
             expect(phrases.buildRedText('My name is Nikolay', " ")).toEqual(" ");
             expect(phrases.buildRedText('My name is Nikolay', "My name Nikola")).toEqual("        Nikola");
-
+        });
+        it('Не должны давать пользователю вносить следующее слово, если в текущем слове есть ошибки', function () {
+            expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "My Name fedor")).toEqual("My Name "); //two words
+            expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "My N")).toEqual("My N"); //two words and last with error
+            expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "My NNme")).toEqual("My NNme"); //two words and last with error
+            expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "My NNme ")).toEqual("My NNme "); //two words and last with error
+            expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "My NNme f")).toEqual("My NNme "); //three words and last with error
+            expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "")).toEqual(""); //no words
+            expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "Myke")).toEqual("Myke");//one word
 
         });
-
         it('Когда один раз нажимем Enter - убираем пользовательский текст до первого правильного слова и подчеркиваем текущее слово', function () {
-
         });
     });
 
