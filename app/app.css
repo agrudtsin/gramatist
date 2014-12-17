@@ -1,12 +1,14 @@
 .DivNativeText {
     FONT-FAMILY: Georgia, Verdana, Times;
-    MARGIN-BOTTOM: 20px;
+    MARGIN-BOTTOM: 30px;
     COLOR: #00a;
     FONT-SIZE: 24px;
     BORDER: #88F solid 1px;    
-    background: rgba(255,255,200,0.6); ;
+    background: rgba(235,235,235,1); ;
     top: 70px;
+    cursor:default;
     height: 2em;
+    user-select:none;
 }
 
 #usertext {
@@ -17,7 +19,8 @@
     border-radius: 4px;    
     left: 70px;    
     WIDTH: 85%;
-    PADDING: 10px;    
+    PADDING: 8px;
+    PADDING-left: 12px;    
     BORDER: #88F 1px;    
     POSITION: absolute;
     overflow:hidden;
@@ -26,7 +29,7 @@
 }
 .AllTextAreas {    
     border-color: rgba(0,0,255,0.1);
-    height: 55px;
+    height: 51px;
     FONT-FAMILY: "Verily Serif Mono", monospace;
     FONT-SIZE: 24px;
     BACKGROUND: none transparent scroll repeat 0% 0%;
@@ -36,27 +39,28 @@
 }
 
 .textarea {
-    filter: alpha(opacity:0);
     opacity: 0;
-    -moz-opacity: 0
     top: 128px;
     POSITION: absolute;
 }
 .propersign {
     Z-INDEX: 100;
     POSITION: absolute;
-    TOP: 132px;
+    top: 128px;
     LEFT: 10px;
 }
 
 .backgroundInput {
     background: #FFF;   
     top: 128px;
-    box-shadow: 0px 0px 20px 16px #8F8 inset;
+    box-shadow: 0px 3px 6px 0px #DDD inset;
+}
+.InputProperShadow {
+    box-shadow: 0px 0px 20px 16px #88F inset;
 }
 
 body {
-    background-image: url("resources/img/fon11.png");   
+    background-image: url("resources/img/fon14.png");   
 }
 
 .MiddleColumn {
@@ -70,14 +74,75 @@ body {
  FONT-SIZE: 20px;
  top:0px;  
  left: 0px;
- width:2000px;
+ width:100%;
  height: 25px;
  background: rgba(255,255,255,0.4);
- box-shadow: 0px 0px 20px 1px #888;
- border-bottom: solid 1px #999;
+ z-index:1000;
+ border-bottom: solid 1px #BBB;
  PADDING: 5px;
+}
+
+.Footer {
+ POSITION: absolute; 
+ FONT-FAMILY: Georgia, Verdana, Times;
+ FONT-SIZE: 20px;
+ bottom:0px;  
+ left: 0px;
+ width:100%;
+ height: 30px;
+ background: rgba(255,255,255,0.4);
+ 
+ border-top: solid 1px #BBB;
+ z-index:1000;
 }
 
 textarea:focus{
     outline: 0;
+}
+
+.StatisticsValue {
+    FONT-FAMILY: Verdana, Times;
+    FONT-SIZE: 12px;
+    BORDER: #88F solid 1px;
+    background: #EEE;
+    width:40px;
+    border-radius: 3px;    
+    display: inline;
+    padding-top:3px;
+    padding-bottom:3px;
+    margin-left:10px;
+    width:100px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.StatisticsBlock {
+    top:210px;
+    POSITION: absolute;
+    FONT-FAMILY: Verdana, Times;
+    FONT-SIZE: 12px;
+    top=150px; 
+    position:absolute;
+    padding-left:40px;
+    padding-top:3px;
+    padding-bottom:3px;
+    FONT-FAMILY: Verdana, Times;
+    FONT-SIZE: 12px;
+}
+.StatisticsCaption {
+    padding-left:30px;
+    display: inline;
+    FONT-FAMILY: Verdana, Times;
+    FONT-SIZE: 12px;
+    padding-top:0px;
+    padding-bottom:6px;
+    
+}
+.BigPicture {
+    top:250px;
+    POSITION: absolute;
+    width:auto;
+    height:300px;
+    left:100px;
+    border-radius: 6px;  
+    BORDER: #88F solid 1px;
 }
