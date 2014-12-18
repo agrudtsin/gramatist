@@ -7,7 +7,7 @@
 </head>
 <body ng-controller="mainCtrl" onload="FocusOnInput()">
     <!-- Background  -->
-    <img class="propersign" id="propersign" src="resources/img/ProperAnswerBlue.png">
+    <img ng-show="isPharsesEqual()" class="propersign" id="propersign" src="resources/img/ProperAnswerBlue.png">
 
     <div class="Header"> Menu        learned phrases</div>
     <div id="MiddleColumn" class="MiddleColumn">

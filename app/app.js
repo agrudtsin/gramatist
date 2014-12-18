@@ -120,4 +120,8 @@ angular.module('myApp', []).
         $scope.FocusOnInput = function() {
             document.getElementById("userText").focus();
         }
+
+        $scope.isPharsesEqual = function(){
+            return $scope.phraseComponents.targetLanguagePhrase == $scope.phraseComponents.userText;
+        }
     }]);

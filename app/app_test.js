@@ -4,11 +4,9 @@
 'use strict';
 
 describe('ext libs stress tests', function () {
-
     it('jasmine stress test', function () {
         expect(true).toBeTruthy();
     });
-
     it('underscore stress test', function () {
         expect(_).toBeDefined();
     });
@@ -17,18 +15,15 @@ describe('ext libs stress tests', function () {
 
 describe('phrases service test', function () {
     var phrases;
-
     beforeEach(function () {
         module('myApp');
         inject(function ($injector) {
             phrases = $injector.get('phrases');
         });
     });
-
     it('phrases service stress test', function () {
         expect(phrases).toBeDefined();
     });
-
     describe('phrases service unit tests', function () {
         it('it should append enters to the commands array', function () {
             expect(phrases.commands).toEqual(jasmine.any(Object));
@@ -95,8 +90,8 @@ describe('phrases service test', function () {
         });
         it('Когда один раз нажимем Enter - убираем пользовательский текст до первого правильного слова и подчеркиваем текущее слово', function () {
         });
-    });
 
+    });
 });
 
 describe('myApp controller', function () {
@@ -106,9 +101,22 @@ describe('myApp controller', function () {
         $scope = $rootScope.$new();
         $controller('mainCtrl', {$scope: $scope});
     }));
-
     it('mainCtrl should be defined', function () {
         expect($scope.isDefined).toBeTruthy();
     });
+    
+    it('shou be trothy when user phrases equal', function(){
 
+        expect($scope.isPharsesEqual()).not.toBeTruthy();
+
+        $scope.phraseComponents.targetLanguagePhrase = "qwe";
+        $scope.phraseComponents.userText = "qwe";
+        expect($scope.isPharsesEqual()).toBeTruthy();
+
+        $scope.phraseComponents.targetLanguagePhrase = "qwe";
+        $scope.phraseComponents.userText = "qwertu";
+        expect($scope.isPharsesEqual()).not.toBeTruthy();
+        
+    });
+    
 });
