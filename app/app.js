@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('myApp', []).
-    factory('phrases', function () {
-        return {
+    factory('phrases',['$http', function ($http, $rootScope) {
+       return {
             commands: [],
             pushCommand: function (command) {
                 return this.commands.push(command);
@@ -13,11 +13,10 @@ angular.module('myApp', []).
             },
             currentPhrase: {
                 text: {
-                    ru: "Меня зовут Коля",
-                    en: "My name is Nikolay"
+                    ru: "Стандартная фраза",
+                    en: "Default phrase"
                 }
             },
-
             underlineUserText: function (userText) {
                 var underlinedText = "";
                 for (var curChar = 0; curChar < userText.length; curChar += 1) {
@@ -29,7 +28,6 @@ angular.module('myApp', []).
                 }
                 return underlinedText;
             },
-
             underlineOrPunctuationМark: function (character) {
                 var punctuationMarks = [',', '.', ';', ':', '?', '!'];
                 if (_.contains(punctuationMarks, character)) {
@@ -66,18 +64,18 @@ angular.module('myApp', []).
                     } else {
                         return str;
                     }
-                };
+                }
 
                 function isWordEnded(croppedUserText){
                     return _.last(croppedUserText) === ' ';
-                };
+                }
             },
-
             getCurrent: function () {
                 return this.currentPhrase;
-            }
+            },
+            phrasesArray:[]
         }
-    }).
+    }]).
     directive('ngEnter', function () {  //http://stackoverflow.com/questions/17470790/how-to-use-a-keypress-event-in-angularjs
         return function (scope, element, attrs) {
             element.bind("keydown keypress", function (event) {
@@ -85,13 +83,12 @@ angular.module('myApp', []).
                     scope.$apply(function () {
                         scope.$eval(attrs.ngEnter);
                     });
-
                     event.preventDefault();
                 }
             });
         };
     }).
-    controller('mainCtrl', ['$scope', 'phrases', function($scope, phrases) {
+    controller('mainCtrl', ['$scope', '$http', 'phrases', function($scope, $http, phrases) {
         $scope.isDefined = true;
 
         //$scope.userText = "";
@@ -101,12 +98,18 @@ angular.module('myApp', []).
         //$scope.underlinesText = "";// phrases.makeUnderlinedText($scope.userText);
         $scope.grayText = "";
 
+        $http.get('phrases/phrases.json').success(function(data){
+            phrases.phrasesArray = data;
+            phrases.currentPhrase = _.first(phrases.phrasesArray);
+            $scope.phraseComponents.nativeLanguagePhrase = phrases.currentPhrase.text.ru;
+            $scope.phraseComponents.targetLanguagePhrase = phrases.currentPhrase.text.en;
+        });
+
         $scope.phraseComponents = {};
         $scope.phraseComponents.userText = "";
         $scope.phraseComponents.redText = "";
         $scope.phraseComponents.underlinesText = "";
-        $scope.phraseComponents.nativeLanguagePhrase = phrases.getCurrent().text.ru;
-        $scope.phraseComponents.targetLanguagePhrase = phrases.getCurrent().text.en;
+
 
         $scope.onUserTextChange = function (){
             $scope.phraseComponents.underlinesText = phrases.underlineUserText($scope.phraseComponents.userText);
@@ -119,7 +122,7 @@ angular.module('myApp', []).
         };
         $scope.FocusOnInput = function() {
             document.getElementById("userText").focus();
-        }
+        };
 
         $scope.isPharsesEqual = function(){
             return $scope.phraseComponents.targetLanguagePhrase == $scope.phraseComponents.userText;
