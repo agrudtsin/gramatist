@@ -1,20 +1,14 @@
 [
   {
-    "text": {
-      "ru": "Меня зовут Андрей",
-      "en": "My name is Andrey"
-    }
+    "name": "Тестовые фразы",
+    "id": "phrases_1"
   },
   {
-    "text": {
-      "ru": "Фраза номер два",
-      "en": "Phrase number two"
-    }
+    "name": "Тестовые фразы 2",
+    "id": "phrases_2"
   },
   {
-    "text": {
-      "ru": "Фраза номер три",
-      "en": "Phrase number three"
-    }
+    "name": "Тестовые фразы 3",
+    "id": "phrases_3"
   }
 ]
