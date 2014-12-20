@@ -1,0 +1,20 @@
+[
+  {
+    "text": {
+      "ru": "Меня зовут Андрей",
+      "en": "My name is Andrey"
+    }
+  },
+  {
+    "text": {
+      "ru": "Фраза номер два",
+      "en": "Phrase number two"
+    }
+  },
+  {
+    "text": {
+      "ru": "Фраза номер три",
+      "en": "Phrase number three"
+    }
+  }
+]

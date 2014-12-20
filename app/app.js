@@ -1,16 +1,29 @@
 'use strict';
 
-angular.module('myApp', []).
-    factory('phrases',['$http', function ($http, $rootScope) {
-       return {
-            commands: [],
-            pushCommand: function (command) {
-                return this.commands.push(command);
-            },
-            flushCommands: function () {
-                this.commands = [];
-                return this.commands;
-            },
+angular.module('myApp', ['ngResource']).
+    factory('dataProvider', ['$http',
+        function($http){
+            return {
+                getCategories: function(){
+                    return $http.get('phrases/phrases.json');
+                },
+                getPhrasesByID : function(id){
+                    return $http.get('phrases/'+id+'.json');
+                },
+                getPhrasesArrayById:function(id){
+                    $http.get('phrases/'+id+'.json').
+                    success(function(data){
+                            return data;
+                        }).
+                    error(function(){
+                            return [];
+                        }
+                    );
+                }
+            }
+        }]).
+    factory('phrases',['$http','dataProvider', function ($http, dataProvider) {
+       var phrasesObj = {
             currentPhrase: {
                 text: {
                     ru: "Стандартная фраза",
@@ -73,8 +86,15 @@ angular.module('myApp', []).
             getCurrent: function () {
                 return this.currentPhrase;
             },
-            phrasesArray:[]
-        }
+            categories:[],
+            phrasesList:[]
+        };
+
+        dataProvider.getCategories().success(function(data){
+            phrasesObj.categories = data;
+        });
+
+        return phrasesObj;
     }]).
     directive('ngEnter', function () {  //http://stackoverflow.com/questions/17470790/how-to-use-a-keypress-event-in-angularjs
         return function (scope, element, attrs) {
@@ -88,43 +108,52 @@ angular.module('myApp', []).
             });
         };
     }).
-    controller('mainCtrl', ['$scope', '$http', 'phrases', function($scope, $http, phrases) {
+    controller('mainCtrl', ['$scope', '$http', 'phrases', 'dataProvider', function($scope, $http, phrases, dataProvider) {
         $scope.isDefined = true;
-
-        //$scope.userText = "";
         $scope.anotherRedText = "";
         $scope.blueText = "";
         $scope.redText = "";
-        //$scope.underlinesText = "";// phrases.makeUnderlinedText($scope.userText);
-        $scope.grayText = "";
+        $scope.userText = "";
+        $scope.redText = "";
+        $scope.underlinesText = "";
+        $scope.currentPhrase = {
+            text : {
+                ru : "",
+                en : ""
+            }
+        };
+        $scope.categories = [];
+        $scope.phrasesList = [];
 
-        $http.get('phrases/phrases.json').success(function(data){
-            phrases.phrasesArray = data;
-            phrases.currentPhrase = _.first(phrases.phrasesArray);
-            $scope.phraseComponents.nativeLanguagePhrase = phrases.currentPhrase.text.ru;
-            $scope.phraseComponents.targetLanguagePhrase = phrases.currentPhrase.text.en;
-        });
+        dataProvider.getCategories().
+            success(function(data){
+                $scope.categories = data;
+                $scope.currentCategory = _.first(data);
+            }).
+            then(function(){
+                $scope.categoryOnChange($scope.currentCategory);
 
-        $scope.phraseComponents = {};
-        $scope.phraseComponents.userText = "";
-        $scope.phraseComponents.redText = "";
-        $scope.phraseComponents.underlinesText = "";
+            });
+
 
 
         $scope.onUserTextChange = function (){
-            $scope.phraseComponents.underlinesText = phrases.underlineUserText($scope.phraseComponents.userText);
-            $scope.phraseComponents.userText = phrases.cropUserTextIfContainErrors($scope.phraseComponents.targetLanguagePhrase, $scope.phraseComponents.userText);
-            $scope.phraseComponents.redText = phrases.buildRedText($scope.phraseComponents.targetLanguagePhrase, $scope.phraseComponents.userText);
+            $scope.underlinesText = phrases.underlineUserText($scope.userText);
+            $scope.userText = phrases.cropUserTextIfContainErrors($scope.currentPhrase.text.en, $scope.userText);
+            $scope.redText = phrases.buildRedText($scope.currentPhrase.text.en, $scope.userText);
         };
-
         $scope.onUserTextEnter = function () {
-            console.log($scope.userText);
         };
-        $scope.FocusOnInput = function() {
-            document.getElementById("userText").focus();
-        };
+        $scope.categoryOnChange = function(newCategory){
+            $scope.currentCategory = newCategory;
+            dataProvider.getPhrasesByID($scope.currentCategory.id).
+                success(function(data){
+                    $scope.phrasesList = data;
+                    $scope.currentPhrase = _.first(data);
+                })
 
-        $scope.isPharsesEqual = function(){
-            return $scope.phraseComponents.targetLanguagePhrase == $scope.phraseComponents.userText;
+        };
+$scope.isPhrasesEqual = function(){
+            return $scope.currentPhrase.text.en == $scope.userText;
         }
     }]);
