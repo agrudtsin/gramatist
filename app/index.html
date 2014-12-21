@@ -28,11 +28,15 @@
         <textarea id="userText" class="AllTextAreas CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">Mi name iz Nikolay</textarea>
         <!-- RED! text -->
         <textarea style="Z-INDEX: 5; COLOR: #F00; CURSOR: none; pointer-events: none" id="RedText" class="AllTextAreas CommonFormat">{{redText}}</textarea>
+        <div class="Hint" ng-show="isContainErrors()">
+            <h2> Нажми Enter для подсказки</h2>
+        </div>
         <div id=Statistics class="StatisticsBlock">
             <div class="StatisticsCaption">Phrases repeared: </div><div id=PhrasesRepeated class="StatisticsValue">23</div>
             <div class="StatisticsCaption">Learned: </div><div id=PhrasesLearned class="StatisticsValue">1/345</div>
             <div class="StatisticsCaption">Number of mistakes: </div><div id=MistakeCount class="StatisticsValue" style="color:red;">15</div>
         </div>
+
         <div id=picture><img class="BigPicture" src="resources/img/ExampleOfPhrasePhoto.jpg" oncontextmenu ="return false;" ></div>
     </div> <!-- Middle column -->
     <div class="Footer">   Here is the footer <a ref="mailto:gramatist@gmail.com" style="float:right;">Send feedback</a></div>

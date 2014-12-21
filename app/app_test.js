@@ -56,19 +56,19 @@ describe('phrases service test', function () {
     });
     describe('Тесты формирования компонентов фразы', function () {
         it('Каждое пользовательское слово должно быть подчеркнуто', function () {
-            expect(phrases.underlineUserText("Вася")).toEqual("____");
-            expect(phrases.underlineUserText("Ва")).toEqual("__");
-            expect(phrases.underlineUserText("Вася ПМ")).toEqual("____ __");
-            expect(phrases.underlineUserText(" Вася")).toEqual(" ____");
-            expect(phrases.underlineUserText(" ")).toEqual(" ");
-            expect(phrases.underlineUserText("")).toEqual("");
+            expect(phrases.buildUnderlinedTextByString("Вася")).toEqual("____");
+            expect(phrases.buildUnderlinedTextByString("Ва")).toEqual("__");
+            expect(phrases.buildUnderlinedTextByString("Вася ПМ")).toEqual("____ __");
+            expect(phrases.buildUnderlinedTextByString(" Вася")).toEqual(" ____");
+            expect(phrases.buildUnderlinedTextByString(" ")).toEqual(" ");
+            expect(phrases.buildUnderlinedTextByString("")).toEqual("");
         });
         it('Не должны подчеркиваться знаки пунктуации', function () {
-            expect(phrases.underlineUserText("Вася, Коля")).toEqual("____, ____");
-            expect(phrases.underlineUserText("Вася,.Коля")).toEqual("____,.____");
-            expect(phrases.underlineUserText(".")).toEqual(".");
-            expect(phrases.underlineUserText("12.")).toEqual("__.");
-            expect(phrases.underlineUserText(".,?!;: q")).toEqual(".,?!;: _");
+            expect(phrases.buildUnderlinedTextByString("Вася, Коля")).toEqual("____, ____");
+            expect(phrases.buildUnderlinedTextByString("Вася,.Коля")).toEqual("____,.____");
+            expect(phrases.buildUnderlinedTextByString(".")).toEqual(".");
+            expect(phrases.buildUnderlinedTextByString("12.")).toEqual("__.");
+            expect(phrases.buildUnderlinedTextByString(".,?!;: q")).toEqual(".,?!;: _");
 
 
         });
@@ -88,7 +88,7 @@ describe('phrases service test', function () {
             expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "Myke")).toEqual("Myke");//one word
 
         });
-        it('Когда один раз нажимем Enter - убираем пользовательский текст до первого правильного слова и подчеркиваем текущее слово', function () {
+        xit('Когда один раз нажимем Enter - убираем пользовательский текст до первого правильного слова и подчеркиваем текущее слово', function () {
         });
 
     });
@@ -100,23 +100,135 @@ describe('myApp controller', function () {
     beforeEach(inject(function ($rootScope, $controller) {
         $scope = $rootScope.$new();
         $controller('mainCtrl', {$scope: $scope});
+        $scope.categories =  [{
+            "name": "Тестовые фразы",
+            "id": "phrases_1"
+        },
+        {
+            "name": "Тестовые фразы 2",
+            "id": "phrases_2"
+        }];
+        $scope.phrasesList = [
+            {
+                "text": {
+                    "ru": "Меня зовут Андрей",
+                    "en": "My name is Andrey"
+                }
+            },
+            {
+                "text": {
+                    "ru": "Фраза номер два",
+                    "en": "Phrase number two"
+                }
+            },
+            {
+                "text": {
+                    "ru": "Фраза номер три",
+                    "en": "Phrase number three"
+                }
+            }
+        ];
+        $scope.currentPhrase = _.first($scope.phrasesList);
+        $scope.currentCategory = _.first($scope.categories);
+        $scope.userText = "";
+        $scope.underlinesText = "";
+        $scope.grayText = "";
+
     }));
     it('mainCtrl should be defined', function () {
         expect($scope.isDefined).toBeTruthy();
     });
     
     it('should be trothy when user phrases equal', function(){
-
-        $scope.currentPhrase.text.en = "qwe";
-        $scope.userText = "qwertu";
         expect($scope.isPhrasesEqual()).not.toBeTruthy();
 
-        console.log("curPrase", $scope.currentPhrase);
         $scope.currentPhrase.text.en = "qwe";
         $scope.userText = "qwe";
         expect($scope.isPhrasesEqual()).toBeTruthy();
 
+        $scope.currentPhrase.text.en = "qwe";
+        $scope.userText = "qwertu";
+        expect($scope.isPhrasesEqual()).not.toBeTruthy();
+    });
+
+    it("По нажатию на Enter, если пользовательская фраза введена правильно, переключается на следующую фразу", function () {
+
+        $scope.userText = $scope.currentPhrase.text.en;
+        $scope.onUserTextEnter();
+        expect($scope.userText).toEqual(""); //польз. текст очищен
+        expect($scope.currentPhrase.text.ru).toEqual("Фраза номер два"); //польз. текст очищен
+
+        $scope.userText = $scope.currentPhrase.text.en;
+        $scope.onUserTextEnter();
+        expect($scope.userText).toEqual(""); //польз. текст очищен
+        expect($scope.currentPhrase.text.ru).toEqual("Фраза номер три");
+    });
+    it("Когда списк фраз походит к концу - переключаемся на следующую категорию", function () {
+
+        $scope.userText = $scope.currentPhrase.text.en;
+        $scope.onUserTextEnter();
+
+        $scope.userText = $scope.currentPhrase.text.en;
+        $scope.onUserTextEnter();
+
+        $scope.userText = $scope.currentPhrase.text.en;
+        $scope.onUserTextEnter();
+
+
+       expect($scope.currentCategory.name).toEqual("Тестовые фразы 2"); //польз. текст очищен
+       //expect($scope.userText).toEqual(""); //польз. текст очищен
+        //expect($scope.currentPhrase.text.ru).toEqual("Фраза номер три");
+    });
+    describe("При первом нажатии на Энтер выводим все почеркивания", function () {
+        it("Пользовательский текст пустой; срузу жмем Энтер", function () {
+            $scope.onUserTextEnter();
+            expect($scope.underlinesText).toEqual("__ ____ __ ______"); //My name is Andrey
+        });
+        it("В тексте есть знаки припинания", function () {
+            $scope.currentPhrase.text.en = " ;,. test ";
+            $scope.onUserTextEnter();
+            expect($scope.underlinesText).toEqual(" ;,. ____ "); //" ;,. test "
+        });
+        it("Пользовательский тект уже на половину введен", function () {
+            $scope.userText = "My name";
+            $scope.onUserTextEnter();
+            expect($scope.underlinesText).toEqual("__ ____ __ ______"); //My name is Andrey
+        });
+        it("После того как фраза введена полностью - очищаем подчеркивания", function () {
+            $scope.userText = $scope.currentPhrase.text.en;
+            $scope.onUserTextEnter();
+            expect($scope.underlinesText).toEqual(""); //My name is Andrey
+        });
+
 
     });
-    
+
+    describe("При втором нажатии на энтер подсказываем слово серым текстом", function () {
+        xit("Пользовательский текст пустой; срузу жмем Энтер два раза", function () {
+            $scope.onUserTextEnter();
+            $scope.onUserTextEnter();
+            expect($scope.grayText).toEqual("My"); //My name is Andrey
+        });
+
+        xit("Пользовательский тект уже на половину введен", function () {
+            $scope.userText = "My name";
+            $scope.onUserTextEnter();
+            $scope.onUserTextEnter();
+            expect($scope.grayText).toEqual("        is"); //My name is Andrey
+        });
+
+        xit("Пользовательский тект содержит ошибку", function () {
+            $scope.userText = "My test";
+            $scope.onUserTextEnter();
+            $scope.onUserTextEnter();
+            expect($scope.grayText).toEqual("   name"); //My name is Andrey
+            expect($scope.userText).toEqual("My ");
+            expect($scope.redText).toEqual("   "); //My name is Andrey
+        });
+    });
+    it("При третьем нажатии на энтер показываем серыми буквами фразу целиком", function () {
+
+    });
+
+
 });
