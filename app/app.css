@@ -15,6 +15,9 @@
     Z-INDEX: 2; 
     filter: alpha(opacity: 0.5);    
 }
+.Hint {
+    position: absolute;
+}
 .CommonFormat {
     border-radius: 4px;    
     left: 70px;    
@@ -120,7 +123,7 @@ textarea:focus{
     POSITION: absolute;
     FONT-FAMILY: Verdana, Times;
     FONT-SIZE: 12px;
-    top=150px; 
+    top=150px;
     position:absolute;
     padding-left:40px;
     padding-top:3px;
