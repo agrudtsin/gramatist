@@ -4,12 +4,21 @@ module.exports = function(config){
     basePath : './',
 
     files : [
-        'app/bower_components/underscore/underscore.js',
+
         'app/bower_components/angular/angular.js',
         'app/bower_components/angular-mocks/angular-mocks.js',
         'app/bower_components/angular-resource/angular-resource.js',
+
+        'app/bower_components/firebase/firebase.js',
+        'app/bower_components/mockfirebase/browser/mockfirebase.js',
+        'app/bower_components/angularfire/dist/angularfire.js',
+
+        'app/bower_components/underscore/underscore.js',
+
         'app/app.js',
-        'app/app_test.js'
+        'app/app_test.js',
+        'app/authentication/auth.js',
+        'app/authentication/auth_test.js'
     ],
 
     autoWatch : true,

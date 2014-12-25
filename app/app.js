@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp', ['ngResource']).
+angular.module('myApp', ['ngResource', 'myApp.auth']).
     factory('dataProvider', ['$http',
         function ($http) {
             return {

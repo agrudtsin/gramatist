@@ -9,7 +9,7 @@
     <!-- Background  -->
     <img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/ProperAnswerBlue.png">
 
-    <div class="Header">
+    <div class="Header1">
         <select ng-model='currentCategory'
                 ng-change="categoryOnChange(currentCategory)"
                 ng-options="category.name for category in categories"></select>
@@ -40,10 +40,32 @@
         <div id=picture><img class="BigPicture" src="resources/img/ExampleOfPhrasePhoto.jpg" oncontextmenu ="return false;" ></div>
     </div> <!-- Middle column -->
     <div class="Footer">   Here is the footer <a ref="mailto:gramatist@gmail.com" style="float:right;">Send feedback</a></div>
+    <div id="userData"
+         ng-controller="AuthCtrl"
+         style="position: absolute; top: 0; right: 0">
+        <div class="LoginForm"
+             ng-show="!isAuthentificated()">
+            <input id="userEmail" ng-model="userEmail" type="text"/>
+            <input id="userPassword" ng-model="userPassword" type="text"/>
+            <button>Sign up</button>
+            <button ng-click="authWithPassword(userEmail,userPassword)" >Login</button>
+        </div>
+        <div id="userInformation"
+             ng-show="isAuthentificated()">
+            {{authData.password.email}} <button ng-click="signOut()" >Sign out</button>
+        </div>
+        <div id="errorMessage"
+             ng-show="errorMessage !== ''">
+            <div class="errorMessage" style="background-color: red; color: white">{{errorMessage}}</div>
+        </div>
+
+    </div>
     <!-- Angular scripts-->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
     <script src ="app.js"></script>
-</body>
+    <script src ="authentication/auth.js"></script></body>
 </html>
