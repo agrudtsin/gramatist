@@ -1,4 +1,5 @@
 'use strict';
+var beginTime;
 
 angular.module('myApp', []).
     factory('phrases', function () {
@@ -94,3 +95,4 @@ angular.module('myApp', []).
             document.getElementById("userText").focus();
         }
     }]);
+    

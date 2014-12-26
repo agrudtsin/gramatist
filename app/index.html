@@ -4,6 +4,8 @@
     <meta content="text/html; charset=utf-8;" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="app.css">
     <title>Граматист - практическое изучение английского языка</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body ng-controller="mainCtrl" onload="FocusOnInput()">
     <!-- Background  -->
@@ -22,24 +24,39 @@
         <!-- GrayedText -->
         <textarea style="Z-INDEX: 1; COLOR: #00f" class="AllTextAreas CommonFormat">{{blueText}}</textarea>
 
-        <textarea id="userText" class="AllTextAreas CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">Mi name iz Nikolay</textarea>
+        <textarea autofocus id="userText" class="AllTextAreas CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">Mi name iz Nikolay</textarea>
 
         <!-- RED! text -->
         <textarea style="Z-INDEX: 5; COLOR: #F00; CURSOR: none; pointer-events: none" id="RedText" class="AllTextAreas CommonFormat">{{RedText}} i       z</textarea>
         
         <div id=Statistics class="StatisticsBlock">
             <div class="StatisticsCaption">Phrases repeared: </div><div id=PhrasesRepeated class="StatisticsValue">23</div>
-            <div class="StatisticsCaption">Learned: </div><div id=PhrasesLearned class="StatisticsValue">1/345</div>
+            <div class="StatisticsCaption">Time for knowledges: </div><div id=PhrasesRepeated class="StatisticsValue">38:22</div>
             <div class="StatisticsCaption">Number of mistakes: </div><div id=MistakeCount class="StatisticsValue" style="color:red;">15</div>
         </div>
+        <div id=Statistics class="StatisticsBlock" style="top:240px;">
+            <div class="StatisticsCaption">Category: </div><div id=PhrasesRepeated class="StatisticsValue">Proverbs</div>
+            <div class="StatisticsCaption">Learned: </div><div id=PhrasesLearned class="StatisticsValue">1/345</div>
+        </div>
         <div id=picture><img class="BigPicture" src="resources/img/ExampleOfPhrasePhoto.jpg" oncontextmenu ="return false;" ></img></div>
-        
+        <div id=FeedbackDIVBlock class="FeedbackDiv" style="display: block;">
+            <div style = "margin-bottom:10px;">Description:</div>
+            <input type="textarea" name="FeedbackText" style = "margin-bottom:10px;width:100%; height:55%;" wrap="hard" col="10" rows="10"/></input>
+            <div style="display: inline;">
+                <a class="btn btn-primary" href="#" role="button">Submit</a>
+                <div style="right:0px; display: inline;"><a class="btn btn-default" href="#" role="button" style="float:right;" >Cancel</a></div>
+            </div>
+        </div>
         
     </div> <!-- Middle column -->
-    <div class="Footer">   Here is the footer <a ref="mailto:gramatist@gmail.com" style="float:right;">Send feedback</a></div>
+    <div class="Footer">
+        <a ref="">
+        <a ref="#" style="float:center;" onclick="getElementById("FeedbackDIVBlock").style.display=none;">Send feedback</a>
+    </div>
     <!-- Angular scripts-->
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
