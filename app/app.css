@@ -1,30 +1,49 @@
 .DivNativeText {
     FONT-FAMILY: Georgia, Verdana, Times;
-    MARGIN-BOTTOM: 30px;
+    MARGIN-top: 100px;
+    
+    margin-left:52px; 
     COLOR: #00a;
     FONT-SIZE: 22px;
     BORDER: #88F solid 1px;    
-    background: rgba(235,235,235,1); ;
-    top: 70px;
+    /*background: rgba(235,235,235,1);*/
     cursor:default;
     height: 48px;
     user-select:none;
 }
 
 #usertext {
-    Z-INDEX: 2; 
+    Z-INDEX: 2;
     filter: alpha(opacity: 0.5);    
+}
+.Hint {
+    position:absolute;
+    FONT-FAMILY: Verdana, Times;
+    FONT-SIZE: 16px;
+    Z-INDEX: 1000;
+    border-radius: 4px;    
+    BORDER: #BBB solid 1px;
+    PADDING: 3px;
+    left:400px;
+    top:156px;
+    background:#FF8;
+    box-shadow: 0px 0px 3px 3px #DDD;
+    CURSOR: pointer; 
+}
+.positionabsolute {
+    position:absolute;
 }
 .CommonFormat {
     border-radius: 4px;    
-    left: 70px;    
-    WIDTH: 85%;
     PADDING: 8px;
     PADDING-left: 12px;    
-    POSITION: absolute;
     overflow:hidden;
     resize: none; 
     BORDER: #BBB solid 1px;
+    left:52px;
+    width:95%;
+}
+.CommonDIVFormat {
 }
 .AllTextAreas {    
     height: 51px;
@@ -32,25 +51,21 @@
     FONT-SIZE: 24px;
     BACKGROUND: none transparent scroll repeat 0% 0%;
     FONT-SIZE: 24px;    
-    top: 128px;
     BACKGROUND: none transparent scroll repeat 0% 0%;
 }
 
 .textarea {
     opacity: 0;
-    top: 128px;
-    POSITION: absolute;
+
 }
 .propersign {
-    Z-INDEX: 100;
-    POSITION: absolute;
-    top: 128px;
-    LEFT: 10px;
+    position:absolute;
+    margin-top:10px;
+    left: 10px;
 }
 
 .backgroundInput {
     background: #FFF;   
-    top: 128px;
     box-shadow: 2px 2px 3px 0px #DDD inset;
 }
 .InputProperShadow {
@@ -58,15 +73,14 @@
 }
 
 body {
-    
-}
-.bodyOld {
-    background-image: url("resources/img/fon14.png");   
+    background-color:#AAB;
+    /*background-image: url("resources/img/fon14.png");   */
+    /*width: 85%;*/
+    /*left: 5%;*/
 }
 
 .MiddleColumn {
-    width: 85%;
-    left: 5%;
+    left:52px;
 }
 
 .Header {
@@ -76,7 +90,7 @@ body {
  top:0px;  
  left: 0px;
  width:100%;
- height: 25px;
+ height: 42px;
  background: rgba(255,255,255,0.4);
  z-index:1000;
  border-bottom: solid 1px #BBB;
@@ -102,7 +116,7 @@ textarea:focus{
     FONT-FAMILY: Verdana, Times;
     FONT-SIZE: 12px;
     BORDER: #BBB solid 1px;
-    background: #EEE;
+    /*background: #EEE;*/
     width:40px;
     border-radius: 3px;    
     display: inline;
@@ -114,15 +128,12 @@ textarea:focus{
     padding-right:10px;
 }
 .StatisticsBlock {
-    top:210px;
-    POSITION: absolute;
     FONT-FAMILY: Verdana, Times;
     FONT-SIZE: 12px;
-    top=150px; 
-    position:absolute;
     padding-left:40px;
     padding-top:3px;
     padding-bottom:3px;
+    margin-bottom:8px;
     FONT-FAMILY: Verdana, Times;
     FONT-SIZE: 12px;
 }
@@ -136,11 +147,9 @@ textarea:focus{
     
 }
 .BigPicture {
-    top:280px;
-    POSITION: absolute;
     width:auto;
     height:300px;
-    left:100px;
+    margin-left:100px;
     border-radius: 6px;  
     BORDER: #BBB solid 1px;
 }

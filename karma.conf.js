@@ -4,10 +4,12 @@ module.exports = function(config){
     basePath : './',
 
     files : [
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/app.js',
-      'app/app_test.js'
+        'app/bower_components/underscore/underscore.js',
+        'app/bower_components/angular/angular.js',
+        'app/bower_components/angular-mocks/angular-mocks.js',
+        'app/bower_components/angular-resource/angular-resource.js',
+        'app/app.js',
+        'app/app_test.js'
     ],
 
     autoWatch : true,
@@ -16,7 +18,7 @@ module.exports = function(config){
 
     browsers : ['PhantomJS'],
 
-    hostname : process.env.IP,
+    // hostname : process.env.IP,
     port : 8082,
     runnerPort : 0,
 

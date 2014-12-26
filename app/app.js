@@ -1,54 +1,105 @@
 'use strict';
 var beginTime;
 
-angular.module('myApp', []).
-    factory('phrases', function () {
-        return {
-            commands : [],
-            pushCommand : function(command){
-                return this.commands.push(command);
-            },
-            flushCommands : function(){
-                 this.commands = []
-                 return this.commands;
-            },
-            currentPhrase : {
+angular.module('myApp', ['ngResource']).
+    factory('dataProvider', ['$http',
+        function ($http) {
+            return {
+                getCategories: function () {
+                    return $http.get('phrases/phrases.json');
+                },
+                getPhrasesByID: function (id) {
+                    return $http.get('phrases/' + id + '.json');
+                },
+                getPhrasesArrayById: function (id) {
+                    $http.get('phrases/' + id + '.json').
+                        success(function (data) {
+                            return data;
+                        }).
+                        error(function () {
+                            return [];
+                        }
+                    );
+                }
+            }
+        }]).
+    factory('phrases', ['$http', 'dataProvider', function ($http, dataProvider) {
+        var phrasesObj = {
+            currentPhrase: {
                 text: {
-                    ru: "Меня зовут Коля",
-                    en: "My name is Nikolay"
+                    ru: "Стандартная фраза",
+                    en: "Default phrase"
                 }
             },
-            
-            makeUnderlinedText : function(userText){
-                return underlineUserText(userText);
-                
-                function underlineUserText(userText){
-                    var underlinedText = ""
-                    for (var curChar = 0; curChar < userText.length; curChar +=1 ) {
-                        if(userText[curChar] == " "){
-                            underlinedText += " " ;
-                        } else {
-                            underlinedText += underlineOrPunctuationМark(userText[curChar]) ;
-                        }
-                    };  
-                    return underlinedText;
-                };   
-                
-                function underlineOrPunctuationМark(character){
-                    var punctuationMarks = [',','.',';',':','?','!'];
-                    if(punctuationMarks.indexOf(character) !== -1){
-                        return character
+            buildUnderlinedTextByString: function (userText) {
+                var underlinedText = "";
+                for (var curChar = 0; curChar < userText.length; curChar += 1) {
+                    if (userText[curChar] == " ") {
+                        underlinedText += " ";
                     } else {
-                        return "_";    
+                        underlinedText += this.underlineOrPunctuationМark(userText[curChar]);
                     }
-                };
+                }
+                return underlinedText;
             },
-            
-            getCurrent : function(){
+            underlineOrPunctuationМark: function (character) {
+                var punctuationMarks = [',', '.', ';', ':', '?', '!'];
+                if (_.contains(punctuationMarks, character)) {
+                    return character
+                } else {
+                    return "_";
+                }
+            },
+            buildRedText: function (targetPhrase, userText) {
+                var redText = "";
+                for (var i = 0; i < userText.length; i += 1) {
+                    if (targetPhrase[i] !== userText[i]) {
+                        redText += userText[i];
+                    } else {
+                        redText += " ";
+                    }
+                }
+                return redText;
+
+            },
+            isContainErrors : function(redText){
+                return ' ' != _.uniq(redText).toString() && '' != _.uniq(redText).toString()
+            },
+            cropUserTextIfContainErrors: function (targetPhrase, userText) {
+                var croppedUserText = userText.slice();
+                var isContainErrors = this.isContainErrors(this.buildRedText(targetPhrase, userText));
+                var isContainErrorsInPreviousWord = this.isContainErrors(this.buildRedText(targetPhrase, cropLastWord(userText)));
+                if (isContainErrors && isContainErrorsInPreviousWord) {
+                    croppedUserText = cropLastWord(croppedUserText);
+                }
+                return croppedUserText;
+
+                function cropLastWord(str) {
+                    var lastIndex = str.lastIndexOf(' '); //pre last index of space
+                    if (lastIndex > 0) {
+                        return str.substring(0, lastIndex) + ' ';
+                    } else {
+                        return str;
+                    }
+                }
+
+                function isWordEnded(croppedUserText) {
+                    return _.last(croppedUserText) === ' ';
+                }
+            },
+            getCurrent: function () {
                 return this.currentPhrase;
-            }
-        }
-    }).
+            },
+            categories: [],
+            phrasesList: []
+        };
+
+        dataProvider.getCategories().success(function (data) {
+            phrasesObj.categories = data;
+        });
+
+        return phrasesObj;
+    }]).
     directive('ngEnter', function () {  //http://stackoverflow.com/questions/17470790/how-to-use-a-keypress-event-in-angularjs
         return function (scope, element, attrs) {
             element.bind("keydown keypress", function (event) {
@@ -56,43 +107,132 @@ angular.module('myApp', []).
                     scope.$apply(function () {
                         scope.$eval(attrs.ngEnter);
                     });
-
                     event.preventDefault();
                 }
             });
         };
     }).
-    controller('mainCtrl', ['$scope', 'phrases', function($scope, phrases) {
+    controller('mainCtrl', ['$scope', '$http', 'phrases', 'dataProvider', function ($scope, $http, phrases, dataProvider) {
         $scope.isDefined = true;
-        $scope.nativeLanguagePhrase = phrases.getCurrent().text.ru;
-        $scope.userText = "";
         $scope.anotherRedText = "";
-        $scope.blueText = "";
+       
         $scope.redText = "";
-        $scope.underlinesText = "";// phrases.makeUnderlinedText($scope.userText);
+        $scope.userText = "";
+        $scope.redText = "";
         $scope.grayText = "";
-        
-        $scope.nativeLanguagePhrase = "Меня зовут Коля";
-
-        $scope.onUserTextChange = function (){
-            //underline every character
-            $scope.underlinesText = phrases.makeUnderlinedText($scope.userText);
-            //for(var currentChar in $scope.userText){
-            //    if($scope.userText[currentChar] === " "){
-            //        $scope.underlinesText += " ";
-            //    } else {
-            //        $scope.underlinesText += "_";
-            //    }
-            //}
-            $scope.redText = $scope.userText;
-
+        $scope.underlinesText = "";
+        $scope.currentPhrase = {
+            text: {
+                ru: "",
+                en: ""
+            }
         };
+        $scope.categories = [];
+        $scope.phrasesList = [];
 
+        dataProvider.getCategories().
+            success(function (data) {
+                $scope.categories = data;
+                $scope.currentCategory = _.first(data);
+            }).
+            then(function () {
+                $scope.categoryOnChange($scope.currentCategory);
+
+            });
+        $scope.onUserTextChange = function () {
+            $scope.userText = phrases.cropUserTextIfContainErrors($scope.currentPhrase.text.en, $scope.userText);
+            $scope.buildRedText();
+            $scope.grayText = "";
+        };
         $scope.onUserTextEnter = function () {
-            console.log($scope.userText);
+
+            if(useEnterInTheEndOfPhrase()) return;
+            if(useEntersToUnderlineText()) return;
+            useTwoEntersToShowGrayedText();
+
+            function useTwoEntersToShowGrayedText(){
+                $scope.grayText = $scope.currentPhrase.text.en;
+                if($scope.isContainErrors()) deleteWrongWord();
+
+                function deleteWrongWord(){
+                    $scope.userText = trimmSpacesAtTheEnd($scope.userText);
+                    var lastIndex = $scope.userText.lastIndexOf(' ');
+                    if (lastIndex > 0) {
+                        $scope.userText = $scope.userText.substring(0, lastIndex) + ' ';
+                        $scope.userText = trimmSpacesAtTheEnd($scope.userText);
+                    } else {
+                        $scope.userText = "";
+                    }
+                    
+                    $scope.buildRedText();
+                };
+            };
+            function trimmSpacesAtTheEnd(text){
+                return text.toString();
+                var newText = text.toString();
+                while(true){
+                    if(_.last(text) == ' '){
+                      newText = _.initial(text);  
+                    } else {
+                        break;
+                    }
+                }
+                return newText;
+            }
+            function useEntersToUnderlineText(){
+                if(isAllPhraseAlreadyUnderlined()) return false; //phrase already underined
+                $scope.underlinesText = phrases.buildUnderlinedTextByString($scope.currentPhrase.text.en);
+                return true;
+            };
+            function isAllPhraseAlreadyUnderlined() {
+                return $scope.currentPhrase.text.en.length == $scope.underlinesText.length
+            };
+            function useEnterInTheEndOfPhrase(){
+                if($scope.isPhrasesEqual()){
+                    $scope.userText = "";
+                    $scope.redText = "";
+                    $scope.underlinesText = "";
+                    $scope.grayText = "";
+                    if ( $scope.currentPhrase != _.last($scope.phrasesList)){
+                        setNextPhrase();
+                        return true;
+                    } else {
+                        setNextCategory();
+                        return true;
+                    }
+                }
+                return false;
+
+                function setNextPhrase(){
+                    $scope.currentPhrase = $scope.phrasesList[_.indexOf($scope.phrasesList, $scope.currentPhrase) + 1];
+                };
+                function setNextCategory(){
+                    if( $scope.categories != _.last($scope.currentCategory)){
+                        $scope.categoryOnChange($scope.categories[_.indexOf($scope.categories,$scope.currentCategory) + 1]);
+                    } else {
+                        $scope.categoryOnChange(_.first($scope.categories));
+                    };
+
+                }
+            }
         };
-        $scope.FocusOnInput = function() {
-            document.getElementById("userText").focus();
+        $scope.categoryOnChange = function (newCategory) {
+            $scope.currentCategory = newCategory;
+            dataProvider.getPhrasesByID($scope.currentCategory.id).
+                success(function (data) {
+                    $scope.phrasesList = data;
+                    $scope.currentPhrase = _.first(data);
+                })
+
+        };
+        $scope.isPhrasesEqual = function () {
+            return $scope.currentPhrase.text.en == $scope.userText;
+        };
+        $scope.isContainErrors = function(){
+           return phrases.isContainErrors($scope.redText);
+        };
+        $scope.buildRedText = function(){
+            $scope.redText = phrases.buildRedText($scope.currentPhrase.text.en, $scope.userText);
         }
     }]);
     
