@@ -4,10 +4,12 @@
     <meta content="text/html; charset=utf-8;" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="app.css">
     <title>Граматист - практическое изучение английского языка</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body ng-controller="mainCtrl" onload="FocusOnInput()">
     <!-- Background  -->
-    <img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/ProperAnswerBlue.png">
+    
 
     <div class="Header">
         <select ng-model='currentCategory'
@@ -17,33 +19,60 @@
                 ng-change="phrasesListOnChange(currentPhrase)"
                 ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
     </div>
+    <div class="Hint" ng-show="isContainErrors()">Нажми Enter для подсказки</div>
     <div id="MiddleColumn" class="MiddleColumn">
-        <textarea id="NativeLanguagePhrase" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' >{{currentPhrase.text.ru}}</textarea>
+        <div id="NativeTextDIV">
+            <textarea id="NativeLanguagePhrase" rows="2" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' >{{currentPhrase.text.ru}}</textarea>
+            <div style="color:#999; margin-top:5px; margin-bottom:5px; margin-left:52px;">
+                Подсказка: Используйте формальный стиль ('will not' вместо 'wont')
+            </div>
+        </div>
+        
         <!-- Spaces and markup -->
-        <textarea id="UnderlinesForPhrase" class="AllTextAreas CommonFormat backgroundInput" style="Z-INDEX: -4; COLOR: #999" >{{underlinesText}}</textarea>
-       <!-- underline -->
-        <textarea id="GrayedText" class="AllTextAreas CommonFormat" style="Z-INDEX: -3; COLOR: #bbb; CURSOR: none; pointer-events: none" >{{grayText}}</textarea>
-        <!-- GrayedText -->
-        <textarea style="Z-INDEX: 1; COLOR: #00f" class="AllTextAreas CommonFormat">{{blueText}}</textarea>
-        <textarea id="userText" class="AllTextAreas CommonFormat" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">Mi name iz Nikolay</textarea>
-        <!-- RED! text -->
-        <textarea style="Z-INDEX: 5; COLOR: #F00; CURSOR: none; pointer-events: none" id="RedText" class="AllTextAreas CommonFormat">{{redText}}</textarea>
-        <div class="Hint" ng-show="isContainErrors()">
-            <h2> Нажми Enter для подсказки</h2>
+        <div id="LaeyredTextAreas">
+                <!-- underline -->
+            <textarea id="UnderlinesForPhrase" class="AllTextAreas CommonFormat backgroundInput" style="Z-INDEX: -4; COLOR: #999;margin-left:52px; margin-bottom:15px;" spellcheck="false">{{underlinesText}}</textarea>
+                <!-- GrayedText -->
+            <textarea id="GrayedText" class="AllTextAreas CommonFormat positionabsolute" style="Z-INDEX: -3; COLOR: #bbb;" spellcheck="false">{{grayText}}</textarea>
+                <!-- User Input -->
+            <textarea autofocus id="userText" class="AllTextAreas CommonFormat positionabsolute" ng-model="userText" ng-change="onUserTextChange()" ng-enter="onUserTextEnter()" spellcheck="false">Mi name iz Nikolay</textarea>
+                <!-- Red error text -->
+            <textarea readonly style="Z-INDEX: 5; COLOR: #F00; CURSOR: none; pointer-events: none" id="RedText" class="AllTextAreas CommonFormat positionabsolute" >{{redText}}</textarea>
+            <img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/Welldone32.png">
+        </div>
+        
+        <div id=Statistics class="StatisticsBlock">
+            <div class="StatisticsCaption">Phrases repeated: </div><div id=PhrasesRepeated class="StatisticsValue">23</div>
+            <div class="StatisticsCaption" style="display:none">Time for knowledges: <div id=PhrasesRepeated class="StatisticsValue">38:22</div></div>
+            <div class="StatisticsCaption">Number of typos: <div id=MistakeCount class="StatisticsValue" style="color:red;">15</div></div>
         </div>
         <div id=Statistics class="StatisticsBlock">
-            <div class="StatisticsCaption">Phrases repeared: </div><div id=PhrasesRepeated class="StatisticsValue">23</div>
-            <div class="StatisticsCaption">Learned: </div><div id=PhrasesLearned class="StatisticsValue">1/345</div>
-            <div class="StatisticsCaption">Number of mistakes: </div><div id=MistakeCount class="StatisticsValue" style="color:red;">15</div>
+            <div class="StatisticsCaption" style="display:none">Category: <div id=PhrasesRepeated class="StatisticsValue">Proverbs</div></div>
+            <div class="StatisticsCaption" style="display:none">Learned: <div id=PhrasesLearned class="StatisticsValue">1/345</div></div>
         </div>
-
-        <div id=picture><img class="BigPicture" src="resources/img/ExampleOfPhrasePhoto.jpg" oncontextmenu ="return false;" ></div>
+        <!--<div id=picture><img class="BigPicture" src="resources/img/ExampleOfPhrasePhoto.jpg" oncontextmenu ="return false;" ></img></div> -->
+        <div id=FeedbackDIVBlock class="FeedbackDiv" style="display: none;">
+            <div style = "margin-bottom:10px;">Description:</div>
+            <input type="textarea" name="FeedbackText" style = "margin-bottom:10px;width:100%; height:55%;" wrap="hard" col="10" rows="10"/></input>
+            <div style="display: inline;">
+                <a class="btn btn-primary" href="#" role="button">Submit</a>
+                <div style="right:0px; display: inline;"><a class="btn btn-default" href="#" role="button" style="float:right;" >Cancel</a></div>
+            </div>
+        </div>
     </div> <!-- Middle column -->
-    <div class="Footer">   Here is the footer <a ref="mailto:gramatist@gmail.com" style="float:right;">Send feedback</a></div>
+    <!--<div id="test" style="top:500px; right:20px; background:#AAA">        dghjgh    </div> -->
+    <div class="Footer" style="display:none">
+        <a ref="">
+        <a ref="#" style="float:center;" onclick="getElementById("FeedbackDIVBlock").style.display=none;">Send feedback</a>
+    </div>
     <!-- Angular scripts-->
+ 
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
-    <script src ="app.js"></script>
+    <script src="bower_components/underscore.string/lib/underscore.string.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src='bower_components/angular-resource/angular-resource.js'></script>
+    
 </body>
 </html>
