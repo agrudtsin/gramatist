@@ -1,0 +1,581 @@
+Перем NonBreakingSpace, errorSymbol, СтрокаХТМЛ;
+Перем ListOfDelimeters, lastCheckedPhrase, textAfterEnter;
+Перем words, previousUserText;
+Перем errorLettersList;
+
+Процедура КнопкаВыполнитьНажатие(Кнопка)
+	// Вставить содержимое обработчика.
+КонецПроцедуры
+
+Процедура ПриОткрытии()
+	errorSymbol = "█";
+	NonBreakingSpace = " ";
+	fillListOfDelimeters();
+	getNewPhrase();
+	setInitialMockup();
+	WSHShell = Новый COMОбъект("WScript.Shell");
+  	WSHShell.SendKeys("{TAB}");
+	StartTime = ТекущаяДата();
+	//ЭлементыФормы.MainCanvas.Документ.getElementById("usertext").focus();
+КонецПроцедуры
+
+// (11.12.2014 0:29:00)  Дяченко Александр=============================
+Процедура getNewPhrase() //Экспорт
+	Запрос = Новый Запрос;
+	Запрос.УстановитьПараметр("PhraseCatalog", PhraseCatalog);
+	Запрос.УстановитьПараметр("CurrentUser", ПараметрыСеанса.CurrentUser);
+	//Поставь РАЗРЕШЕННЫЕ!
+	Запрос.Текст = "ВЫБРАТЬ
+	               |	Phrases.Ссылка КАК Phrase,
+	               |	ЕСТЬNULL(MinErrors.ErrorsCount, 1000) КАК ErrorsCount
+	               |ПОМЕСТИТЬ Phrases
+	               |ИЗ
+	               |	Справочник.Phrases КАК Phrases
+	               |		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+	               |			LogOfLearning.Phrase КАК Phrase,
+	               |			МИНИМУМ(LogOfLearning.ErrorsCount) КАК ErrorsCount
+	               |		ИЗ
+	               |			РегистрСведений.LogOfLearning КАК LogOfLearning
+	               |		ГДЕ
+	               |			LogOfLearning.User = &CurrentUser
+	               |		
+	               |		СГРУППИРОВАТЬ ПО
+	               |			LogOfLearning.Phrase) КАК MinErrors
+	               |		ПО Phrases.Ссылка = MinErrors.Phrase
+	               |ГДЕ
+	               |	Phrases.ЭтоГруппа = ЛОЖЬ
+	               |	И Phrases.Ссылка В ИЕРАРХИИ(&PhraseCatalog)
+	               |	И Phrases.ПометкаУдаления = ЛОЖЬ
+	               |;
+	               |
+	               |////////////////////////////////////////////////////////////////////////////////
+	               |ВЫБРАТЬ ПЕРВЫЕ 10
+	               |	Phrases.Phrase,
+	               |	Phrases.ErrorsCount КАК ErrorsCount,
+	               |	Learned.LearnedPhrases,
+	               |	phrasesInCatalog.fullAmount
+	               |ИЗ
+	               |	Phrases КАК Phrases,
+	               |	(ВЫБРАТЬ
+	               |		КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Phrases.Phrase) КАК LearnedPhrases
+	               |	ИЗ
+	               |		Phrases КАК Phrases
+	               |	ГДЕ
+	               |		Phrases.ErrorsCount < 2) КАК Learned,
+	               |	(ВЫБРАТЬ
+	               |		КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Phrases.Phrase) КАК fullAmount
+	               |	ИЗ
+	               |		Phrases КАК Phrases) КАК phrasesInCatalog
+	               |ГДЕ
+	               |	Phrases.ErrorsCount > 1
+	               |
+	               |УПОРЯДОЧИТЬ ПО
+	               |	ErrorsCount УБЫВ,
+	               |	Phrases.Phrase.DateAdded УБЫВ";
+	Результат = Запрос.Выполнить();
+	Если Результат.Пустой() Тогда	
+		Предупреждение("All phrases learned",,); //(<Текст предупреждения>, <Таймаут>, <Заголовок>)  ;		
+		Возврат;
+	КонецЕсли;     // НЕТ данных...
+	Выборка = Результат.Выбрать(); //(<Тип обхода>, <Группировки>, <ГруппировкиДляЗначенийГруппировок>)  1-ПоГруппировкам | ПоГруппировкамСИерархией|Прямой   2-... 3 - "все" - Для обхода всех зн-й в запросе
+	ГСЧ =  Новый ГенераторСлучайныхЧисел();
+	Number = Окр(ГСЧ.СлучайноеЧисло(0, Выборка.Количество()),0);
+	Phrase = Справочники.Phrases.ПустаяСсылка();
+	FirstErrorCount = -1;
+	Пока Выборка.Следующий() Цикл
+		If FirstErrorCount = -1 then FirstErrorCount = Выборка.ErrorsCount; EndIF;
+		If FirstErrorCount <> Выборка.ErrorsCount Then break; EndIF;
+		Phrase =  Выборка.Phrase;
+		Если Number = 0 Тогда
+			Прервать;
+		КонецЕсли; 
+		Number = Number - 1;
+	КонецЦикла;
+	LearnedPhrases = Выборка.LearnedPhrases;
+	phrasesInThisCatalog = Выборка.fullAmount;
+	EnglishPhrase = СокрЛП(phrase.EnglishPhrase);
+	EnglishPhrase = стрЗаменить(EnglishPhrase,"’","'");
+	RemoveDotsAtTheEnd();
+	ShowUnderlines = false;
+	UnderlinesForPhrase = "";
+	ErrorsPresent = false;
+	GrayedText = "";
+	PhraseEnteredFullyProper = false;
+	ErrorsCount = 0;
+	ShowGrayedText = false;
+	GrayedText="";
+	textAfterEnter = "";
+	RedText = "";
+	previousUserText = "";
+	errorLettersList = new Соответствие();
+	words = Новый Соответствие();
+	wordsTable.Очистить();
+	Если wordsTable.Колонки.Количество()=0 Тогда
+		wordsTable.Колонки.Добавить("Номер");
+		wordsTable.Колонки.Добавить("Слово");
+		wordsTable.Колонки.Добавить("С");
+		wordsTable.Колонки.Добавить("По");
+		wordsTable.Колонки.Добавить("ДлинаСлова");
+		wordsTable.Колонки.Добавить("Ошибок");		
+		wordsTable.Колонки.Добавить("ОшибкиОдногоПрохода");
+		wordsTable.Колонки.Добавить("Подчеркнуто");
+		wordsTable.Колонки.Добавить("Показано");
+	КонецЕсли; 
+	к=1;
+	ПозС = 0;
+	ПозПо = 0;
+	
+	текСлово = СловоПоНомеру(EnglishPhrase, к,,ПозС, ПозПо);
+	Пока текСлово<>"" Цикл
+		НовСтр = wordsTable.Добавить();
+		НовСтр.Номер = к;
+		НовСтр.Слово = текСлово;
+		НовСтр.С = ПозС;
+		НовСтр.По = ПозПо;
+		НовСтр.Ошибок = 0;
+		НовСтр.ОшибкиОдногоПрохода = 0;
+		НовСтр.ДлинаСлова = ПозПо - ПозС;
+		НовСтр.Подчеркнуто = false;
+		НовСтр.Показано = false;
+		к=к + 1;
+		текСлово = СловоПоНомеру(EnglishPhrase, к,,ПозС, ПозПо);
+	КонецЦикла; 
+	EnglishPhrase_LowCase = Нрег(EnglishPhrase);
+	phrasesLearnedString = ""+learnedPhrases+"/"+phrasesInThisCatalog;
+КонецПроцедуры
+
+Процедура RemoveDotsAtTheEnd()
+	if Прав(EnglishPhrase,1)= "." and Прав(EnglishPhrase,3)<> "..." then
+		EnglishPhrase = Сред(EnglishPhrase, 1, СтрДлина(EnglishPhrase)-1);
+	endif;	
+КонецПроцедуры
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Made by DSV
+Функция СловоПоНомеру(СтрСлов,НомерСлова,РазделительСлов=" ", ПозицияС, ПозицияПо) Экспорт
+Перем Стр;
+	Стр=СокрЛП(СтрСлов);
+	НомПервСимвНужнСлова=1;
+	НачалоСлова = 0;
+	СледСлово=0;
+	Отрезано = 0;
+	Рез =0;
+	Пока (СледСлово<>НомерСлова)и(Стр<>"") Цикл
+		Отрезано = Отрезано + Рез;
+		Рез=Найти(Стр,РазделительСлов);
+		НужноеСлово=Сред(Стр,1,Рез-1);
+		Стр=?(Рез=0,"",Сред(Стр,Рез+1));
+		СледСлово=СледСлово+?(НужноеСлово="",0,1);
+	КонецЦикла;
+	ПозицияС = 1+Отрезано;
+	ПозицияПо = ?(Рез<>0, Отрезано+Рез-1,СтрДлина(СтрСлов));
+	if Прав(НужноеСлово,1)="?" 
+	or Прав(НужноеСлово,1)="," then
+		ПозицияПо = ПозицияПо - 1;
+		НужноеСлово = Сред(НужноеСлово, 1, СтрДлина(НужноеСлово)-1);
+	endif;
+	Возврат ?(СледСлово=НомерСлова,НужноеСлово,"");
+КонецФункции
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Made by DSV      MobileWorld@Email.dp.ua
+
+ 
+
+// (10.12.2014 22:14:01)  Дяченко Александр=============================
+Процедура setInitialMockup() //Экспорт
+	Макет=ЭтотОбъект.ПолучитьМакет("ТекстПользователя");
+	СтрокаХТМЛ=Макет.ПолучитьТекст();	
+	pictureAdress = ЭлементыФормы.MainCanvas.ПолучитьURL(Метаданные.ОбщиеКартинки.Background_1000);
+	СтрокаХТМЛ = СтрЗаменить(СтрокаХТМЛ, "url(t:\background3.jpg)", pictureAdress);
+	pictureAdress = ЭлементыФормы.MainCanvas.ПолучитьURL(Метаданные.ОбщиеКартинки.properPhrase);
+	СтрокаХТМЛ = СтрЗаменить(СтрокаХТМЛ, "url(t:\proper.jpg)", pictureAdress);
+
+	ЭлементыФормы.MainCanvas.УстановитьТекст(СтрокаХТМЛ);
+	//rebuildHTMLText();
+КонецПроцедуры
+
+
+
+Процедура ОбновлениеОтображения()
+	//Сообщить("Обновление");
+	//ЭлементыФормы.MainCanvas.
+	Попытка
+		CurrentUserText = ЭлементыФормы.MainCanvas.Документ.getElementById("usertext").value;		
+	Исключение
+		Возврат;
+	КонецПопытки; 
+	ОбработатьВводТекста();
+		
+		//Сообщить(ЭлементыФормы.MainCanvas.Документ.activeElement.value);
+	КонецПроцедуры
+	
+// (12.12.2014 21:52:07)  Дяченко Александр=============================
+Процедура ОбработатьВводТекста() //Экспорт
+		Если Найти(CurrentUserText, Символы.ПС)<>0 Тогда
+			CurrentUserText = СтрЗаменить(CurrentUserText, Символ(10), "");
+			CurrentUserText = СтрЗаменить(CurrentUserText, Символ(13), "");
+			skipThisPhrase = false;
+			ЭлементыФормы.MainCanvas.Документ.getElementById("usertext").value = CurrentUserText;
+			if PhraseEnteredFullyProper = false then
+				if showUnferlineForCurrentWord() = true then //wasn't and now is
+					makePhraseCheck(true);
+					rebuildHTMLText();
+					return;	
+				ИначеЕсли showCurrentWord() = true then //wasn't and now is
+					makePhraseCheck(true);
+					rebuildHTMLText();
+					return;	
+				ИначеЕсли showUnferlineForWholePhrase() = true then //wasn't and now is
+					makePhraseCheck(true);
+					rebuildHTMLText();
+					return;	
+				ИначеЕсли showWholePhrase() = true then //wasn't and now is
+					makePhraseCheck(true);
+					rebuildHTMLText();
+					return;	
+				ИначеЕсли CurrentUserText = previousUserText then
+					skipThisPhrase = true;
+				endif;
+			endif;
+			//if textAfterEnter = CurrentUserText and ShowUnderlines=true then
+			//	ShowGrayedText = true;
+			//endif;
+			//Если CurrentUserText="" Тогда //only Enter pressed!
+			//	ShowUnderlines = true;
+			//КонецЕсли; 
+			makePhraseCheck(true);
+			rebuildHTMLText();
+			
+			textAfterEnter = CurrentUserText;
+			Если ErrorsPresent = false 
+			  or skipThisPhrase = true    Тогда
+				saveLogOnCurrentPhrase();
+				getNewPhrase();
+				CurrentUserText = "";
+				rebuildHTMLText();
+				ЭлементыФормы.MainCanvas.Документ.getElementById("usertext").value = CurrentUserText;
+			КонецЕсли; 
+		Иначе
+			makePhraseCheck();
+			rebuildHTMLText();
+		КонецЕсли; 
+КонецПроцедуры
+
+// (13.12.2014 4:04:37)  Дяченко Александр====================================
+Функция findCurrentWord() //Экспорт
+	length = СтрДлина(CurrentUserText);
+	length = ?(length = 0, 1, length);
+	Для к=1 По wordsTable.Количество() Цикл
+		if к=1 then 
+			firstSymbol =1;
+		else
+			firstSymbol =wordsTable[к-2].По;
+		endif;				
+		Если length>=firstSymbol 
+		 and length<=wordsTable[к-1].По Тогда
+			//current word is found!
+			return wordsTable[к-1];
+		КонецЕсли; 
+	КонецЦикла;
+	return 0;
+КонецФункции
+ 
+
+// (13.12.2014 3:51:48)  Дяченко Александр====================================
+Функция showUnferlineForCurrentWord() //Экспорт
+	currentWord = findCurrentWord();
+	if currentWord = 0 then return false; endif;
+	if currentWord.Подчеркнуто=false then
+		currentWord.Ошибок = 2;
+		return true;
+	endif;
+	return false;
+КонецФункции
+
+// (13.12.2014 3:51:48)  Дяченко Александр====================================
+Функция showCurrentWord() //Экспорт
+	currentWord = findCurrentWord();
+	if currentWord = 0 then return false; endif;
+	if currentWord.показано=false then
+		currentWord.Ошибок = 4;
+		ErrorsCount = ErrorsCount + currentWord.ДлинаСлова;
+		return true;
+	endif;
+	return false;
+КонецФункции
+
+// (13.12.2014 3:51:48)  Дяченко Александр====================================
+Функция showUnferlineForWholePhrase() //Экспорт
+	underlinesChanged = false;
+	Для к=1 По wordsTable.Количество() Цикл
+		Если wordsTable[к-1].Подчеркнуто = false Тогда
+			wordsTable[к-1].Ошибок = Макс(2, wordsTable[к-1].Ошибок);
+			underlinesChanged = true;
+			
+		КонецЕсли; 
+	КонецЦикла;
+	return underlinesChanged;
+КонецФункции
+
+// (13.12.2014 3:51:48)  Дяченко Александр====================================
+Функция showWholePhrase() //Экспорт
+	visibilityChanged = false;
+	Для к=1 По wordsTable.Количество() Цикл
+		Если wordsTable[к-1].Показано = false Тогда
+			wordsTable[к-1].Ошибок = Макс(4,wordsTable[к-1].ДлинаСлова);
+			ErrorsCount = ErrorsCount + wordsTable[к-1].ДлинаСлова;
+			visibilityChanged = true;
+		КонецЕсли; 
+	КонецЦикла;
+	return visibilityChanged;
+КонецФункции
+
+
+Процедура ОсновныеДействияФормыA1(Кнопка)
+	Обработки.ОбучениеПоФразам.ПолучитьФорму().Открыть();
+КонецПроцедуры
+
+
+// (10.12.2014 23:35:58)  Дяченко Александр=============================
+Процедура makePhraseCheck(checkIfTextIsEmpty= false) //Экспорт
+	Если lastCheckedPhrase = CurrentUserText and checkIfTextIsEmpty = false Тогда
+		Возврат;
+	КонецЕсли; 
+	WrongLettersForPhrase = "";	
+	ErrorsPresent = false;
+	CurrentUserText_LowCase = Нрег(CurrentUserText);
+	localErrorsCount = 0;
+	RedText = "";
+	GrayedText ="";
+	UnderlinesForPhrase = "";
+	Если CurrentUserText = "" and checkIfTextIsEmpty = false Тогда
+	
+		//Возврат;
+	КонецЕсли; 
+	UnderlinesForPhrase = "";
+	Для к=1 По wordsTable.Количество() Цикл
+		wordsTable[к-1].ОшибкиОдногоПрохода = 0;
+	КонецЦикла;
+	 
+	ThreeErrorsInARow = false;
+	If checkIfTextIsEmpty = false then
+		cycleLength = СтрДлина(CurrentUserText);	
+	else	
+		cycleLength = Max(СтрДлина(EnglishPhrase), СтрДлина(CurrentUserText));
+	endif;	
+	Для k=1 По cycleLength Цикл
+		symbolOriginal 		= Mid(EnglishPhrase,   k, 1);
+		symbolFromUserText 	= Mid(CurrentUserText, k, 1);
+		Если k>СтрДлина(EnglishPhrase) Тогда
+			WrongLettersForPhrase = WrongLettersForPhrase + NonBreakingSpace;
+			RedText = RedText + makeRedText(replaceSpace(symbolFromUserText));
+			Продолжить; 
+		КонецЕсли; 
+		Если symbolOriginal = symbolFromUserText Тогда
+			WrongLettersForPhrase = WrongLettersForPhrase + NonBreakingSpace;
+			RedText = RedText +  replaceSpace(symbolFromUserText);
+			localErrorsCount = 0;
+		Иначе
+			if symbolFromUserText = " " then
+				WrongLettersForPhrase = WrongLettersForPhrase + errorSymbol;
+			endif;
+			localErrorsCount = localErrorsCount + 1;
+			RedText = RedText + makeRedText(replaceSpace(symbolFromUserText));
+			ErrorsPresent = true;
+			if стрДлина(previousUserText) <= СтрДлина(CurrentUserText) and symbolFromUserText <>"" then
+				ДобавитьОшибкуВСлове(k);
+				symbolFromLastUserText 	= Mid(previousUserText, k, 1);
+				if symbolFromLastUserText<>symbolFromUserText then  
+					addErrorInLetter(k);
+				endif;
+			endif;
+		КонецЕсли; 
+	КонецЦикла;
+	Для к=1 По Max(СтрДлина(EnglishPhrase), СтрДлина(CurrentUserText)) Цикл
+		GrayedText			= GrayedText + Символы.НПП;		
+		if ShowUnderlines = false then
+			UnderlinesForPhrase = UnderlinesForPhrase + Символы.НПП;
+		else
+			//UnderlinesForPhrase = UnderlinesForPhrase + "_";
+		endif;
+	КонецЦикла;
+	 
+	if СтрДлина(CurrentUserText_LowCase) <> СтрДлина(EnglishPhrase) and checkIfTextIsEmpty = true then
+		ErrorsPresent = true;
+	endif;
+	
+	ErrorsCount = ErrorsCount + ?(ErrorsPresent, 1, 0);
+	if CurrentUserText = EnglishPhrase then
+		PhraseEnteredFullyProper = true;
+	endif; 
+	ПрорисоватьПодсказкуПоСловам();
+	lastCheckedPhrase = CurrentUserText;
+	previousUserText  = CurrentUserText;
+КонецПроцедуры
+
+Procedure addErrorInLetter(index)
+	if errorLettersList[index]=Неопределено then
+		errorLettersList.Вставить(index, 1);
+	else
+		errorLettersList[index] = errorLettersList[index] + 1;
+	endif;
+	
+EndProcedure
+// (12.12.2014 1:25:10)  Дяченко Александр=============================
+Процедура ДобавитьОшибкуВСлове(НомерСимвола) //Экспорт
+	Для к=1 По wordsTable.Количество() Цикл
+		Если НомерСимвола >= wordsTable[к-1].С 
+		   И НомерСимвола <= wordsTable[к-1].По Тогда
+			//найдено!
+			Если wordsTable[к-1].ОшибкиОдногоПрохода = 0 Тогда
+				wordsTable[к-1].ОшибкиОдногоПрохода = 1;
+				wordsTable[к-1].Ошибок = wordsTable[к-1].Ошибок + 1;
+			КонецЕсли; 
+			Прервать;
+		КонецЕсли; 
+	КонецЦикла;
+	 
+КонецПроцедуры
+
+// (12.12.2014 1:31:07)  Дяченко Александр=============================
+Процедура ПрорисоватьПодсказкуПоСловам() //Экспорт
+	Для к=1 По wordsTable.Количество() Цикл
+		Если wordsTable[к-1].Ошибок >=2 
+		  //or (wordsTable[к-1].Ошибок =1 and
+		  //	wordsTable[к-1].ДлинаСлова = 1)
+			  Тогда
+			//show underline!
+			wordsTable[к-1].Подчеркнуто = true;
+			Для номерСимвола=wordsTable[к-1].С По wordsTable[к-1].По Цикл
+				UnderlinesForPhrase = Сред(UnderlinesForPhrase, 1, номерСимвола-1) + "_" + Сред(UnderlinesForPhrase, номерСимвола);
+			КонецЦикла;
+			 
+		КонецЕсли; 
+		Если wordsTable[к-1].Ошибок >=4 Тогда
+			//show gray word!
+			wordsTable[к-1].Показано = true;
+			Для номерСимвола=wordsTable[к-1].С По wordsTable[к-1].По Цикл
+				GrayedText = Сред(GrayedText, 1, номерСимвола-1) + Сред(EnglishPhrase,номерСимвола,1) + Сред(GrayedText, номерСимвола+1);
+			КонецЦикла;
+		КонецЕсли; 		
+	КонецЦикла;
+	Для каждого element из errorLettersList Цикл
+			номерСимвола = element.Ключ;
+			if element.Значение >=2 then
+				GrayedText = Сред(GrayedText, 1, номерСимвола-1) + Сред(EnglishPhrase,номерСимвола,1) + Сред(GrayedText, номерСимвола+1);	
+			endif;		
+	КонецЦикла;
+	
+КонецПроцедуры
+ 
+
+Функция makeRedText(mText)
+	Возврат "<span style="+Символ(34)+"color:red"+Символ(34)+">"+mText+"</span>";
+КонецФункции
+Функция replaceSpace(mText)
+	Возврат СтрЗаменить(mText," ",NonBreakingSpace);	
+КонецФункции
+
+// (11.12.2014 0:27:12)  Дяченко Александр=============================
+Процедура formUnderlinesForPhrase() //Экспорт
+	UnderlinesForPhrase = "";
+	Для k=1 По СтрДлина(EnglishPhrase) Цикл
+		Если ListOfDelimeters[Mid(EnglishPhrase, k, 1)]<>Неопределено Тогда
+			UnderlinesForPhrase = UnderlinesForPhrase + NonBreakingSpace;
+		Иначе
+			UnderlinesForPhrase = UnderlinesForPhrase + "_";
+		КонецЕсли; 
+		
+	КонецЦикла;
+	 
+КонецПроцедуры
+ 
+ 
+
+// (10.12.2014 23:40:09)  Дяченко Александр=============================
+Процедура rebuildHTMLText() //Экспорт
+	//СтрокаХТМЛ = СтрЗаменить(СтрокаХТМЛ, "", );
+	ЭлементыФормы.MainCanvas.Документ.getElementById("WrongLettersForPhrase").innerHTML = WrongLettersForPhrase;
+	ЭлементыФормы.MainCanvas.Документ.getElementById("UnderlinesForPhrase").innerHTML = UnderlinesForPhrase;
+	ЭлементыФормы.MainCanvas.Документ.getElementById("NativeLanguagePhrase").innerHTML = Phrase.NativeLanguagePhrase;
+	ЭлементыФормы.MainCanvas.Документ.getElementById("RedText").innerHTML = RedText;
+	if ShowGrayedText=true then
+		ЭлементыФормы.MainCanvas.Документ.getElementById("GrayedText").innerHTML = EnglishPhrase;
+	else	
+		ЭлементыФормы.MainCanvas.Документ.getElementById("GrayedText").innerHTML = GrayedText;
+	endif;
+	if PhraseEnteredFullyProper = true then
+		ЭлементыФормы.MainCanvas.Документ.getElementById("WrongLettersForPhrase").style.background = "#99ff99";
+		ЭлементыФормы.MainCanvas.Документ.getElementById("propersign").style.zindex = "200";
+	else
+		ЭлементыФормы.MainCanvas.Документ.getElementById("WrongLettersForPhrase").style.background = "#fafafa";
+		ЭлементыФормы.MainCanvas.Документ.getElementById("propersign").style.zindex = "-200";
+	endif;
+		
+КонецПроцедуры
+
+Процедура MainCanvasonkeydown(Элемент, pEvtObj)
+	// nothing
+	пп=1;
+КонецПроцедуры
+ 
+ // (11.12.2014 0:40:06)  Дяченко Александр=============================
+ Процедура fillListOfDelimeters() //Экспорт
+ 	ListOfDelimeters = Новый Соответствие();
+	ListOfDelimeters.Вставить(".","!");
+	ListOfDelimeters.Вставить(",","!");
+	ListOfDelimeters.Вставить(" ","!");
+	//ListOfDelimeters.Вставить("?");
+	//ListOfDelimeters.Вставить("!");
+ КонецПроцедуры
+
+
+ Процедура MainCanvasДокументСформирован(Элемент)
+	rebuildHTMLText(); 
+ КонецПроцедуры
+
+
+ Процедура ПолеВвода1ПриИзменении(Элемент)
+	 // Insert handler code.
+	 getNewPhrase();
+	 rebuildHTMLText(); 
+ КонецПроцедуры
+ 
+ // (11.12.2014 1:37:20)  Дяченко Александр=============================
+ Процедура saveLogOnCurrentPhrase() //Экспорт
+ 	Запись = РегистрыСведений.LogOfLearning.СоздатьМенеджерЗаписи();
+	Запись.Период = ТекущаяДата(); 
+	Запись.DateTime = ТекущаяДата(); 
+	Запись.EnglishPhraseEntered = CurrentUserText;
+	Запись.ErrorsCount = ?(ShowGrayedText = true, 500, ErrorsCount);
+	Запись.User = ПараметрыСеанса.CurrentUser;
+	Запись.Phrase = Phrase;
+	Запись.Записать();
+	PhrasesRepeated = PhrasesRepeated + 1;
+	
+	AveragePhrasesPerHourValue = Окр(3600/((ТекущаяДата() - StartTime)/PhrasesRepeated),0);
+	
+	AveragePhrasesPerHour = " "+AveragePhrasesPerHourValue + "/hour";
+	errorsAmountPerSession = errorsAmountPerSession + ErrorsCount;
+ КонецПроцедуры
+
+ Procedure PhrasesCatalog(Button)
+	 Catalogs.Phrases.GetListForm().Open();
+ EndProcedure
+
+ Процедура PhraseCatalogПриИзменении(Элемент)
+	getNewPhrase();
+	CurrentUserText = "";
+	rebuildHTMLText();
+	ЭлементыФормы.MainCanvas.Документ.getElementById("usertext").value = CurrentUserText;
+	 
+ КонецПроцедуры
+
+ Процедура ПередЗакрытием(Отказ, СтандартнаяОбработка)
+	 Если Вопрос("Do you want to quit?",РежимДиалогаВопрос.ДаНет)=КодВозвратаДиалога.Нет then
+		Отказ = true;
+	 endif;
+ КонецПроцедуры
+ 
+ 
+ //1. Show only 1 word after 3 errors in it - DONE
+ //2. Take care of what symbol exactly changes - leading space error
+ //3. 

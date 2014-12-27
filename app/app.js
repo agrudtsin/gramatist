@@ -7,8 +7,8 @@ angular.
     factory('phrases', ['$http', 'dataProvider', Phrases]).
     directive('ngEnter', ngEnter).
     controller('mainCtrl', MainCtrl);
-    
-    
+
+
 function DataProvider($http) {
     return {
         getCategories: function () {
@@ -31,73 +31,72 @@ function DataProvider($http) {
 }
 function Phrases($http, dataProvider) {
     var phrasesObj = {
-    currentPhrase: {
-        text: {
-            ru: "Стандартная фраза",
-            en: "Default phrase"
-        }
-    },
-    buildUnderlinedTextByString: function (userText) {
-        var underlinedText = "";
-        for (var curChar = 0; curChar < userText.length; curChar += 1) {
-            if (userText[curChar] == " ") {
-                underlinedText += " ";
-            } else {
-                underlinedText += this.underlineOrPunctuationМark(userText[curChar]);
+        currentPhrase: {
+            text: {
+                ru: "Стандартная фраза",
+                en: "Default phrase"
             }
-        }
-        return underlinedText;
-    },
-    underlineOrPunctuationМark: function (character) {
-        var punctuationMarks = [',', '.', ';', ':', '?', '!'];
-        if (_.contains(punctuationMarks, character)) {
-            return character
-        } else {
-            return "_";
-        }
-    },
-    buildRedText: function (targetPhrase, userText) {
-        var redText = "";
-        for (var i = 0; i < userText.length; i += 1) {
-            if (targetPhrase[i] !== userText[i]) {
-                redText += userText[i];
+        },
+        deleteLastWord: function (userText) {
+            var resultText = _.str.rtrim(userText, " ");
+            var lastSpacePosition = resultText.lastIndexOf(' ');
+            if (lastSpacePosition > 0) {
+                return _.str.rtrim(resultText.substring(0, lastSpacePosition), " ") + ' ';
             } else {
-                redText += " ";
+                return "";
             }
-        }
-        return redText;
-
-    },
-    isContainErrors : function(redText){
-        return ' ' != _.uniq(redText).toString() && '' != _.uniq(redText).toString()
-    },
-    cropUserTextIfContainErrors: function (targetPhrase, userText) {
-        var croppedUserText = userText.slice();
-        var isContainErrors = this.isContainErrors(this.buildRedText(targetPhrase, userText));
-        var isContainErrorsInPreviousWord = this.isContainErrors(this.buildRedText(targetPhrase, cropLastWord(userText)));
-        if (isContainErrors && isContainErrorsInPreviousWord) {
-            croppedUserText = cropLastWord(croppedUserText);
-        }
-        return croppedUserText;
-
-        function cropLastWord(str) {
-            var lastIndex = str.lastIndexOf(' '); //pre last index of space
-            if (lastIndex > 0) {
-                return str.substring(0, lastIndex) + ' ';
+        },
+        deleteLastSpace: function (text) {
+            return _.string.rtrim(text, ' ');
+        },
+        buildUnderlinedTextByString: function (userText) {
+            var underlinedText = "";
+            for (var curChar = 0; curChar < userText.length; curChar += 1) {
+                if (userText[curChar] == " ") {
+                    underlinedText += " ";
+                } else {
+                    underlinedText += this.underlineOrPunctuationМark(userText[curChar]);
+                }
+            }
+            return underlinedText;
+        },
+        underlineOrPunctuationМark: function (character) {
+            var punctuationMarks = [',', '.', ';', ':', '?', '!'];
+            if (_.contains(punctuationMarks, character)) {
+                return character
             } else {
-                return str;
+                return "_";
             }
-        }
+        },
+        buildRedText: function (targetPhrase, userText) {
+            var redText = "";
+            for (var i = 0; i < userText.length; i += 1) {
+                if (targetPhrase[i] !== userText[i]) {
+                    redText += userText[i];
+                } else {
+                    redText += " ";
+                }
+            }
+            return redText;
 
-        function isWordEnded(croppedUserText) {
-            return _.last(croppedUserText) === ' ';
-        }
-    },
-    getCurrent: function () {
-        return this.currentPhrase;
-    },
-    categories: [],
-    phrasesList: []
+        },
+        isContainErrors: function (redText) {
+            return ' ' != _.uniq(redText).toString() && '' != _.uniq(redText).toString()
+        },
+        cropUserTextIfContainErrors: function (targetPhrase, userText) {
+            var isContainErrors = this.isContainErrors(this.buildRedText(targetPhrase, userText));
+            var isContainErrorsInPreviousWord = this.isContainErrors(this.buildRedText(targetPhrase, this.deleteLastWord(userText)));
+            if (isContainErrors && isContainErrorsInPreviousWord) {
+                return this.deleteLastWord(userText)
+            } else {
+                return userText;
+            }
+        },
+        getCurrent: function () {
+            return this.currentPhrase;
+        },
+        categories: [],
+        phrasesList: []
     };
 
     dataProvider.getCategories().success(function (data) {
@@ -106,8 +105,8 @@ function Phrases($http, dataProvider) {
 
     return phrasesObj;
 }
-function ngEnter(){
-    return  function (scope, element, attrs) {
+function ngEnter() {
+    return function (scope, element, attrs) {
         element.bind("keydown keypress", function (event) {
             if (event.which === 13) {
                 scope.$apply(function () {
@@ -118,10 +117,10 @@ function ngEnter(){
         });
     };
 }
-function MainCtrl($scope, $http, phrases, dataProvider){
+function MainCtrl($scope, $http, phrases, dataProvider) {
     $scope.isDefined = true;
     $scope.anotherRedText = "";
-    
+
     $scope.redText = "";
     $scope.userText = "";
     $scope.redText = "";
@@ -135,7 +134,7 @@ function MainCtrl($scope, $http, phrases, dataProvider){
     };
     $scope.categories = [];
     $scope.phrasesList = [];
-    
+
     dataProvider.getCategories().
         success(function (data) {
             $scope.categories = data;
@@ -143,72 +142,51 @@ function MainCtrl($scope, $http, phrases, dataProvider){
         }).
         then(function () {
             $scope.categoryOnChange($scope.currentCategory);
-    
+
         });
-    
+
     $scope.onUserTextChange = function () {
         $scope.userText = phrases.cropUserTextIfContainErrors($scope.currentPhrase.text.en, $scope.userText);
         $scope.buildRedText();
         $scope.grayText = "";
     };
     $scope.onUserTextEnter = function () {
-    
-        if(useEnterInTheEndOfPhrase()) return;
-        if(useEntersToUnderlineText()) return;
+        if (useEnterInTheEndOfPhrase()) return;
+        if (useEntersToUnderlineText()) return;
         useTwoEntersToShowGrayedText();
-    
-        function useTwoEntersToShowGrayedText(){
+
+        function useTwoEntersToShowGrayedText() {
             $scope.grayText = $scope.currentPhrase.text.en;
-            if($scope.isContainErrors()) deleteWrongWord();
-    
-            function deleteWrongWord(){
-                $scope.userText = _.str.rtrim($scope.userText, " ");
-                var lastIndex = $scope.userText.lastIndexOf(' ');
-                if (lastIndex > 0) {
-                    $scope.userText = _.str.rtrim($scope.userText, " ");
-                    $scope.userText = $scope.userText.substring(0, lastIndex) + ' ';
-                } else {
-                    $scope.userText = "";
-                }
-                
-                $scope.buildRedText();
-            };
+            if ($scope.isContainErrors()) $scope.userText = phrases.deleteLastWord($scope.userText);
+            $scope.buildRedText();
         };
-        
-        function useEntersToUnderlineText(){
-            if(isAllPhraseAlreadyUnderlined()) return false; //phrase already underined
+        function useEntersToUnderlineText() {
+            if (isAllPhraseAlreadyUnderlined()) return false; //phrase already underined
             $scope.underlinesText = phrases.buildUnderlinedTextByString($scope.currentPhrase.text.en);
             return true;
         };
         function isAllPhraseAlreadyUnderlined() {
             return $scope.currentPhrase.text.en.length == $scope.underlinesText.length
         };
-        function useEnterInTheEndOfPhrase(){
-            if($scope.isPhrasesEqual()){
-                $scope.userText = "";
-                $scope.redText = "";
-                $scope.underlinesText = "";
-                $scope.grayText = "";
-                if ( $scope.currentPhrase != _.last($scope.phrasesList)){
-                    setNextPhrase();
-                    return true;
-                } else {
-                    setNextCategory();
-                    return true;
-                }
+        function useEnterInTheEndOfPhrase() {
+            if ($scope.isPhrasesEqual()) {
+                $scope.userText = $scope.redText = $scope.underlinesText = $scope.grayText = "";
+                if ($scope.currentPhrase != _.last($scope.phrasesList)) setNextPhrase();
+                else setNextCategory();
+                return true;
             }
             return false;
-    
-            function setNextPhrase(){
+
+            function setNextPhrase() {
                 $scope.currentPhrase = $scope.phrasesList[_.indexOf($scope.phrasesList, $scope.currentPhrase) + 1];
             };
-            function setNextCategory(){
-                if( $scope.categories != _.last($scope.currentCategory)){
-                    $scope.categoryOnChange($scope.categories[_.indexOf($scope.categories,$scope.currentCategory) + 1]);
+            function setNextCategory() {
+                if ($scope.categories != _.last($scope.currentCategory)) {
+                    $scope.categoryOnChange($scope.categories[_.indexOf($scope.categories, $scope.currentCategory) + 1]);
                 } else {
                     $scope.categoryOnChange(_.first($scope.categories));
                 };
-    
+
             }
         }
     };
@@ -219,15 +197,14 @@ function MainCtrl($scope, $http, phrases, dataProvider){
                 $scope.phrasesList = data;
                 $scope.currentPhrase = _.first(data);
             })
-    
     };
     $scope.isPhrasesEqual = function () {
         return $scope.currentPhrase.text.en == $scope.userText;
     };
-    $scope.isContainErrors = function(){
-       return phrases.isContainErrors($scope.redText);
+    $scope.isContainErrors = function () {
+        return phrases.isContainErrors($scope.redText);
     };
-    $scope.buildRedText = function(){
+    $scope.buildRedText = function () {
         $scope.redText = phrases.buildRedText($scope.currentPhrase.text.en, $scope.userText);
     }
 }

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="MakeChoice" id="8">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.SelectCurrentUser</CommandName>
+				<Parameter xsi:nil="true"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Select</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="MakeChoiceExtendedTooltip" id="9"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Users" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Users</DataPath>
+			<RowPictureDataPath>Users.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select user</v8:content>
+				</v8:item>
+			</Title>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="UsersКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="UsersКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="UsersExtendedTooltip" id="10"/>
+			<SearchStringAddition name="UsersSearchString" id="11">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="UsersSearchStringContextMenu" id="12"/>
+				<ExtendedTooltip name="UsersSearchStringExtendedTooltip" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="UsersViewStatus" id="14">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="UsersViewStatusContextMenu" id="15"/>
+				<ExtendedTooltip name="UsersViewStatusExtendedTooltip" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="UsersSearchControl" id="17">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="UsersSearchControlContextMenu" id="18"/>
+				<ExtendedTooltip name="UsersSearchControlExtendedTooltip" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">UsersВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="UsersНаименование" id="4">
+					<DataPath>Users.Description</DataPath>
+					<Width>20</Width>
+					<ContextMenu name="UsersНаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="UsersНаименованиеExtendedTooltip" id="20"/>
+				</LabelField>
+				<LabelField name="UsersКод" id="6">
+					<DataPath>Users.Code</DataPath>
+					<ContextMenu name="UsersКодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="UsersКодExtendedTooltip" id="21"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ChooseUser</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Users" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Users</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникUsers.Ссылка,
+	СправочникUsers.Код,
+	СправочникUsers.Наименование
+ИЗ
+	Справочник.Users КАК СправочникUsers</QueryText>
+				<MainTable>Catalog.Users</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+		<Attribute name="SelectedUser" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Selected user</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Users</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="SelectCurrentUser" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select current user</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select current user</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>SelectCurrentUser</Action>
+		</Command>
+	</Commands>
+</Form>
