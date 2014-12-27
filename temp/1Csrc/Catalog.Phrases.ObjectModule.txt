@@ -1,0 +1,17 @@
+﻿
+Процедура ПередЗаписью(Отказ)
+	if DateAdded = Неопределено then 
+		DateAdded = ТекущаяДата(); 
+	endif;
+	if ЭтоГруппа=ложь then 
+		Наименование = NativeLanguagePhrase + " - "+EnglishPhrase; 
+	else
+		If NativeLanguagePhrase = "" then
+			NativeLanguagePhrase = Наименование;
+		endif;
+		if EnglishPhrase = "" then
+			EnglishPhrase = Наименование;
+		endif;
+	endIf;
+КонецПроцедуры
+

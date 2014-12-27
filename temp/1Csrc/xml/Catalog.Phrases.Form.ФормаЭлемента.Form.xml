@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Width>150</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Родитель" id="1">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="9"/>
+		</InputField>
+		<InputField name="Category" id="3">
+			<DataPath>Объект.Category</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="CategoryКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="CategoryExtendedTooltip" id="10"/>
+		</InputField>
+		<InputField name="NativeLanguagePhrase" id="5">
+			<DataPath>Объект.NativeLanguagePhrase</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="NativeLanguagePhraseКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="NativeLanguagePhraseExtendedTooltip" id="11"/>
+		</InputField>
+		<InputField name="EnglishPhrase" id="7">
+			<DataPath>Объект.EnglishPhrase</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="EnglishPhraseКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="EnglishPhraseExtendedTooltip" id="12"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Phrases</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

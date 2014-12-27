@@ -17,6 +17,22 @@ module.exports = function(config){
 
     frameworks: ['jasmine'],
 
+      // coverage reporter generates the coverage
+      reporters: ['progress', 'coverage'],
+
+      preprocessors: {
+          // source files, that you wanna generate coverage for
+          // do not include tests or libraries
+          // (these files will be instrumented by Istanbul)
+          'app/app.js': ['coverage']
+      },
+
+// optionally, configure the reporter
+      coverageReporter: {
+          type : 'html',
+          dir : 'temp/coverage/'
+      },
+
     browsers : ['PhantomJS'],
 
     // hostname : process.env.IP,
@@ -28,7 +44,8 @@ module.exports = function(config){
             'karma-firefox-launcher',
             'karma-phantomjs-launcher',
             'karma-jasmine',
-            'karma-junit-reporter'
+            'karma-junit-reporter',
+            'karma-js-coverage'
             ],
 
     junitReporter : {
