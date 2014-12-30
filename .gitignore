@@ -1,6 +1,6 @@
 .idea
-node_modules
-app/bower_components
+#node_modules
+#app/bower_components
 
 # Cloud9 IDE - http://c9.io
 .c9revisions
