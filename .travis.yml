@@ -12,3 +12,8 @@ before_script:
 script:
   - node_modules/.bin/karma start karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox
   #- node_modules/.bin/protractor e2e-tests/protractor.conf.js --browser=firefox
+deploy:
+  provider: heroku
+  api_key: cf30875e-2cfd-43ff-ab8a-d150ff8af775
+  app:
+    master : grammatist
