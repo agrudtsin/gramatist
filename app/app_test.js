@@ -5,7 +5,7 @@
 
 describe('ext libs stress tests', function () {
     it('jasmine stress test', function () {
-        expect(true).not.toBeTruthy();
+        expect(true).toBeTruthy();
     });
     it('underscore stress test', function () {
         expect(_).toBeDefined();
