@@ -5,6 +5,11 @@
   "description": "Web-app for studing gramar in practise exersises",
   "repository": "https://github.com/agrudtsin/gramatist",
   "license": "MIT",
+  "dependencies": {
+    "http-server": "latest",
+    "bower": "latest",
+    "shelljs": "^0.2.6"
+  },
   "devDependencies": {
     "karma": "~0.10",
     "karma-js-coverage": "^0.4.0",
