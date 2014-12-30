@@ -11,6 +11,7 @@ module.exports = function(config){
         'app/bower_components/angular-resource/angular-resource.js',
         'app/bower_components/angular-route/angular-route.js',
         'app/app.js',
+        'app/mainPage/mainPage.js',
         'app/app_test.js'
     ],
 

@@ -2,7 +2,10 @@
 _.mixin(_.string.exports());
 
 angular.
-    module('myApp', ['ngResource','ngRoute']).
+    module('myApp', [
+        'ngResource',
+        'ngRoute',
+        'myApp.mainPage']).
     factory('dataProvider', ['$http', DataProvider]).
     factory('phrases', ['$http', 'dataProvider', Phrases]).
     directive('ngEnter', ngEnter).

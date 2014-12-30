@@ -1,11 +1,11 @@
 angular.
     module('myApp.mainPage', ['ngRoute'])
-    .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/', {
-            templateUrl: 'mainPage/mainPage.html',
-            controller: 'mainCtrl'
-        });
-    }])
+    //.config(['$routeProvider', function($routeProvider) {
+    //    $routeProvider.when('/', {
+    //        templateUrl: 'mainPage/mainPage.html',
+    //        controller: 'mainCtrl'
+    //    });
+    //}])
     .controller('mainCtrl', MainCtrl);
 function MainCtrl($scope, $http, phrases, dataProvider) {
     $scope.isDefined = true;
