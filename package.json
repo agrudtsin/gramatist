@@ -13,19 +13,20 @@
     "phantomjs": "^1.9.12",
     "protractor": "^1.1.1",
     "http-server": "latest",
+    "bower": "latest",
     "shelljs": "^0.2.6"
   },
   "scripts": {
-
+    "postinstall": "node ./node_modules/.bin/bower install",
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 80 -c-1",
+    "start": "node ./node_modules/.bin/http-server -a localhost -p 8000 -c-1",
     "pretest": "npm install",
-    "test": "karma start karma.conf.js",
-    "test-single-run": "karma start karma.conf.js  --single-run",
+    "test": "node ./node_modules/.bin/karma start karma.conf.js",
+    "test-single-run": "node ./node_modules/.bin/karma start karma.conf.js  --single-run",
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor e2e-tests/protractor.conf.js"
+    "protractor": "node ./node_modules/.bin/protractor e2e-tests/protractor.conf.js"
 
   }
 }
