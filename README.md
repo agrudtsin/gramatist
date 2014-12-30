@@ -1,4 +1,4 @@
-gramatist    <img src="https://travis-ci.org/agrudtsin/gramatist.svg"/>
+gramatist   <a href="https://travis-ci.org/agrudtsin/gramatist"> <img src="https://travis-ci.org/agrudtsin/gramatist.svg"/> </a>
 =========
 ### Install Dependencies
 
