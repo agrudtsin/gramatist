@@ -7,7 +7,7 @@ describe('my app', function() {
   describe('Стресс тесты: ', function () {
 
     beforeEach(function() {
-      browser.get('index.html');
+      browser.get('/');
     });
 
 
