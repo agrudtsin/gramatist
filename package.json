@@ -8,9 +8,7 @@
   "dependencies": {
     "http-server": "latest",
     "bower": "latest",
-    "shelljs": "^0.2.6"
-  },
-  "devDependencies": {
+    "shelljs": "^0.2.6",
     "karma": "~0.10",
     "karma-js-coverage": "^0.4.0",
     "karma-junit-reporter": "^0.2.2",
@@ -18,13 +16,12 @@
     "phantomjs": "^1.9.12",
     "protractor": "^1.1.1",
     "http-server": "latest",
-    "bower": "latest",
     "shelljs": "^0.2.6"
   },
   "scripts": {
     "postinstall": "node ./node_modules/.bin/bower install",
     "prestart": "npm install",
-    "start": "node ./node_modules/.bin/http-server ./app",
+    "start": "node ./node_modules/.bin/http-server -a localhost ./app",
     "pretest": "npm install",
     "test-watch": "node ./node_modules/.bin/karma start karma.conf.js",
     "test": "node ./node_modules/.bin/karma start karma.conf.js  --single-run",
