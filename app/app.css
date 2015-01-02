@@ -1,14 +1,12 @@
 .DivNativeText {
     FONT-FAMILY: Georgia, Verdana, Times;
-    MARGIN-top: 100px;
-    
+
     margin-left:52px; 
     COLOR: #00a;
     FONT-SIZE: 22px;
     BORDER: #88F solid 1px;    
     /*background: rgba(235,235,235,1);*/
     cursor:default;
-    height: 48px;
     user-select:none;
 }
 
@@ -83,7 +81,7 @@ body {
 }
 
 .MiddleColumn {
-    left:52px;
+    margin-left:52px;
 }
 
 .Header {

@@ -13,6 +13,7 @@
 
 
     <div class="Header">
+        <img id="GrammatistLogo" src="resources/img/Logo1_32.png" title ="Граматист - практическое изучение английского языка"></img>
         <select ng-model='currentCategory'
                 ng-change="categoryOnChange(currentCategory)"
                 ng-options="category.name for category in categories"></select>
@@ -22,11 +23,15 @@
     </div>
     <div class="Hint" ng-show="isContainErrors()">Нажми Enter для подсказки</div>
     <div id="MiddleColumn" class="MiddleColumn">
+        <div height=100></div>
+        <div style="display: none; margin-left:100px; MARGIN-top: 50px; BORDER: #7799D8 solid 1px; width:80%; Font-size:27; color:#7F7F7F; Font-family:Verdana">
+            <img id="GrammatistLogo" height:64px width:64px src="resources/img/Logo1.png"></img>ammatist
+        </div>
         <div unselectable='on'
                     onselectstart='return false;' 
                     onmousedown='return false;'
                     id="NativeTextDIV">
-            <textarea id="NativeLanguagePhrase" rows="2" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' >{{currentPhrase.text.ru}}</textarea>
+            <textarea id="NativeLanguagePhrase" rows="1" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' style="BORDER: #7799D8 solid 1px; ">{{currentPhrase.text.ru}}</textarea>
             <div    unselectable='on'
                     onselectstart='return false;' 
                     onmousedown='return false;'
@@ -87,7 +92,7 @@
                 <!-- green background -->
             <textarea 
                 readonly
-                id="GreenBack"
+                id="GreenBackAndRedSpaces"
                 ng-show="isPhrasesEqual()"
                 class="AllTextAreas CommonFormat positionabsolute" 
                 style="
@@ -104,8 +109,9 @@
                 class="AllTextAreas CommonFormat positionabsolute backgroundInput" 
                 style="
                     Z-INDEX: -5; 
+                    COLOR: #fdd;
                     CURSOR: none; 
-                    pointer-events: none;">
+                    pointer-events: none;">{{WrongSpaces}}
             </textarea>
                 <!-- GrayedText -->
             <textarea 
