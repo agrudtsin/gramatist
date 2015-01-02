@@ -1,8 +1,38 @@
 ﻿[
   {
     "text": {
-      "ru": "Ты перестала пить коньяк по утрам?",
-      "en": "Have you stopped drinking cognac in the mornings?"
+      "ru": "Я не работаю сейчас",
+      "en": "I am not working now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они не классно проводят время",
+      "en": "They aren't having a great time now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы не учимся действительно усердно сейчас",
+      "en": "We aren't studying really now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это работает очень медленно сейчас",
+      "en": "It is working very slowly now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я сейчас смотрю телевизор",
+      "en": "I am watching TV now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они купаются в реке в данный момент",
+      "en": "They are swimming in the river at the moment"
     }
   }
 ]
