@@ -32,6 +32,8 @@
 }
 .positionabsolute {
     position:absolute;
+    FONT-FAMILY: "Verily Serif Mono", monospace;
+    
 }
 .CommonFormat {
     border-radius: 4px;    
@@ -50,8 +52,9 @@
     FONT-FAMILY: "Verily Serif Mono", monospace;
     FONT-SIZE: 24px;
     BACKGROUND: none transparent scroll repeat 0% 0%;
-    FONT-SIZE: 24px;    
-    BACKGROUND: none transparent scroll repeat 0% 0%;
+    FILTER: alpha(opacity: 0); 
+    opacity: 0; 
+    -moz-opacity: 0;
 }
 
 .textarea {
@@ -65,7 +68,7 @@
 }
 
 .backgroundInput {
-    background: #FFF;   
+    /*background: #FFF;   */
     box-shadow: 2px 2px 3px 0px #DDD inset;
 }
 .InputProperShadow {

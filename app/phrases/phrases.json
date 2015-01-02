@@ -12,7 +12,15 @@
     "id": "phrases_3"
   },
   {
-    "name": "A01 Present Indefinite Active",
+    "name": "Простое неопределённое время",
     "id": "A01_Present_Indefinite_Active"
+  },
+  {
+    "name": "A02 Past Indefinite Active",
+    "id": "A02_Past_Indefinite_Active"
+  },
+  {
+    "name": "A03 Future Indefinite Active",
+    "id": "A03_Future_Indefinite_Active.json"
   }
 ]
