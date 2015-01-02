@@ -1,16 +1,4 @@
-[
-  {
-    "name": "Тестовые фразы",
-    "id": "phrases_1"
-  },
-  {
-    "name": "Тестовые фразы 2",
-    "id": "phrases_2"
-  },
-  {
-    "name": "Тестовые фразы 3",
-    "id": "phrases_3"
-  },
+﻿[
   {
     "name": "A01 Простое неопределённое время",
     "id": "A01_Present_Indefinite_Active"
@@ -22,5 +10,17 @@
   {
     "name": "A03 Простое будущее время",
     "id": "A03_Future_Indefinite_Active."
+  },
+  {
+    "name": "Тестовые фразы",
+    "id": "phrases_1"
+  },
+  {
+    "name": "Тестовые фразы 2",
+    "id": "phrases_2"
+  },
+  {
+    "name": "Тестовые фразы 3",
+    "id": "phrases_3"
   }
 ]
