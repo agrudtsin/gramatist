@@ -1,0 +1,1460 @@
+﻿[
+  {
+    "text": {
+      "ru": "Ему нравится классическая музыка",
+      "en": "He likes classical music"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она поет очень красиво",
+      "en": "She sings very beautiful"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он играет на гитаре каждый день",
+      "en": "He plays the guitar every day"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они на каникулах",
+      "en": "They are on holiday"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это выглядит очень интересно",
+      "en": "It looks very interesting"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она сделала это наконец",
+      "en": "She did it at last"
+    }
+  },
+  {
+    "text": {
+      "ru": "Кто открыл Америку",
+      "en": "Who discovered America"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я был действительно удивлен",
+      "en": "I was really surprised"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они не заметили это",
+      "en": "They didn’t notice it"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты перестала пить коньяк по утрам?",
+      "en": "Have you stopped drinking cognac in the mornings?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не работаю сейчас",
+      "en": "I am not working now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они не классно проводят время",
+      "en": "They aren’t having a great time now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы не учимся действительно усердно сейчас",
+      "en": "We aren’t studying really now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это работает очень медленно сейчас",
+      "en": "It is working very slowly now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я сейчас смотрю телевизор",
+      "en": "I am watching TV now"
+    }
+  },
+  {
+    "text": {
+      "ru": "В следующем месяце я лечу в Нью-Йорк",
+      "en": "I am flying to New York next month"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я пришел домой, позвонил Марии и лег спать",
+      "en": "I came home, called Mary and went to bed"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они купаются в реке в данный момент",
+      "en": "They are swimming in the river at the moment"
+    }
+  },
+  {
+    "text": {
+      "ru": "Твой сосед уже искал тебя 3 часа, когда ты пришел",
+      "en": "Your neighbour had been looking for you for 3 hours, when you came"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мария учит английский с 2000 года",
+      "en": "Mary has been learning English since 2000"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они играют в футбол с 8 часов",
+      "en": "They have been playing football since 8 o'clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она позвонила мне к трем часам",
+      "en": "She had called me by three o'clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я еще буду играть в теннис в 4 часа",
+      "en": "I will still be playing tennis at 4 o'clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они будут искать новый офис в сентябре",
+      "en": "They will be looking for a new office in September"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моя мама готовила в 3 часа",
+      "en": "My mother was cooking at 3 o'clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Доктор пригласил меня вчера",
+      "en": "The doctor invited me yesterday"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я пришел домой, позвонил Марии и лег спать",
+      "en": "I came home, called Mary and went to bed"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моя мама поливает растения каждую неделю",
+      "en": "My mother waters plants every week"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты пил со мной брэнди",
+      "en": "You drank brandy with me"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты мечтал об огромном состоянии",
+      "en": "You dreamt of great wealth"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты ел со мной сладости",
+      "en": "You ate candy with me"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты бросил мне свою одежду",
+      "en": "You threw me your clothes"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты полностью полысел",
+      "en": "You lost all your hair"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты носил легкий свитер",
+      "en": "You wore a light sweater"
+    }
+  },
+  {
+    "text": {
+      "ru": "Под покрывалом",
+      "en": "Under the cover"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты бежал по тонкому льду и спрятался",
+      "en": "You ran on the thin ice and hid"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он кормил меня мёдом",
+      "en": "You fed me on honey"
+    }
+  },
+  {
+    "text": {
+      "ru": "Лекции в институте начинаются в 9 часов",
+      "en": "The lectures at the Institute begin at 9 o'clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я хожу в институт пешком",
+      "en": "I go to the Institute on foot"
+    }
+  },
+  {
+    "text": {
+      "ru": "Петя плавает хорошо",
+      "en": "Peter swims well"
+    }
+  },
+  {
+    "text": {
+      "ru": "Земля вращается вокруг Солнца",
+      "en": "The Earth goes round the Sun"
+    }
+  },
+  {
+    "text": {
+      "ru": "Анна ездит на юг каждое лето",
+      "en": "Ann goes to the South every summer"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я иногда встречаю твоего отца на станции",
+      "en": "I sometimes meet your father at the station"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои родители всегда проводят отпуск на море",
+      "en": "My parents always spend their holidays at the seaside"
+    }
+  },
+  {
+    "text": {
+      "ru": "Два раза в году студенты сдают экзамены",
+      "en": "Twice a year students take their exams"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мой друг живёт в общежитии",
+      "en": "My friend lives in a hostel"
+    }
+  },
+  {
+    "text": {
+      "ru": "Учебный год начинается в сентябре",
+      "en": "The school year begins in september"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она водит машину",
+      "en": "She drives a car"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мой брат живёт в Минске",
+      "en": "My brother lives in Minsk"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы играете в шахматы?",
+      "en": "Do you play chess?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он хорошо говорит по английски?",
+      "en": "Does he speak English well?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Останавливаются ли поезда на этой станции?",
+      "en": "Do trains stop at this station?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Скоро ли прибывает это судно?",
+      "en": "Does the ship arrive soon?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы не играем в шахматы",
+      "en": "We do not play chess"
+    }
+  },
+  {
+    "text": {
+      "ru": "Студенты не ходят в библиотеку каждый день",
+      "en": "The students do not go to the library every day"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он не курит",
+      "en": "He does not smoke"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не играю в хоккей",
+      "en": "I don't play hockey"
+    }
+  },
+  {
+    "text": {
+      "ru": "Компьютер не работает",
+      "en": "The computer doesn't work"
+    }
+  },
+  {
+    "text": {
+      "ru": "Тебе нравится рок?",
+      "en": "Do you like rock?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он говорит по-английски?",
+      "en": "Does he speak English?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не люблю черный кофе",
+      "en": "I do not like black coffee"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она не курит",
+      "en": "She doesn't smoke"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я на самом деле хочу тебе помочь",
+      "en": "I do want to help you"
+    }
+  },
+  {
+    "text": {
+      "ru": "Джейн действительно умеет готовить",
+      "en": "Jane does know how to cook"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я часто хожу в парк",
+      "en": "I often go to the park"
+    }
+  },
+  {
+    "text": {
+      "ru": "Каждые выходные они играют в теннис",
+      "en": "They play tennis every weekend"
+    }
+  },
+  {
+    "text": {
+      "ru": "Джим изучает французский",
+      "en": "Jim studies French"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы живем в Бостоне",
+      "en": "We live in Boston"
+    }
+  },
+  {
+    "text": {
+      "ru": "Земля – круглая",
+      "en": "The Earth is round"
+    }
+  },
+  {
+    "text": {
+      "ru": "Волга – самая длинная река в Европе",
+      "en": "The Volga is the longest river in Europe"
+    }
+  },
+  {
+    "text": {
+      "ru": "Самолет взлетает в 14:30",
+      "en": "The airplane takes off at 2.30 p.m"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда вы увидите большой зеленый дом, поверните налево",
+      "en": "When you see a big green house, turn left"
+    }
+  },
+  {
+    "text": {
+      "ru": "В Пакистане разбился самолет",
+      "en": "Airplane crashes in Pakistan"
+    }
+  },
+  {
+    "text": {
+      "ru": "Где вы живете?",
+      "en": "Where do you live?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я вижу мужчину",
+      "en": "I see a man"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я слышу музыку",
+      "en": "I hear the music"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он учится в университете",
+      "en": "He studies at university"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я вас не понимаю",
+      "en": "I don’t understand you"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он не узнает меня",
+      "en": "He doesn’t recognize me"
+    }
+  },
+  {
+    "text": {
+      "ru": "Разве вы не знаете его?",
+      "en": "Do you not know him?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Разве Вы не знаете никаких новостей?",
+      "en": "Don’t you know any news?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Разве ваш сын не ходит в школу?",
+      "en": "Doen’t your son go to school?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Почему вы не идете?",
+      "en": "Why don’t you go?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я действительно знаю это",
+      "en": "I do know that"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он таки работает там",
+      "en": "He does work there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы врач?",
+      "en": "Are you a doctor?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ваша жена дома?",
+      "en": "Is your wife at home?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она не моя подруга",
+      "en": "She is not my friend"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы не счастливы",
+      "en": "You are not happy"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он не такой человек",
+      "en": "He isn’t that kind of man"
+    }
+  },
+  {
+    "text": {
+      "ru": "Но вы же не уверены",
+      "en": "But you aren’t sure"
+    }
+  },
+  {
+    "text": {
+      "ru": "Разве я не твой друг?",
+      "en": "Am I not your friend?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Неужели ты не устал?",
+      "en": "Aren’t you tired?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Разве eго нет дома?",
+      "en": "Isn’t he at home?"
+    }
+  },
+  {
+    "text": {
+      "ru": "У вас здесь много друзей?",
+      "en": "Have you many friends here?"
+    }
+  },
+  {
+    "text": {
+      "ru": "У нее есть мяч?",
+      "en": "Has she a ball?"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня нет красного карандаша",
+      "en": "I haven’t any red pencil"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня нет братьев",
+      "en": "I have no brothers"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня нет твоей ручки",
+      "en": "I haven’t your pen"
+    }
+  },
+  {
+    "text": {
+      "ru": "У нас нет этого журнала",
+      "en": "We haven’t this magazine"
+    }
+  },
+  {
+    "text": {
+      "ru": "У нее не много английских книг",
+      "en": "She hasn’t many English books"
+    }
+  },
+  {
+    "text": {
+      "ru": "В котором часу вы завтракаете?",
+      "en": "What time do you have breakfast?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не обедаю дома",
+      "en": "I do not have dinner at home"
+    }
+  },
+  {
+    "text": {
+      "ru": "У него есть дети?",
+      "en": "Does he have any children?"
+    }
+  },
+  {
+    "text": {
+      "ru": "У вас есть ручка?",
+      "en": "Do you have a pen?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он приходит сюда в шесть часов",
+      "en": "He comes here at six o’clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она ходит в школу",
+      "en": "She goes to school"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он играет на скрипке и поет",
+      "en": "He plays the violin and sings"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он ходит к ней каждый день",
+      "en": "He goes to see her every day"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она живет в Пскове с матерью и двумя братьями",
+      "en": "She lives in Pskov with her mother and two brothers"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы стреляете очень хорошо",
+      "en": "You shoot very well"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он свободно говорит как по-французски, так и по-английски",
+      "en": "He speaks both French and English fluently"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он танцует очень плохо",
+      "en": "He dances very badly"
+    }
+  },
+  {
+    "text": {
+      "ru": "Сахар растворяется в воде",
+      "en": "Sugar dissolves in water"
+    }
+  },
+  {
+    "text": {
+      "ru": "Медь проводит электричество лучше, чем другие металлы",
+      "en": "Copper conducts electricity better than other metals"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я ничего не вижу",
+      "en": "I don’t see anything"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не понимаю этого",
+      "en": "I don’t understand it"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вот она идет",
+      "en": "Here she comes"
+    }
+  },
+  {
+    "text": {
+      "ru": "Почему она идет так медленно",
+      "en": "Why does she walk so slow?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я буду здесь, пока ты придешь",
+      "en": "I’ll be here till you come"
+    }
+  },
+  {
+    "text": {
+      "ru": "Подожди, пока я получу пальто",
+      "en": "Wait until I get my coat"
+    }
+  },
+  {
+    "text": {
+      "ru": "Если вы придете, я дам тебе эту книжку",
+      "en": "If you come, I shall give you this book"
+    }
+  },
+  {
+    "text": {
+      "ru": "Завтра я выезжаю из Ростова",
+      "en": "I leave Rostov tomorrow"
+    }
+  },
+  {
+    "text": {
+      "ru": "Наш пароход отплывает в следующий вторник",
+      "en": "Our ship sails on next Tuesday"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда приходит врач?",
+      "en": "When does the doctor come?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вдруг как-то вечером приходит крошка Эмили с работы и он с ней (Dickens)",
+      "en": "All of a sudden, one evening comes little Emily from her work and him with her"
+    }
+  },
+  {
+    "text": {
+      "ru": "Что они обычно делают на выходных?",
+      "en": "What do they usually do at the weekend?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Где твой друг играет в теннис?",
+      "en": "Where does your friend play tennis?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Почему она любит балет?",
+      "en": "Why does she like ballet?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Сколько это стоит?",
+      "en": "How much does it cost?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты любишь мороженое? Да",
+      "en": "Do you like ice-cream? Yes, I do"
+    }
+  },
+  {
+    "text": {
+      "ru": "По воскресеньям я не выхожу",
+      "en": "On Saturday I don't go out"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я всегда встаю в 7 часов",
+      "en": "I always get up at 7 o'clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я всегда опаздываю в школу",
+      "en": "I am always late for school"
+    }
+  },
+  {
+    "text": {
+      "ru": "Его никогда нет дома, когда я звоню",
+      "en": "He's never at home when I call"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я вполне понимаю, что вы имеете в виду",
+      "en": "I quite understand what you mean"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы не оставляете мне выбора",
+      "en": "You leave me no choice"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я отказываюсь слушать вас. Вы говорите слишком много",
+      "en": "I refuse to listen to you. You talk too much"
+    }
+  },
+  {
+    "text": {
+      "ru": "Если мы не застанем его дома, мы оставим ему записку",
+      "en": "If we don't find him at home we'll leave him a message"
+    }
+  },
+  {
+    "text": {
+      "ru": "Твой самолет вылетает через час",
+      "en": "Your plane leaves in an hour's time"
+    }
+  },
+  {
+    "text": {
+      "ru": "Что мы сделаем дальше?",
+      "en": "What do we do next?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Как быстро летят годы!",
+      "en": "How swiftly the years fly!"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы видели вашу собаку в двух кварталах отсюда",
+      "en": "We saw your dog two blocks from here"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты помыл свои руки?",
+      "en": "Did you wash your hands?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они подписали контракт?",
+      "en": "Did they sign the contract?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы не нашли свою машину",
+      "en": "We did not find our car"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не понял этот вопрос",
+      "en": "I did not understand this question"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я видел Джереми в банке",
+      "en": "I saw Jeremy in the bank"
+    }
+  },
+  {
+    "text": {
+      "ru": "Старик часто меня навещал",
+      "en": "The old man often visited me"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я замечал эту очаровательную продавщицу каждый раз, когда шел за покупками",
+      "en": "I noticed this charming shop girl each time I went to buy something"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я услышал странный звук, обернулся и увидел здоровенного кота, сидящего на столе",
+      "en": "I heard a strange sound, looked back, and saw a huge cat sitting on the table"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы выбрали книгу?",
+      "en": "Did you choose the book?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она закрыла дверь?",
+      "en": "Did she close the door?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Где они видели меня?",
+      "en": "Where did they see me?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда ты купил эту книгу?",
+      "en": "When did you buy this book?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я видел вас вчера",
+      "en": "I saw you yesterday"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я обедал час назад",
+      "en": "I had dinner an hour ago"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моя дочь поступила в университет в 1999 году",
+      "en": "My daughter entered а university in 1999"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы переехали в Санкт-Петербург три года назад",
+      "en": "We moved to St. Petersburg three years ago"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я прочитал эту книгу в прошлом месяце",
+      "en": "I read this book last month"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я купил подарок и пошел на день рождения к своему другу",
+      "en": "I bought a gift and went to my friend's birthday party"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я прочитал стихотворение, написал сочинение и начал смотреть телевизор",
+      "en": "I read a poem, wrote an essay and began to watch TV"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мария звонила мне каждый день, когда я лежал в больнице",
+      "en": "Mary called me every day when I was in hospital"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я работал в Москве прошлым летом",
+      "en": "I worked in Moscow last summer"
+    }
+  },
+  {
+    "text": {
+      "ru": "Твой отец работал на этой фабрике?",
+      "en": "Did your father work at this factory?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы ходили вчера в лес?",
+      "en": "Did you go to the forest yesterday?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Что он сказал?",
+      "en": "What did he say?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда вы ее видели?",
+      "en": "When did you see her?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они не видели моей записки",
+      "en": "They did not see my note"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она не знала этого",
+      "en": "She did not know this"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не видел тебя в темноте",
+      "en": "I didn’t see you in the dark"
+    }
+  },
+  {
+    "text": {
+      "ru": "Почему вы не ответили на мой телефонный звонок?",
+      "en": "Why did you not answer to my telephone call?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Почему вы не ответили мне?",
+      "en": "Why didn’t you answer me?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Неужели вы не слышали меня?",
+      "en": "Didn’t you hear me?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я таки хотел достать словарь",
+      "en": "I did want to get a dictionary"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я ответил, что я действительно помню это",
+      "en": "I answered that I did remember it"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы были на фронте?",
+      "en": "Were you at the front?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не был там",
+      "en": "I was not there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они не опоздали",
+      "en": "They were not late"
+    }
+  },
+  {
+    "text": {
+      "ru": "Разве он не был в школе?",
+      "en": "Was he not at school?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он не был готов идти туда",
+      "en": "He wasn’t ready to go there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они не боялись его",
+      "en": "They weren’t afraid of him"
+    }
+  },
+  {
+    "text": {
+      "ru": "У вас был магнитофон в прошлом году?",
+      "en": "Had you a tape-recorder last year?"
+    }
+  },
+  {
+    "text": {
+      "ru": "В учеников были словари?",
+      "en": "Did the pupils have dictionaries?"
+    }
+  },
+  {
+    "text": {
+      "ru": "У него не было братьев",
+      "en": "He hadn’t any brothers"
+    }
+  },
+  {
+    "text": {
+      "ru": "У нее не было денег",
+      "en": "She had no money"
+    }
+  },
+  {
+    "text": {
+      "ru": "У вас был второй завтрак?",
+      "en": "Did you have any lunch?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Прогулка была приятной?",
+      "en": "Did you have a pleasant trip?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не обедал",
+      "en": "I didn’t have a dinner"
+    }
+  },
+  {
+    "text": {
+      "ru": "Но у него не было работы",
+      "en": "But he didn’t have a job"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я только что видел вас на улице",
+      "en": "I saw you in the street just now"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я была там сегодня в семь часов утра",
+      "en": "I was there at seven this morning"
+    }
+  },
+  {
+    "text": {
+      "ru": "До войны они жили в Курске",
+      "en": "They lived in Kursk before the war"
+    }
+  },
+  {
+    "text": {
+      "ru": "Эти молодые люди закончили университет в прошлом году",
+      "en": "These young men graduated from the university last year"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я оделся, сошел вниз, выпил в кухне кофе и пошел в гараж",
+      "en": "I dressed, went downstairs, had some coffee in the kitchen and went out to the garge"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я видел ее каждый день",
+      "en": "I saw her every day"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она не раз приходила к нам",
+      "en": "She came many at time to our house"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы бывали в больнице ежедневно после обеда",
+      "en": "We were at the hospital every afternoon"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои родители обычно приходили к нам в воскресение",
+      "en": "My patents would come to our place on Sundays"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она, бывало, много росказывала мне о своем детстве",
+      "en": "She used to tell me long stories about her childhood"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты был вчера в институте? Да",
+      "en": "Were you at the Institute yesterday? Yes, I was"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он не мог говорить по-английски в прошлом году",
+      "en": "He couldn't speak English last year"
+    }
+  },
+  {
+    "text": {
+      "ru": "В небольшом доме в деревне жил-был человек",
+      "en": "There was once a man who lived in a small house in the country"
+    }
+  },
+  {
+    "text": {
+      "ru": "Однажды он ушел из дома и отправился в город",
+      "en": "One day he left his house and went into town"
+    }
+  },
+  {
+    "text": {
+      "ru": "После обеда мы долго сидели в саду",
+      "en": "After dinner we sat in the garden for a long time"
+    }
+  },
+  {
+    "text": {
+      "ru": "Если бы только у меня было больше времени",
+      "en": "If only I had more time"
+    }
+  },
+  {
+    "text": {
+      "ru": "Десять часов, тебе пора домой",
+      "en": "Ten o'clock - it's time you went home"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я бы хотел, чтобы моя память была лучше",
+      "en": "I wish I had a better memory"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне жаль, что мы уехали из Честера. Это такое прекрасное место",
+      "en": "I'm sorry we left Chester. It was such a nice place"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я женился на тебе, потому что хотел иметь жену, которая умеет готовить",
+      "en": "I married you because I wanted a wife who could cook"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я видел этот фильм на прошлой неделе",
+      "en": "I saw this film last week"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я посмотрел этот фильм вчера",
+      "en": "I saw this film yesterday"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я скоро вернусь",
+      "en": "I'll come soon"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она скоро узнает результат",
+      "en": "She'll soon know the result"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы закончим эту работу сегодня",
+      "en": "We shall finish the work today"
+    }
+  },
+  {
+    "text": {
+      "ru": "Самолёт возвратится через два часа",
+      "en": "The plane will return in two hours"
+    }
+  },
+  {
+    "text": {
+      "ru": "Увижу ли я вас завтра?",
+      "en": "Shall I see you tomorrow?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы возьмёте эту книгу в библиотеке?",
+      "en": "Will you take the book from the library?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Что мы будем делать завтра?",
+      "en": "What shall we do tomorrow?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не сделаю этого",
+      "en": "I shall not do this"
+    }
+  },
+  {
+    "text": {
+      "ru": "Пётр не пойдёт в театр сегодня вечером",
+      "en": "Peter will not go to the theatre tonight"
+    }
+  },
+  {
+    "text": {
+      "ru": "Следующим летом я поеду в Шанхай",
+      "en": "I will go to Shanghai next summer"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы пойдем на пляж?",
+      "en": "Shall we go to the beach?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ваш босс согласится с нашими условиями?",
+      "en": "Will your boss agree with our conditions?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я вас не подведу",
+      "en": "I shall not (shan’t) let you down"
+    }
+  },
+  {
+    "text": {
+      "ru": "Фред не согласится нам помочь",
+      "en": "Fred will not (won’t) agree to help us"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы вернемся через 4 часа",
+      "en": "We’ll return in 4 hours"
+    }
+  },
+  {
+    "text": {
+      "ru": "Его будет нелегко убедить",
+      "en": "It will not be easy to convince him"
+    }
+  },
+  {
+    "text": {
+      "ru": "Обещаю, что буду навещать тебя каждый день",
+      "en": "I promise I’ll visit you every day"
+    }
+  },
+  {
+    "text": {
+      "ru": "Буду каждый день ходить к речке, купаться и ловить рыбу",
+      "en": "I shall go to the river, swim and fish every day"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я расскажу вам об этом после обеда",
+      "en": "I’ll tell it to you after dinner"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он вернется через час",
+      "en": "He’ll be back in an hour"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы вернемся сюда на ночлег?",
+      "en": "Shall we come back here to sleep?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда он будет дома?",
+      "en": "When will he be at home?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы не пойдем туда",
+      "en": "We will not go there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он не останется здесь",
+      "en": "He will not stay here"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не пойду туда",
+      "en": "I shan’t go there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она не пойдет в театр",
+      "en": "She won’t go to the theatre"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я поеду с тобой завтра утром",
+      "en": "I’ll go over with you tomorrow morning"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я всегда буду возвращаться",
+      "en": "I’ll always come back"
+    }
+  },
+  {
+    "text": {
+      "ru": "В следующем году он будет работать на фабрике",
+      "en": "He’ll work at the factory next year"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я дам это ему, когда он вернется",
+      "en": "I’ll give it him when he comes back"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он готовит еду каждый каждый вечер? Нет",
+      "en": "Does he cook every evening? No, he doesn’t"
+    }
+  }
+]

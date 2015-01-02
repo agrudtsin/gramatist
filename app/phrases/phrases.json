@@ -1,26 +1,130 @@
-[
+﻿[
   {
-    "name": "Тестовые фразы",
-    "id": "phrases_1"
+    "name": "1. Вопросы, уведомления - Questions",
+    "id": "1._Вопросы,_уведомления_-_Questions"
   },
   {
-    "name": "Тестовые фразы 2",
-    "id": "phrases_2"
+    "name": "1. Времена - Tenses",
+    "id": "1._Tenses"
   },
   {
-    "name": "Тестовые фразы 3",
-    "id": "phrases_3"
+    "name": "1.1. Актив - Active",
+    "id": "1.1._Active"
   },
   {
-    "name": "A01 Простое неопределённое время",
-    "id": "A01_Present_Indefinite_Active"
+    "name": "1.1.1 Present",
+    "id": "1.1.1_Present"
   },
   {
-    "name": "A02 Простое прошедшее время",
-    "id": "A02_Past_Indefinite_Active"
+    "name": "1.1.1.1 Simple",
+    "id": "1.1.1.1_Simple"
   },
   {
-    "name": "A03 Простое будущее время",
-    "id": "A03_Future_Indefinite_Active."
+    "name": "1.1.1.2 Continuous",
+    "id": "1.1.1.2_Continuous"
+  },
+  {
+    "name": "1.1.1.3 Perfect",
+    "id": "1.1.1.3_Perfect"
+  },
+  {
+    "name": "1.1.1.4 Perfect Continuous",
+    "id": "1.1.1.4_Perfect_Continuous"
+  },
+  {
+    "name": "1.1.2 Past",
+    "id": "1.1.2_Past"
+  },
+  {
+    "name": "1.1.2.1 Simple",
+    "id": "1.1.2.1_Simple"
+  },
+  {
+    "name": "1.1.2.2 Continuous",
+    "id": "1.1.2.2_Continuous"
+  },
+  {
+    "name": "1.1.2.3 Past Perfect",
+    "id": "1.1.2.3_Past_Perfect"
+  },
+  {
+    "name": "1.1.2.4 Perfect Countinuous",
+    "id": "1.1.2.4_Perfect_Countinuous"
+  },
+  {
+    "name": "1.1.3 Future",
+    "id": "1.1.3_Future"
+  },
+  {
+    "name": "1.1.3.1 Simple",
+    "id": "1.1.3.1_Simple"
+  },
+  {
+    "name": "1.1.3.2 Continuous",
+    "id": "1.1.3.2_Continuous"
+  },
+  {
+    "name": "1.1.3.3 Perfect",
+    "id": "1.1.3.3_Perfect"
+  },
+  {
+    "name": "1.1.3.4 Perfect Continuous",
+    "id": "1.1.3.4_Perfect_Continuous"
+  },
+  {
+    "name": "1.2 Пассив - Passive",
+    "id": "1.2_Пассив_-_Passive"
+  },
+  {
+    "name": "1.2.1 Настоящее - Present",
+    "id": "1.2.1_Настоящее_-_Present"
+  },
+  {
+    "name": "1.2.1.1 Simple",
+    "id": "1.2.1.1_Simple"
+  },
+  {
+    "name": "1.2.2 Прошлое - Past",
+    "id": "1.2.2_Прошлое_-_Past"
+  },
+  {
+    "name": "1.2.3. Будущее - Future",
+    "id": "1.2.3._Будущее_-_Future"
+  },
+  {
+    "name": "1.2.3.1 Simple",
+    "id": "1.2.3.1_Simple"
+  },
+  {
+    "name": "1.3. Вложеные вопросы - Embedded questions",
+    "id": "1.3._Вложеные_вопросы_-_Embedded_questions"
+  },
+  {
+    "name": "1.4. Альтернативный вопрос",
+    "id": "1.4._Альтернативный_вопрос"
+  },
+  {
+    "name": "1.5. Вопросительные слова",
+    "id": "1.5._Вопросительные_слова"
+  },
+  {
+    "name": "2. Advising and persuading",
+    "id": "2._Advising_and_persuading"
+  },
+  {
+    "name": "2. Идиомы - Idioms",
+    "id": "2._Идиомы_-_Idioms"
+  },
+  {
+    "name": "3. Encouragement",
+    "id": "3._Encouragement"
+  },
+  {
+    "name": "3. Полезные фразы - Useful phrases",
+    "id": "3._Полезные_фразы_-_Useful_phrases"
+  },
+  {
+    "name": "5. Пословицы - Proverbs",
+    "id": "3._Encouragement"
   }
 ]

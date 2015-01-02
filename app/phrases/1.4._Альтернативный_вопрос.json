@@ -1,0 +1,50 @@
+﻿[
+  {
+    "text": {
+      "ru": "Он послал открытку или письмо два дня назад?",
+      "en": "Did he send a postcard or a letter two days ago?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он послал матери открытку вчера или два дня назад?",
+      "en": "Did he send a postcard to his mother yesterday or two days ago?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он послал открытку матери или сестре?",
+      "en": "Did he send the postcard to his mother or his sister?"
+    }
+  },
+  {
+    "text": {
+      "ru": "На улице тепло или холодно?",
+      "en": "Is it cold or warm outside?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Тепло на улице или дома?",
+      "en": "Is it warm inside or outside?"
+    }
+  },
+  {
+    "text": {
+      "ru": "На улице часто бывает тепло или только в это время года?",
+      "en": "Is it often warm outside or only at this time of the year?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда тебя прервали: в начале или середине речи?",
+      "en": "When were you interrupted: at the beginning or in the middle of your speech?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он попытается принять участие в этих или следующих соревнованиях?",
+      "en": "Will he try to take part in this or next competitions?"
+    }
+  }
+]
