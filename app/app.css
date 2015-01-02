@@ -1,7 +1,7 @@
 .DivNativeText {
     FONT-FAMILY: Georgia, Verdana, Times;
-
-    margin-left:52px; 
+    margin-top:100px; 
+    margin-left:52px;
     COLOR: #00a;
     FONT-SIZE: 22px;
     BORDER: #88F solid 1px;    
@@ -50,9 +50,6 @@
     FONT-FAMILY: "Verily Serif Mono", monospace;
     FONT-SIZE: 24px;
     BACKGROUND: none transparent scroll repeat 0% 0%;
-    FILTER: alpha(opacity: 0); 
-    opacity: 0; 
-    -moz-opacity: 0;
 }
 
 .textarea {
@@ -81,7 +78,7 @@ body {
 }
 
 .MiddleColumn {
-    margin-left:52px;
+    
 }
 
 .Header {
