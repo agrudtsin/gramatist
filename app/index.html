@@ -2,6 +2,8 @@
 <html ng-app="myApp">
 <head>
     <meta content="text/html; charset=utf-8;" http-equiv="Content-Type">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" type="text/css" href="app.css">
     <title>Граматист - практическое изучение английского языка</title>
     <link rel="shortcut icon" href="resources/img/Logo1_16.png">
@@ -20,7 +22,7 @@
                 ng-change="phrasesListOnChange(currentPhrase)"
                 ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
     </div>
-    <div class="Hint" ng-show="isContainErrors()">Нажми Enter для подсказки</div>
+    <div class="Hint" ng-show="isContainErrors()">Нажмите Enter для подсказки</div>
     <div id="MiddleColumn" class="MiddleColumn">
         <div height=100></div>
         <div style="display: none; margin-left:100px; MARGIN-top: 50px; BORDER: #7799D8 solid 1px; width:80%; Font-size:27; color:#7F7F7F; Font-family:Verdana">
@@ -30,7 +32,7 @@
                     onselectstart='return false;' 
                     onmousedown='return false;'
                     id="NativeTextDIV">
-            <textarea id="NativeLanguagePhrase" rows="1" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' style="BORDER: #7799D8 solid 1px; ">{{currentPhrase.text.ru}}</textarea>
+            <textarea id="NativeLanguagePhrase" rows="1" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' style="BORDER: #DDD solid 1px; ">{{currentPhrase.text.ru}}</textarea>
             <div    unselectable='on'
                     onselectstart='return false;' 
                     onmousedown='return false;'
@@ -63,7 +65,7 @@
                     style="
                         FONT-FAMILY: Verdana, Arial;
                         background:#FFF; 
-                        color:#7799D8; 
+                        color:#336FD6; 
                         border-radius: 10px; 
                         BORDER: #7799D8 solid 1px; 
                         CURSOR:help;
@@ -97,8 +99,8 @@
                 class="AllTextAreas CommonFormat positionabsolute" 
                 style="
                     Z-INDEX: -4; 
-                    background:#B7DB69;
-                    box-shadow: 2px 2px 3px 0px #9BBB59 inset;
+                    background:#EEFFCD;
+                    box-shadow: 2px 2px 3px 0px #D7E5B5 inset;
                     CURSOR: none; 
                     pointer-events: none;">
             </textarea>
@@ -148,6 +150,7 @@
                     pointer-events: none" >{{redText}}
             </textarea>
             <img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/Welldone32.png">
+            <img class="grammatistLogoSmallScreen" id="GrammatistLogo" src="resources/img/Logo1_32.png" title ="Граматист - практическое изучение английского языка"></img>
         </div>
         
         <div id=Statistics class="StatisticsBlock">

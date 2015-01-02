@@ -4,8 +4,8 @@
     margin-left:52px;
     COLOR: #00a;
     FONT-SIZE: 22px;
-    BORDER: #88F solid 1px;    
-    /*background: rgba(235,235,235,1);*/
+    BORDER: #EEE solid 1px;    
+    background: #F3F3F3;
     cursor:default;
     user-select:none;
 }
@@ -25,7 +25,7 @@
     left:400px;
     top:156px;
     background:#FF8;
-    box-shadow: 0px 0px 3px 3px #DDD;
+    /*box-shadow: 1px 1px 1px 1px #DDD;*/
     CURSOR: pointer; 
 }
 .positionabsolute {
@@ -61,7 +61,12 @@
     margin-top:10px;
     left: 10px;
 }
-
+.grammatistLogoSmallScreen {
+    display: none;
+    position:absolute;
+    top:20px;
+    left: 10px;
+}
 .backgroundInput {
     /*background: #FFF;   */
     box-shadow: 2px 2px 3px 0px #DDD inset;
@@ -165,3 +170,18 @@ textarea:focus{
     FONT-FAMILY: Verdana, Times;
     BORDER: #BBB solid 1px;
 }
+
+@media screen and (max-height: 800px) {
+        .Header {
+            display:none;
+        }
+        .DivNativeText {
+            margin-top:10px; 
+        }
+        .grammatistLogoSmallScreen {
+            display: block;
+        }
+        .Hint {
+            top:66px;
+        }
+    }
