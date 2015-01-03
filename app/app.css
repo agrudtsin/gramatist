@@ -6,7 +6,7 @@
     FONT-SIZE: 22px;
     BORDER: #EEE solid 1px;    
     background: #F3F3F3;
-    cursor:default;
+    cursor:pointer;
     user-select:none;
 }
 
@@ -66,7 +66,16 @@
     position:absolute;
     top:20px;
     left: 10px;
+    cursor:pointer;
 }
+#GrammatistLogoNearNative:hover {    
+    top:19px;
+    left:9px;
+    width: 34px;
+    height: 34px;
+}
+
+
 .backgroundInput {
     /*background: #FFF;   */
     box-shadow: 2px 2px 3px 0px #DDD inset;

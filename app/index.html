@@ -4,23 +4,35 @@
     <meta content="text/html; charset=utf-8;" http-equiv="Content-Type">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
     <link rel="stylesheet" type="text/css" href="app.css">
     <title>Граматист - практическое изучение английского языка</title>
     <link rel="shortcut icon" href="resources/img/Logo1_16.png">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
-<body ng-controller="mainCtrl" onload="FocusOnInput()">
+<body ng-controller="mainCtrl" onload="window.scrollTo(0,1);">
     <!-- Background  -->
     <div ng-view></div>
     <div class="Header">
-        <img id="GrammatistLogo" src="resources/img/Logo1_32.png" title ="Граматист - практическое изучение английского языка"></img>
+        <img id="GrammatistLogo" src="resources/img/Logo2_32.png" title ="Граматист - практическое изучение английского языка"></img>
         <select ng-model='currentCategory'
                 ng-change="categoryOnChange(currentCategory)"
                 ng-options="category.name for category in categories"></select>
         <select ng-model='currentPhrase'
                 ng-change="phrasesListOnChange(currentPhrase)"
                 ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
+    </div>
+    <div id="blackBackground" style = "position:absolute; z-index:1999;left:0px; right:0px;top:0px;bottom:0px; background:rgba(0,0,0,0.3); visibility:hidden " onclick="hideCategorySelect()">
+        <div id="CategoryChooseDivOnMobile" style="position:absolute; z-index:2000; left: 10%; top:10%; right:10%;bottom:10%; background:#FFF; BORDER: #EEE solid 1px;   border-radius: 10px;  " onclick="hideCategorySelect()">
+            <select ng-model='currentCategory'
+                    ng-change="categoryOnChange(currentCategory)"
+                    ng-options="category.name for category in categories" style="margin-left:20px; margin-top:10px;"></select>
+            <select ng-model='currentPhrase'
+                ng-change="phrasesListOnChange(currentPhrase)"
+                ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
+            <input type="button" value=" OK " onclick="hideCategorySelect();"/>
+        </div>
     </div>
     <div class="Hint" ng-show="isContainErrors()">Нажмите Enter для подсказки</div>
     <div id="MiddleColumn" class="MiddleColumn">
@@ -32,7 +44,8 @@
                     onselectstart='return false;' 
                     onmousedown='return false;'
                     id="NativeTextDIV">
-            <textarea id="NativeLanguagePhrase" rows="1" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' style="BORDER: #DDD solid 1px; ">{{currentPhrase.text.ru}}</textarea>
+            <textarea id="NativeLanguagePhrase" rows="1" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' style="BORDER: #DDD solid 1px; " onclick="showCategorySelect();">{{currentPhrase.text.ru}}</textarea>
+            <img class="grammatistLogoSmallScreen" id="GrammatistLogoNearNative" src="resources/img/Logo2_32.png" title ="Граматист - практическое изучение английского языка" onclick="showCategorySelect();"></img>
             <div    unselectable='on'
                     onselectstart='return false;' 
                     onmousedown='return false;'
@@ -150,7 +163,6 @@
                     pointer-events: none" >{{redText}}
             </textarea>
             <img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/Welldone32.png">
-            <img class="grammatistLogoSmallScreen" id="GrammatistLogo" src="resources/img/Logo1_32.png" title ="Граматист - практическое изучение английского языка"></img>
         </div>
         
         <div id=Statistics class="StatisticsBlock">
@@ -186,6 +198,13 @@
     <script src="mainPage/mainPage.js"></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
     <script src='bower_components/angular-route/angular-route.js'></script>
-    
+    <script type="text/javascript">
+    function showCategorySelect(){
+        document.getElementById('blackBackground').style.visibility='visible';
+    }
+    function hideCategorySelect(){
+        document.getElementById('blackBackground').style.visibility='hidden';
+    }
+    </script>
 </body>
 </html>
