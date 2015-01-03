@@ -22,8 +22,8 @@
     border-radius: 4px;    
     BORDER: #BBB solid 1px;
     PADDING: 3px;
-    left:400px;
-    top:156px;
+    left:40%;
+    top:165px;
     background:#FF8;
     /*box-shadow: 1px 1px 1px 1px #DDD;*/
     CURSOR: pointer; 
@@ -191,6 +191,22 @@ textarea:focus{
             display: block;
         }
         .Hint {
-            top:66px;
-        }
+            top:80px;
+        }        
     }
+@media screen and (max-width: 800px) {
+    .CommonFormat {
+        width:85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .CommonFormat {
+        width:75%;
+    }
+    .Hint {
+        FONT-SIZE: 10px;
+        left:80px;
+    }        
+}
+    
