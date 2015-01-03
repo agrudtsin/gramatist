@@ -23,6 +23,7 @@ function MainCtrl($scope, $http, phrases, dataProvider) {
         $scope.redText = "";
         $scope.grayText = "";
         $scope.underlinesText = "";
+        $scope.wrongSpaces = "";
     };
     $scope.clearUserText();
     dataProvider.getCategories().
@@ -35,6 +36,10 @@ function MainCtrl($scope, $http, phrases, dataProvider) {
 
         });
 
+    $scope.onUserTextSpace = function(){
+        $scope.userText += " ";
+        $scope.onUserTextChange();
+    };
     $scope.onUserTextChange = function () {
         $scope.userText = phrases.cropUserTextIfContainErrors($scope.currentPhrase.text.en, $scope.userText);
         $scope.buildRedText();
@@ -46,7 +51,12 @@ function MainCtrl($scope, $http, phrases, dataProvider) {
         useTwoEntersToShowGrayedText();
 
         function useTwoEntersToShowGrayedText() {
-            if ($scope.isContainErrors()) $scope.userText = phrases.deleteLastWord($scope.userText);
+            if ($scope.isContainErrorSpaces()){
+                $scope.userText = _.str.rtrim($scope.userText);
+            }
+            if ($scope.isContainErrors() || !$scope.isWordFinished()) {
+                $scope.userText = phrases.deleteLastWord($scope.userText);
+            };
             $scope.grayText = phrases.buildGrayText($scope.currentPhrase.text.en, $scope.userText);
             $scope.buildRedText();
         };
@@ -101,8 +111,15 @@ function MainCtrl($scope, $http, phrases, dataProvider) {
     $scope.isContainErrors = function () {
         return phrases.isContainErrors($scope.redText);
     };
+    $scope.isContainErrorSpaces = function(){
+        return phrases.isContainErrors($scope.wrongSpaces);
+    };
+    $scope.isWordFinished = function () {
+        return phrases.isWordFinished($scope.currentPhrase.text.en, $scope.userText);
+    };
     $scope.buildRedText = function () {
         $scope.redText = phrases.buildRedText($scope.currentPhrase.text.en, $scope.userText);
+        $scope.wrongSpaces = phrases.buildWrongSpaces($scope.currentPhrase.text.en, $scope.userText);
     }
 }
 

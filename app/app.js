@@ -40,13 +40,9 @@ function Phrases($http, dataProvider) {
             }
         },
         deleteLastWord: function (userText) {
-            var resultText = _.str.rtrim(userText, " ");
-            var lastSpacePosition = resultText.lastIndexOf(' ');
-            if (lastSpacePosition > 0) {
-                return _.str.rtrim(resultText.substring(0, lastSpacePosition), " ") + ' ';
-            } else {
-                return "";
-            }
+            var lastSpacePosition = _.str.rtrim(userText, " ").lastIndexOf(' ');
+            if (lastSpacePosition > 0) return _.initial(_.string.words(userText," ")).join(" ") + " ";
+            return "";
         },
         deleteLastSpace: function (text) {
             return _.string.rtrim(text, ' ');
@@ -89,8 +85,26 @@ function Phrases($http, dataProvider) {
             if(_.string.words(userText).length == 0) grayText = grayText.slice(1);//remove first space if no words in user text
             return grayText;
         },
+        buildWrongSpaces:function(targetPhrase, userText){
+            var wrongSpaces = "";
+            for (var i = 0; i < userText.length; i += 1) {
+                if(userText[i] == " " && userText[i] != targetPhrase[i]){
+                    wrongSpaces += "█";
+                } else {
+                    wrongSpaces += " ";
+                };
+            };
+            return wrongSpaces;
+        },
         isContainErrors: function (redText) {
             return ' ' != _.uniq(redText).toString() && '' != _.uniq(redText).toString()
+        },
+        isWordFinished: function(targetPhrase, userText){
+            if(userText=="") return true;
+            var targetPhraseWords = _.string.words(targetPhrase);
+            return _.reduce(_.string.words(userText), function(result, value, key){
+                return result && (value == targetPhraseWords[key])
+            },true);
         },
         cropUserTextIfContainErrors: function (targetPhrase, userText) {
             var isContainErrors = this.isContainErrors(this.buildRedText(targetPhrase, userText));
@@ -120,6 +134,12 @@ function ngEnter() {
             if (event.which === 13) {
                 scope.$apply(function () {
                     scope.$eval(attrs.ngEnter);
+                });
+                event.preventDefault();
+            }
+            if (event.which === 32) {
+                scope.$apply(function () {
+                    scope.$eval("onUserTextSpace()");
                 });
                 event.preventDefault();
             }
