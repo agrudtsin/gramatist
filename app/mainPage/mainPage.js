@@ -46,8 +46,8 @@ function MainCtrl($scope, $http, phrases, dataProvider) {
         useTwoEntersToShowGrayedText();
 
         function useTwoEntersToShowGrayedText() {
-            $scope.grayText = $scope.currentPhrase.text.en;
             if ($scope.isContainErrors()) $scope.userText = phrases.deleteLastWord($scope.userText);
+            $scope.grayText = phrases.buildGrayText($scope.currentPhrase.text.en, $scope.userText);
             $scope.buildRedText();
         };
         function useEntersToUnderlineText() {

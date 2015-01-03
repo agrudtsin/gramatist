@@ -4,12 +4,10 @@ _.mixin(_.string.exports());
 angular.
     module('myApp', [
         'ngResource',
-        'ngRoute',
         'myApp.mainPage']).
     factory('dataProvider', ['$http', DataProvider]).
     factory('phrases', ['$http', 'dataProvider', Phrases]).
-    directive('ngEnter', ngEnter).
-    config(routerConfig)
+    directive('ngEnter', ngEnter);
 
 
 
@@ -84,6 +82,13 @@ function Phrases($http, dataProvider) {
             return redText;
 
         },
+        buildGrayText:function(targetPhrase, userText){
+            var grayText = "";
+            grayText =_.reduce(_.string.trim(userText), function(memo,context){return memo+=" "},"");//replace all chars by spaces
+            grayText += " "+ _.string.words(targetPhrase)[_.string.words(userText).length];// add next word from targetPhrase
+            if(_.string.words(userText).length == 0) grayText = grayText.slice(1);//remove first space if no words in user text
+            return grayText;
+        },
         isContainErrors: function (redText) {
             return ' ' != _.uniq(redText).toString() && '' != _.uniq(redText).toString()
         },
@@ -120,10 +125,4 @@ function ngEnter() {
             }
         });
     };
-}
-function routerConfig($routeProvider){
-    $routeProvider
-        .otherwise({
-            redirectTo: '/'
-        });
 }
