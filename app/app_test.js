@@ -108,11 +108,11 @@ describe('myApp controller', function () {
         $controller('mainCtrl', {$scope: $scope});
         $scope.categories =  [{
             "name": "Тестовые фразы",
-            "id": "phrases_1"
+            "id": "1.1.1.3_Perfect"
         },
         {
             "name": "Тестовые фразы 2",
-            "id": "phrases_2"
+            "id": "1.1.2_Past"
         }];
         $scope.phrasesList = [
             {
@@ -144,7 +144,6 @@ describe('myApp controller', function () {
     it('mainCtrl should be defined', function () {
         expect($scope.isDefined).toBeTruthy();
     });
-    
     it('should be trothy when user phrases equal', function(){
         expect($scope.isPhrasesEqual()).not.toBeTruthy();
 
@@ -156,7 +155,6 @@ describe('myApp controller', function () {
         $scope.userText = "qwertu";
         expect($scope.isPhrasesEqual()).not.toBeTruthy();
     });
-
     it("По нажатию на Enter, если пользовательская фраза введена правильно, переключается на следующую фразу", function () {
 
         $scope.userText = $scope.currentPhrase.text.en;
@@ -232,7 +230,19 @@ describe('myApp controller', function () {
             //expect($scope.redText)  .toEqual("   "); //My name is Andrey
         });
     });
-    it("При третьем нажатии на энтер показываем серыми буквами фразу целиком", function () {
+
+    //https://github.com/agrudtsin/gramatist/issues/20
+    it("При выборе категории очищается пользовательский текст, почеркивание, красный и серый текст", function () {
+
+        $scope.userText = "userText";
+        $scope.grayText = "grayText";
+        $scope.redText = "redText";
+        $scope.underlinesText = "underlinesText";
+        $scope.categoryOnChange(_.first($scope.categories ));
+        expect($scope.userText).toEqual("");
+        expect($scope.grayText).toEqual("");
+        expect($scope.underlinesText).toEqual("");
+        expect($scope.redText).toEqual("");
 
     });
 
