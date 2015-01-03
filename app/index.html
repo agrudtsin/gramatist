@@ -22,8 +22,8 @@
                 ng-change="phraseOnChange(currentPhrase)"
                 ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
     </div>
-    <div id="blackBackground" style = "position:absolute; z-index:1999;left:0px; right:0px;top:0px;bottom:0px; background:rgba(0,0,0,0.3); visibility:hidden " onclick="hideCategorySelect()">
-        <div id="CategoryChooseDivOnMobile" style="position:absolute; z-index:2000; left: 10%; top:10%; right:10%;padding-bottom:5%; background:#FFF; BORDER: #EEE solid 1px;   border-radius: 10px;  " onclick="hideCategorySelect()">
+    <div id="blackBackground" style = "position:absolute; z-index:1999;left:0px; right:0px;top:0px;bottom:0px; background:rgba(0,0,0,0.3); visibility:hidden ">
+        <div id="CategoryChooseDivOnMobile" style="position:absolute; z-index:2000; left: 10%; top:10%; right:10%;padding-bottom:5%; background:#FFF; BORDER: #EEE solid 1px;   border-radius: 10px;  ">
             <div style="margin-left:20px; float:center;">Группа</div> 
             <select ng-model='currentCategory'
                     ng-change="categoryOnChange(currentCategory)"

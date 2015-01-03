@@ -126,5 +126,21 @@
   {
     "name": "5. Пословицы - Proverbs",
     "id": "3._Encouragement"
+  },
+  {
+    "name": "6. IELTS",
+    "id": "6._IELTS"
+  },
+  {
+    "name": "6.1. Правила для сочинения - Rules for essay",
+    "id": "6.1._Rules_for_essay"
+  },
+  {
+    "name": "7. Переводы текстов - Translation of texts",
+    "id": "7._Translation_of_texts"
+  },
+  {
+    "name": "7.01. Health in Switzerland",
+    "id": "7.01._Health_in_Switzerland"
   }
 ]

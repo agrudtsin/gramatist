@@ -23,7 +23,7 @@
     BORDER: #BBB solid 1px;
     PADDING: 3px;
     left:40%;
-    top:165px;
+    top:155px;
     background:#FF8;
     /*box-shadow: 1px 1px 1px 1px #DDD;*/
     CURSOR: pointer; 
@@ -60,6 +60,7 @@
     position:absolute;
     margin-top:10px;
     left: 10px;
+
 }
 .grammatistLogoSmallScreen {
     display: none;
@@ -180,20 +181,46 @@ textarea:focus{
     BORDER: #BBB solid 1px;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 500px) {
         .Header {
             display:none;
         }
         .DivNativeText {
             margin-top:10px; 
+            FONT-SIZE: 16px;
         }
         .grammatistLogoSmallScreen {
             display: block;
         }
         .Hint {
-            top:80px;
+            top:40px;
+            FONT-SIZE: 12px;
         }        
+        .CommonFormat {
+            PADDING: 0px;
+            PADDING-left: 3px;
+        }
+        .AllTextAreas {    
+            height: 25px;
+            FONT-SIZE: 16px;
+        }
+        .grammatistLogoSmallScreen {
+            top:6px;
+            cursor:pointer;
+        }
+        #GrammatistLogoNearNative:hover {    
+            top:5px;
+        }
+        .propersign {
+            margin-top:-4px;
+            left: 10px;
+        }
+}
+@media screen and (max-width: 1000px) {
+    .CommonFormat {
+        width:90%;
     }
+}    
 @media screen and (max-width: 800px) {
     .CommonFormat {
         width:85%;
@@ -201,12 +228,14 @@ textarea:focus{
 }
 
 @media screen and (max-width: 500px) {
-    .CommonFormat {
-        width:75%;
-    }
     .Hint {
         FONT-SIZE: 10px;
-        left:80px;
+        left:200px;
     }        
 }
-    
+
+@media screen and (max-width: 400px) {
+    .CommonFormat {
+        width:83%;
+    }  
+}
