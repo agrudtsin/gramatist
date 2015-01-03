@@ -69,8 +69,13 @@ describe('phrases service test', function () {
             expect(phrases.buildUnderlinedTextByString(".")).toEqual(".");
             expect(phrases.buildUnderlinedTextByString("12.")).toEqual("__.");
             expect(phrases.buildUnderlinedTextByString(".,?!;: q")).toEqual(".,?!;: _");
-
-
+        });
+        it("deleteLastWord должен удалять последнее слово в строке", function () {
+            expect(phrases.deleteLastWord(" ")).toEqual("");
+            //expect(phrases.deleteLastWord("  ")).toEqual("");
+            //expect(phrases.deleteLastWord("My name")).toEqual("My ");
+            //expect(phrases.deleteLastWord("My name is")).toEqual("My name ");
+            //expect(phrases.deleteLastWord("My name         ")).toEqual("My name ");
         });
         it('Неправильные символы выделяем красным, остальные символы - пробелы', function () {
             expect(phrases.buildRedText('My name is Nikolay', "My Name")).toEqual("   N   ");
@@ -94,6 +99,22 @@ describe('phrases service test', function () {
             expect(phrases.buildGrayText('My name is Nikolay', "My "))  .toEqual("   name");
             expect(phrases.buildGrayText('My name is Nikolay', "My name")).toEqual("        is");
         });
+
+        it('Выделяем красным неправмльные пробелы', function(){
+            expect(phrases.buildWrongSpaces('My name is Nikolay', " "))     .toEqual("█");
+            expect(phrases.buildWrongSpaces('My name is Nikolay', "  "))     .toEqual("██");
+            expect(phrases.buildWrongSpaces('My name is Nikolay', "   "))     .toEqual("██ ");
+            expect(phrases.buildWrongSpaces('My name is Nikolay', "   "))     .toEqual("██ ");
+        });
+
+        it("isWordFinished работает правильно", function () {
+            expect(phrases.isWordFinished('My name is Nikolay', "My")).toBeTruthy();
+            expect(phrases.isWordFinished('My name is Nikolay', "")).toBeTruthy();
+            expect(phrases.isWordFinished('My name is Nikolay', "My ")).toBeTruthy();
+            expect(phrases.isWordFinished('My name is Nikolay', "M")).not.toBeTruthy();
+            expect(phrases.isWordFinished('My name is Nikolay', "My nam")).not.toBeTruthy();
+        });
+
         xit('Когда один раз нажимем Enter - убираем пользовательский текст до первого правильного слова и подчеркиваем текущее слово', function () {
         });
 
@@ -213,13 +234,20 @@ describe('myApp controller', function () {
             $scope.onUserTextEnter();
             expect($scope.grayText).toEqual("My"); //My name is Andrey
         });
-
         it("Пользовательский тект уже на половину введен", function () {
             $scope.userText = "My name";
             $scope.onUserTextEnter();
             $scope.onUserTextEnter();
             expect($scope.grayText).toEqual("        is"); //My name is Andrey
         });
+        it("Если слово не дописано, и пользователь вызывает подсказку," +
+        " то удаляем недописанное слово и выводим подсказку", function () {
+            $scope.userText = "My na";
+            $scope.onUserTextEnter();// Только подчеркивания
+            $scope.onUserTextEnter();//Выводим подсказку серым
+            expect($scope.grayText).toEqual("   name");
+        });
+
 
         xit("Пользовательский тект содержит ошибку", function () {
             //$scope.userText = "My test";

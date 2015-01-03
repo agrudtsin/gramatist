@@ -13,7 +13,6 @@
 </head>
 <body ng-controller="mainCtrl" onload="window.scrollTo(0,1);">
     <!-- Background  -->
-    <div ng-view></div>
     <div class="Header">
         <img id="GrammatistLogo" src="resources/img/Logo2_32.png" title ="Граматист - практическое изучение английского языка"></img>
         <select ng-model='currentCategory'
@@ -29,7 +28,6 @@
             <select ng-model='currentCategory'
                     ng-change="categoryOnChange(currentCategory)"
                     ng-options="category.name for category in categories" style="margin-left:20px; margin-top:10px;"></select>
-            фраза
             <select ng-model='currentPhrase'
                 ng-change="phrasesListOnChange(currentPhrase)"
                 ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
@@ -128,7 +126,7 @@
                     Z-INDEX: -5; 
                     COLOR: #fdd;
                     CURSOR: none; 
-                    pointer-events: none;">{{WrongSpaces}}
+                    pointer-events: none;">{{wrongSpaces}}
             </textarea>
                 <!-- GrayedText -->
             <textarea 
@@ -146,12 +144,12 @@
             <textarea 
                 autofocus 
                 id="userText" 
-                class="AllTextAreas CommonFormat positionabsolute" 
+                class="AllTextAreas CommonFormat positionabsolute"
                 ng-model="userText" 
                 ng-change="onUserTextChange()" 
-                ng-enter="onUserTextEnter()" 
+                ng-enter="onUserTextEnter()"
                 spellcheck="false" 
-                rows="1">Mi name iz Nikolay
+                rows="1">
             </textarea>
                 <!-- Red error text -->
             <textarea 
