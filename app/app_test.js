@@ -88,6 +88,12 @@ describe('phrases service test', function () {
             expect(phrases.cropUserTextIfContainErrors('My name is Nikolay', "Myke")).toEqual("Myke");//one word
 
         });
+        it('Серым цветом подсказываем одно следующее слово', function(){
+            expect(phrases.buildGrayText('My name is Nikolay', ""))     .toEqual("My");
+            expect(phrases.buildGrayText('My name is Nikolay', "My"))   .toEqual("   name");
+            expect(phrases.buildGrayText('My name is Nikolay', "My "))  .toEqual("   name");
+            expect(phrases.buildGrayText('My name is Nikolay', "My name")).toEqual("        is");
+        });
         xit('Когда один раз нажимем Enter - убираем пользовательский текст до первого правильного слова и подчеркиваем текущее слово', function () {
         });
 
@@ -183,6 +189,7 @@ describe('myApp controller', function () {
         it("Пользовательский текст пустой; срузу жмем Энтер", function () {
             $scope.onUserTextEnter();
             expect($scope.underlinesText).toEqual("__ ____ __ ______"); //My name is Andrey
+            expect($scope.grayText).toEqual(""); //My name is Andrey
         });
         it("В тексте есть знаки припинания", function () {
             $scope.currentPhrase.text.en = " ;,. test ";
@@ -202,15 +209,14 @@ describe('myApp controller', function () {
 
 
     });
-
     describe("При втором нажатии на энтер подсказываем слово серым текстом", function () {
-        xit("Пользовательский текст пустой; срузу жмем Энтер два раза", function () {
+        it("Пользовательский текст пустой; срузу жмем Энтер два раза", function () {
             $scope.onUserTextEnter();
             $scope.onUserTextEnter();
             expect($scope.grayText).toEqual("My"); //My name is Andrey
         });
 
-        xit("Пользовательский тект уже на половину введен", function () {
+        it("Пользовательский тект уже на половину введен", function () {
             $scope.userText = "My name";
             $scope.onUserTextEnter();
             $scope.onUserTextEnter();
@@ -218,12 +224,12 @@ describe('myApp controller', function () {
         });
 
         xit("Пользовательский тект содержит ошибку", function () {
-            $scope.userText = "My test";
-            $scope.onUserTextEnter();
-            $scope.onUserTextEnter();
-            expect($scope.grayText).toEqual("   name"); //My name is Andrey
-            expect($scope.userText).toEqual("My ");
-            expect($scope.redText).toEqual("   "); //My name is Andrey
+            //$scope.userText = "My test";
+            //$scope.onUserTextEnter();
+            //$scope.onUserTextEnter();
+            //expect($scope.grayText) .toEqual("   name"); //My name is Andrey
+            //expect($scope.userText) .toEqual("My ");
+            //expect($scope.redText)  .toEqual("   "); //My name is Andrey
         });
     });
     it("При третьем нажатии на энтер показываем серыми буквами фразу целиком", function () {
