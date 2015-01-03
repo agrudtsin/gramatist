@@ -9,13 +9,6 @@ angular.
     .controller('mainCtrl', MainCtrl);
 function MainCtrl($scope, $http, phrases, dataProvider) {
     $scope.isDefined = true;
-    $scope.anotherRedText = "";
-
-    $scope.redText = "";
-    $scope.userText = "";
-    $scope.redText = "";
-    $scope.grayText = "";
-    $scope.underlinesText = "";
     $scope.currentPhrase = {
         text: {
             ru: "",
@@ -24,7 +17,14 @@ function MainCtrl($scope, $http, phrases, dataProvider) {
     };
     $scope.categories = [];
     $scope.phrasesList = [];
-
+    $scope.clearUserText = function(){
+        $scope.redText = "";
+        $scope.userText = "";
+        $scope.redText = "";
+        $scope.grayText = "";
+        $scope.underlinesText = "";
+    };
+    $scope.clearUserText();
     dataProvider.getCategories().
         success(function (data) {
             $scope.categories = data;
@@ -85,9 +85,16 @@ function MainCtrl($scope, $http, phrases, dataProvider) {
         dataProvider.getPhrasesByID($scope.currentCategory.id).
             success(function (data) {
                 $scope.phrasesList = data;
-                $scope.currentPhrase = _.first(data);
+                $scope.phraseOnChange(_.first(data));
             })
+        $scope.clearUserText();
+
     };
+    $scope.phraseOnChange = function(newPhrase){
+        $scope.currentPhrase = newPhrase;
+        $scope.clearUserText();
+    };
+
     $scope.isPhrasesEqual = function () {
         return $scope.currentPhrase.text.en == $scope.userText;
     };

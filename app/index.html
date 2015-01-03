@@ -20,7 +20,7 @@
                 ng-change="categoryOnChange(currentCategory)"
                 ng-options="category.name for category in categories"></select>
         <select ng-model='currentPhrase'
-                ng-change="phrasesListOnChange(currentPhrase)"
+                ng-change="phraseOnChange(currentPhrase)"
                 ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
     </div>
     <div id="blackBackground" style = "position:absolute; z-index:1999;left:0px; right:0px;top:0px;bottom:0px; background:rgba(0,0,0,0.3); visibility:hidden " onclick="hideCategorySelect()">
