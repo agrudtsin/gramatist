@@ -1,38 +1,278 @@
 ﻿[
   {
     "text": {
-      "ru": "Я не работаю сейчас",
-      "en": "I am not working now"
+      "ru": "Я отправил письмо сегодня",
+      "en": "I have sent the letter today"
     }
   },
   {
     "text": {
-      "ru": "Они не классно проводят время",
-      "en": "They aren't having a great time now"
+      "ru": "Она только что ответила на вопрос",
+      "en": "She has just answered the question"
     }
   },
   {
     "text": {
-      "ru": "Мы не учимся действительно усердно сейчас",
-      "en": "We aren't studying really now"
+      "ru": "Мария еще не получила письмо",
+      "en": "Mary has not received the letter yet"
     }
   },
   {
     "text": {
-      "ru": "Это работает очень медленно сейчас",
-      "en": "It is working very slowly now"
+      "ru": "Я не видел ее",
+      "en": "I have not seen her"
     }
   },
   {
     "text": {
-      "ru": "Я сейчас смотрю телевизор",
-      "en": "I am watching TV now"
+      "ru": "Ты уже прочитал ту книгу?",
+      "en": "Have you read that book already?"
     }
   },
   {
     "text": {
-      "ru": "Они купаются в реке в данный момент",
-      "en": "They are swimming in the river at the moment"
+      "ru": "Она нашла свой ключ?",
+      "en": "Has she found her key?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Где ты нашел ключ?",
+      "en": "Where have you found a key?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Джон купил рубашку",
+      "en": "John has bought a shirt"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы провели опыт",
+      "en": "We have run an experiment"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я сделал домашнее задание сегодня утром",
+      "en": "I have done my homework this morning"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она звонила мне на этой неделе",
+      "en": "She has called me this week"
+    }
+  },
+  {
+    "text": {
+      "ru": "Сегодня мы показывали ей новое платье",
+      "en": "We have shown her a new dress today"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я уже сделал эту работу",
+      "en": "I have already done this work"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она видела Марию недавно",
+      "en": "She has seen Mary lately"
+    }
+  },
+  {
+    "text": {
+      "ru": "Джон никогда не слышал ту песню",
+      "en": "John has never heard that song"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я уже отправил письмо",
+      "en": "I have already sent the letter"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы уже отправили письмо?",
+      "en": "Have you sent the letter already?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она еще не открыла окно",
+      "en": "She hasn't opened the window yet"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они уже отправили посылку?",
+      "en": "Have they sent the parcel yet?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Джон знает Марию с 2002 года",
+      "en": "John has known Mary since 2002"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мария видела Джона с тех пор, как он переехал в Москву?",
+      "en": "Has Mary seen John since he moved to Moscow?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ты когда-нибудь был в Бангкоке?",
+      "en": "Have you ever been to Bangkok?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы уже опубликовали ее новый роман",
+      "en": "We have already published her new novel"
+    }
+  },
+  {
+    "text": {
+      "ru": "Помидоры еще не поспели",
+      "en": "The tomatoes haven't ripened yet"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я недавно послал ей приглашение",
+      "en": "I have only recently sent her an invitation"
+    }
+  },
+  {
+    "text": {
+      "ru": "Сколько раз ты был по-настоящему зол?",
+      "en": "How many times have you been really angry?"
+    }
+  },
+  {
+    "text": {
+      "ru": "У Джима было три дорожно-транспортных происшествий",
+      "en": "Jim has had three car accidents"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она только что мне позвонила",
+      "en": "She has just phoned me"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы еще не решили проблему",
+      "en": "We haven't solved the problem yet"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я уже помыл пол",
+      "en": "I have already washed the floor"
+    }
+  },
+  {
+    "text": {
+      "ru": "Последнее время она не получала от своего отца никаких писем",
+      "en": "She hasn't received any letters from her father lately"
+    }
+  },
+  {
+    "text": {
+      "ru": "В этом году он написал две книги",
+      "en": "He has written two books this year"
+    }
+  },
+  {
+    "text": {
+      "ru": "Сегодня я сделал много работы",
+      "en": "I have done a lot of work today"
+    }
+  },
+  {
+    "text": {
+      "ru": "Бен был в Африке несколько раз",
+      "en": "Ben has been to Africa several times"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это одна из самых интересных книг, которые я когда-либо читал",
+      "en": "It's one of the most interesting books I have ever read"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это был единственный раз, когда он был вдали от дома",
+      "en": "It was the only time he has been away from home"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он не видел свою семью несколько недель, так как много работал",
+      "en": "He hasn't seen his family for weeks because he has been working so hard"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он всегда хотел побывать в Париже",
+      "en": "He has always wanted to visit Paris"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не разговаривал с ним, с тех пор, как он переехал в Париж",
+      "en": "I haven't spoken to him since he moved to Paris"
+    }
+  },
+  {
+    "text": {
+      "ru": "С тех пор, как я знаю эту девушку, она всегда покупает много еды",
+      "en": "Since I have known this girl she has always bought much food"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она не встречала Питера с понедельника",
+      "en": "She hasn't met Peter since Monday"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они жили в Америке в течение 2 лет",
+      "en": "He has lived in America for two years"
+    }
+  },
+  {
+    "text": {
+      "ru": "Джил не звонил мне почти месяц",
+      "en": "Jill hasn't phoned me for nearly a month"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я никогда не пробовала папайю",
+      "en": "I have never tasted papaya"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мой отец всегда интересовался политикой",
+      "en": "My dad has always been interested in politics"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы продолжим обсуждение, как только соберем больше фактов",
+      "en": "We'll continue the discussion as soon as you've collected more facts"
     }
   }
 ]
