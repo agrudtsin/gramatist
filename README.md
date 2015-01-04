@@ -1,4 +1,5 @@
 gramatist   <a href="https://travis-ci.org/agrudtsin/gramatist"> <img src="https://travis-ci.org/agrudtsin/gramatist.svg"/> </a>
+<a href='https://coveralls.io/r/agrudtsin/gramatist'><img src='https://coveralls.io/repos/agrudtsin/gramatist/badge.png' alt='Coverage Status' /></a>
 =========
 ### Install Dependencies
 
