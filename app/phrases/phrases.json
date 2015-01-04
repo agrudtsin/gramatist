@@ -1,9 +1,5 @@
 ﻿[
   {
-    "name": "1. Вопросы, уведомления - Questions",
-    "id": "1._Вопросы,_уведомления_-_Questions"
-  },
-  {
     "name": "1. Времена - Tenses",
     "id": "1._Tenses"
   },
@@ -108,20 +104,28 @@
     "id": "1.5._Вопросительные_слова"
   },
   {
-    "name": "2. Advising and persuading",
-    "id": "2._Advising_and_persuading"
-  },
-  {
     "name": "2. Идиомы - Idioms",
     "id": "2._Идиомы_-_Idioms"
   },
   {
-    "name": "3. Encouragement",
-    "id": "3._Encouragement"
-  },
-  {
     "name": "3. Полезные фразы - Useful phrases",
     "id": "3._Полезные_фразы_-_Useful_phrases"
+  },
+  {
+    "name": "3.1. Вопросы, уведомления - Questions",
+    "id": "3.1._Вопросы,_уведомления_-_Questions"
+  },
+  {
+    "name": "3.2. Advising and persuading",
+    "id": "3.2._Advising_and_persuading"
+  },
+  {
+    "name": "3.3. Encouragement - Подбадривания",
+    "id": "3.3._Encouragement_-_Подбадривания"
+  },
+  {
+    "name": "4. Interjections - междометия",
+    "id": "4._Interjections_-_междометия"
   },
   {
     "name": "5. Пословицы - Proverbs",

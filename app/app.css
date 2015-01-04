@@ -215,6 +215,10 @@ textarea:focus{
             margin-top:-4px;
             left: 10px;
         }
+        .backgroundInput {
+            box-shadow: 1px 1px 2px 0px #DDD inset;
+        }
+
 }
 @media screen and (max-width: 1000px) {
     .CommonFormat {
