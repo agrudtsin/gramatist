@@ -67,7 +67,7 @@
   },
   {
     "text": {
-      "ru": "Сегодня мы показывали ей новое платье",
+      "ru": "Мы показывали ей новое платье сегодня",
       "en": "We have shown her a new dress today"
     }
   },
@@ -157,7 +157,7 @@
   },
   {
     "text": {
-      "ru": "У Джима было три дорожно-транспортных происшествий",
+      "ru": "У Джима было три дорожно-транспортных происшествия",
       "en": "Jim has had three car accidents"
     }
   },
@@ -247,7 +247,7 @@
   },
   {
     "text": {
-      "ru": "Они жили в Америке в течение 2 лет",
+      "ru": "Он жил в Америке в течение 2 лет",
       "en": "He has lived in America for two years"
     }
   },
@@ -266,12 +266,12 @@
   {
     "text": {
       "ru": "Мой отец всегда интересовался политикой",
-      "en": "My dad has always been interested in politics"
+      "en": "My father has always been interested in politics"
     }
   },
   {
     "text": {
-      "ru": "Мы продолжим обсуждение, как только соберем больше фактов",
+      "ru": "Мы продолжим обсуждение, как только вы соберете больше фактов",
       "en": "We'll continue the discussion as soon as you've collected more facts"
     }
   }

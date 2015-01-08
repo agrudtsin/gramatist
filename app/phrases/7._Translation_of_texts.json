@@ -154,5 +154,785 @@
       "ru": "Мы будем рады помочь вам в выборе клиники и организации поездки",
       "en": "We will gladly help you to choose a clinic and organize the trip"
     }
+  },
+  {
+    "text": {
+      "ru": "Мои красивые новенькие часики проработали восемнадцать месяцев, не убегая вперёд и не отставая. Ни разу не сломались и не остановились. Казалось, механизм их вечен и всегда будет безошибочно определять время суток. Но однажды часы всё-таки встали, причём по моей вине. Я горевал так, будто всё это было предвестником большого несчастья",
+      "en": "My beautiful new watch had run eighteen months without losing or gaining, and without breaking any part of its machinery or stopping. I had come to believe it infallible in its judgments about the time of day, and to consider its constitution and its anatomy imperishable. But at last, one night, I let it run down. I grieved about it as if it were a recognized messenger and forerunner of calamity"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моя семья небольшая",
+      "en": "My family isn't large"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она состоит из четырёх человек",
+      "en": "It consists of four members"
+    }
+  },
+  {
+    "text": {
+      "ru": "Но каждый член нашей семьи имеет свои вкусы и интересы",
+      "en": "But each member of our family has his own tastes and interests"
+    }
+  },
+  {
+    "text": {
+      "ru": "Например, мой брат увлекается спортом",
+      "en": "For example, my brother is fond of sports"
+    }
+  },
+  {
+    "text": {
+      "ru": "Рано утром он бегает трусцой",
+      "en": "So early in the morning he goes jogging"
+    }
+  },
+  {
+    "text": {
+      "ru": "Поэтому он ничего не ест перед этим, так как перед упражнениями есть нежелательно",
+      "en": "That's why he has nothing to eat before it, because it would be bad for him to eat before exercises"
+    }
+  },
+  {
+    "text": {
+      "ru": "Но возвратившись, он принимает душ и идет завтракать",
+      "en": "But when he comes back, he has a shower and is more than ready for breakfast"
+    }
+  },
+  {
+    "text": {
+      "ru": "Чтобы взбодриться, он всегда выпивает чашку кофе",
+      "en": "He always needs a cup of coffee to really wake him up"
+    }
+  },
+  {
+    "text": {
+      "ru": "Завтрак моего брата обычно состоит из тарелки овсянки с молоком и сахаром",
+      "en": "His breakfast usually consists of a bowl of cereal with milk and sugar"
+    }
+  },
+  {
+    "text": {
+      "ru": "Затем тосты и сок",
+      "en": "This he follows by toasts and juice"
+    }
+  },
+  {
+    "text": {
+      "ru": "У моего отца такой же завтрак",
+      "en": "My father eats the same as my brother"
+    }
+  },
+  {
+    "text": {
+      "ru": "У моей мамы завтрак более легкий и состоит из йогурта и грейпфрута",
+      "en": "My mother has a lighter breakfast of just youghurt and a grapefruit"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне достаточно чашки чая на завтрак",
+      "en": "As for me, a cup of tea is enough for breakfast"
+    }
+  },
+  {
+    "text": {
+      "ru": "Но мама меня иногда ругает, потому что хорошо позавтракать - очень важно",
+      "en": "And my mother sometimes scolds me for it, because it's important to have a really goods breakfast"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы не едим вместе во время ланча",
+      "en": "We don't have our main meal at lunch time"
+    }
+  },
+  {
+    "text": {
+      "ru": "Папа берет бутерброды на работу",
+      "en": "My father takes sandwiches with him to work"
+    }
+  },
+  {
+    "text": {
+      "ru": "Чтобы быть здоровым, он также ест фрукты",
+      "en": "To be healthy, he also eats fruit"
+    }
+  },
+  {
+    "text": {
+      "ru": "У мамы более разнообразная еда, потому что она домохозяйка",
+      "en": "My mother is able to be more varied in her lunches, because she is a housewife"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это значит, что она может приготовить все, что хочет",
+      "en": "It means that she can prepare what she likes"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ее любимое блюдо — жареное мясо",
+      "en": "Her favourite dish is roast meat"
+    }
+  },
+  {
+    "text": {
+      "ru": "Так как она любит печь, дома всегда есть что-нибудь вкусненькое",
+      "en": "As she likes to bake, there is always something tasty at home"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вечером мы обычно едим в 7 часов",
+      "en": "Our evening meal is usually eaten at 7 o'clock"
+    }
+  },
+  {
+    "text": {
+      "ru": "Главное блюдо — мясо с овощами",
+      "en": "The main course is often meat with vegetables"
+    }
+  },
+  {
+    "text": {
+      "ru": "Иногда мы едим пиццу или макароны со вкусным соусом",
+      "en": "Sometimes we eat pizza or pasta with delicious sauce"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы стараемся обедать вместе",
+      "en": "We try to eat our main meal together"
+    }
+  },
+  {
+    "text": {
+      "ru": "В нашей занятой жизни это время, когда мы садимся и разговариваем",
+      "en": "In our busy lives it is the one time of day when we sit down and have a good talk"
+    }
+  },
+  {
+    "text": {
+      "ru": "Прежде всего, позвольте представиться",
+      "en": "First of all let me introduce myself"
+    }
+  },
+  {
+    "text": {
+      "ru": "Меня зовут Тарас",
+      "en": "My name is Taras"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне семнадцать лет",
+      "en": "I'm seventeen years old"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я учусь в 11-м классе",
+      "en": "I'm at 11-th grade"
+    }
+  },
+  {
+    "text": {
+      "ru": "Кроме меня в семье еще два ребенка — мой старший брат Олег и младшая сестренка Мария",
+      "en": "There are two more kids in the family besides me — my elder brother Oleg and my younger sister Marija"
+    }
+  },
+  {
+    "text": {
+      "ru": "Олегу двадцать один год, он ходит в университет, он будет дантистом",
+      "en": "Oleg is twenty-one, he attends a University, he will be a dentist"
+    }
+  },
+  {
+    "text": {
+      "ru": "Марии только двенадцать, она школьница",
+      "en": "Marija is only twelve, she is a schoolgirl"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я забыл упомянуть еще одного члена нашей семьи",
+      "en": "I forgot to mention one more member of our family"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это — наш любимый пудель Тим",
+      "en": "It's our favourite poodle Tim"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои родители еще совсем не старые",
+      "en": "My parents are not old at all"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моей маме сорок, она работает в газете",
+      "en": "My Mum is forty, she works for a newspaper"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моему папе - сорок четыре, он работает инженером ЭВМ",
+      "en": "My Dad is forty-four, he is an engineer in computers"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои родители очень любят свои профессии",
+      "en": "My parents love their jobs very much"
+    }
+  },
+  {
+    "text": {
+      "ru": "В школе я учусь хорошо",
+      "en": "I'm doing quite well at school"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои родители гордятся моими отметками",
+      "en": "My parents are proud of my marks"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я увлекаюсь спортом — играю в баскетбол",
+      "en": "I go in for sports I play basket-ball"
+    }
+  },
+  {
+    "text": {
+      "ru": "В летнее время мне нравится парусный спорт и винд- серфинг",
+      "en": "In summer time I like yachting and windsurfing"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я участвую в различных соревнованиях по баскетболу",
+      "en": "I take part in different basket-ball competitions"
+    }
+  },
+  {
+    "text": {
+      "ru": "Через год я закончу школу, и мне нужно решить, какую профессию выбрать",
+      "en": "In a year I shall finish my school and I have to decide what occupation to choose"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я изучаю английский язык семь лет",
+      "en": "I have been studying English for seven years"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я хочу быть военным переводчиком",
+      "en": "I want to be a military interpreter"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои бабушка и дедушка уже на пенсии",
+      "en": "My grandparents are already retired"
+    }
+  },
+  {
+    "text": {
+      "ru": "Им нравится заниматься на приусадебном участке, и они проводят там все свое время, выращивая помидоры, картошку, лук, клубнику, малину",
+      "en": "They like gardening and spend all their time growing tomatoes, potatoes, onions, strawberries, raspberries"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моя семья не очень большая, это типичная семья: папа, мама, я, мои брат, сестра и кот",
+      "en": "My family is not very big, just a typical family: Dad, Mom, me, my brother and sister and our cat"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моей маме сорок один год, она — учительница испанского языка в университете",
+      "en": "My Mummy is forty-one, she is a teacher of Spanish at the University"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она прирожденная учительница",
+      "en": "She is a born teacher"
+    }
+  },
+  {
+    "text": {
+      "ru": "У нее дар преподавать",
+      "en": "She has teaching abilities"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моему отцу — сорок два, он профессиональный художник и работает в оформительском комбинате",
+      "en": "My Dad is forty-two, he is a professional painter, he works for a design company"
+    }
+  },
+  {
+    "text": {
+      "ru": "Обоим моим родителям очень нравится их работа",
+      "en": "My parents both like their work very much"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моей старшей сестре Наташе — девятнадцать, она ходит в университет и хочет стать учительницей по истории",
+      "en": "My elder sister Natasha is nineteen, she goes to the University, she wants to be a teacher of history"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ей нравится читать историческую и художественную литературу",
+      "en": "She is fond of reading books on history and fiction"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моему младшему братишке Игорю только шесть лет, он ходит в детский сад",
+      "en": "My younger brother Igor is only six years old, he goes to the kindergarten"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он очень смешной, мне нравится проводить свободное время, обучая его чему-нибудь",
+      "en": "He is very funny, I like to spend my free time teaching him something"
+    }
+  },
+  {
+    "text": {
+      "ru": "Игорю нравится играть с нашим котом",
+      "en": "Igor likes to play with our cat"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои бабушка и дедушка — на пенсии",
+      "en": "My grandparents are retired"
+    }
+  },
+  {
+    "text": {
+      "ru": "Им нравится возиться на приусадебном участке",
+      "en": "They like gardening"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они проводят много времени в огороде",
+      "en": "They spend a lot of their time in the garden"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они выращивают овощи и фрукты",
+      "en": "They grow vegetables and fruits"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы наслаждаемся тем, что на нашем столе всегда свежие овощи и зелень",
+      "en": "We enjoy having fresh vegetables and green on our dinner table"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я очень люблю свою семью",
+      "en": "I love my family very much"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы всегда помогаем друг другу",
+      "en": "We always help each other"
+    }
+  },
+  {
+    "text": {
+      "ru": "Каждый член моей семьи — мой лучший друг",
+      "en": "Everyone in my family is my best friend"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда человек взрослеет, он понимает, что есть некоторые необходимые вещи и места, к которым всегда хочется возвращаться",
+      "en": "As you become older you realize that there are several essential things and places you always long to come back to"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это такие вещи как родина, родной дом и школа, в которую ты ходил",
+      "en": "They are your birthplace, your home and the school you went to"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моя школа — трехэтажное здание, расположенное в жилых кварталах нашего города",
+      "en": "My school was a three-storeyed building situated in one of the residential districts of our city (town, settlement)"
+    }
+  },
+  {
+    "text": {
+      "ru": "Туда ходили все дети, живущие по соседству, потому что туда можно дойти пешком",
+      "en": "All the children from the neighbourhood went there because it was a walking distance from their homes"
+    }
+  },
+  {
+    "text": {
+      "ru": "За зданием школы была спортплощадка",
+      "en": "There was a sports ground behind the school-building and a green lawn with flower-beds in front of it"
+    }
+  },
+  {
+    "text": {
+      "ru": "Перед школой была зеленая лужайка с клумбами",
+      "en": "The school was built a few years ago"
+    }
+  },
+  {
+    "text": {
+      "ru": "Школу построили несколько лет назад, поэтому классные комнаты были светлыми и просторными",
+      "en": "That's why its classrooms were light and spacious"
+    }
+  },
+  {
+    "text": {
+      "ru": "В каждой классной комнате было три окна, а на одоконниках стояли цветы в горшках",
+      "en": "There were three large windows in each classroom with flower pots on the windowsills"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ученики (в основном девочки) отвечали за поливку цветов",
+      "en": "It was pupils' (especially girls') responsibility to water the flowers"
+    }
+  },
+  {
+    "text": {
+      "ru": "И делали это с особой любовью",
+      "en": "And they did it with utmost care"
+    }
+  },
+  {
+    "text": {
+      "ru": "На стенах класса висели карты, портреты, таблицы и схемы",
+      "en": "There were maps and portraits, tables and charts on the walls of the classrooms"
+    }
+  },
+  {
+    "text": {
+      "ru": "Наш класс был на втором этаже",
+      "en": "Our classroom was on the second floor"
+    }
+  },
+  {
+    "text": {
+      "ru": "Окна выходили на школьный двор",
+      "en": "Its windows faced the school-yard"
+    }
+  },
+  {
+    "text": {
+      "ru": "В одном только нашем классе был классный руководитель, а не классная руководительница",
+      "en": "Our form was the only one at school who had a form-master, but not a form-mistress"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он оказался очень добрым и знающим учителем, который не жалел времени, чтобы водить нас в интересные места и на выставки",
+      "en": "He appeared to be a very kind and knowledgeable teacher who spared no time to take us to different places of interest and exhibitions"
+    }
+  },
+  {
+    "text": {
+      "ru": "Он учил нас русскому языку и русской литературе",
+      "en": "He taught us Russian and Russian literature"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы его очень уважали",
+      "en": "We respected him very much"
+    }
+  },
+  {
+    "text": {
+      "ru": "Наши уроки начинались в восемь часов утра и длились до половины второго",
+      "en": "Our lessons began at eight o'clock in the morning and lasted till one thirty in the afternoon"
+    }
+  },
+  {
+    "text": {
+      "ru": "У нас было по шесть уроков в день",
+      "en": "We had six lessons a day"
+    }
+  },
+  {
+    "text": {
+      "ru": "У каждого ученика был дневник, куда учителя ставили оценки за ответы",
+      "en": "Every pupil had a day-book where the teachers wrote down the mark each pupil had earned for his answers"
+    }
+  },
+  {
+    "text": {
+      "ru": "Учител также выставлял оценки в классный журнал",
+      "en": "The teacher also wrote down the mark in the class register"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда учитель задавал вопрос, ученики, которые могли на-него ответить, поднимали руки, и учитель вызывал одного из них отвечать на вопрос",
+      "en": "When the teacher asked a question, the pupils who could answer it raised their hands, and the teacher called out one of them to answer the question"
+    }
+  },
+  {
+    "text": {
+      "ru": "Учеников часто вызывали к доске выполнять упражнения или писать предложения",
+      "en": "The pupils were often called to the blackboard to do some exercises or to write some sentences"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда они делали ошибки, то вызывали других учеников, чтобы их исправить, или учитель сам исправлял ошибки",
+      "en": "When they made mistakes, other pupils were called out to correct those mistakes or the teacher corrected them herself"
+    }
+  },
+  {
+    "text": {
+      "ru": "В конце каждого занятия нам задавали домашние задания, как письменные, так и устные",
+      "en": "After every lesson the teachers gave us some home assignments both written and oral"
+    }
+  },
+  {
+    "text": {
+      "ru": "На следующем уроке учителя их проверяли",
+      "en": "At the next lesson the teachers checked them up"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они часто собирали наши тетради, чтобы проверить их дома",
+      "en": "The teachers often took our exercise-books home to check them up"
+    }
+  },
+  {
+    "text": {
+      "ru": "Если были ошибки, они исправляли их и ставили оценки",
+      "en": "If there were any mistakes they corrected them and gave us marks"
+    }
+  },
+  {
+    "text": {
+      "ru": "В конце каждой четверти мы получали табеля, которые подписывали наши родители",
+      "en": "At the end of each quarter we got our report cards which our parents signed"
+    }
+  },
+  {
+    "text": {
+      "ru": "В конце учебного года нас переводили в следующий класс",
+      "en": "At the end of the study year we were promoted, to the next form"
+    }
+  },
+  {
+    "text": {
+      "ru": "Моя школа — это трехэтажное здание",
+      "en": "My school is a three-storeyed building"
+    }
+  },
+  {
+    "text": {
+      "ru": "Оно достаточно большое, позади него — спортивная площадка, а внутри есть бассейн",
+      "en": "It is quite big with sport ground behind it, inside swimming pool"
+    }
+  },
+  {
+    "text": {
+      "ru": "На первом этаже расположены классы, комнаты учеников начальной школы, мастерские и библиотека",
+      "en": "On the groundfloor there are the classrooms for the primary- school pupils, workshops, library"
+    }
+  },
+  {
+    "text": {
+      "ru": "В мастерской стоят станки и различные инструменты",
+      "en": "There are all kinds of tools and machines in the workshops"
+    }
+  },
+  {
+    "text": {
+      "ru": "У мальчиков нашей школы есть также кабинет, где можно работать по дереву",
+      "en": "The boys of our school have a woodwork room too"
+    }
+  },
+  {
+    "text": {
+      "ru": "Есть также кабинет по ручному труду для девочек",
+      "en": "There is a room for manual works for girls"
+    }
+  },
+  {
+    "text": {
+      "ru": "Там они обучаются искусству готовить, шить и моделировать одежду",
+      "en": "Teachers teach them how to cook, sew and design clothes"
+    }
+  },
+  {
+    "text": {
+      "ru": "Наша школьная библиотека очень хорошая и чистая",
+      "en": "Our school library is nice and clean"
+    }
+  },
+  {
+    "text": {
+      "ru": "Два библиотекаря помогают ученикам найти нужные книги",
+      "en": "Two librarians help pupils to find books they need"
+    }
+  },
+  {
+    "text": {
+      "ru": "В библиотеке есть много книжных шкафов и полочек с книгами",
+      "en": "There are many bookcases and bookshelves with a lot of books there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Если вы зайдете в школу и повернете направо, вы увидите большую светлую столовую",
+      "en": "If you enter the school and turn right you see a big light dining-room"
+    }
+  },
+  {
+    "text": {
+      "ru": "Там всегда шумно и многолюдно, но чисто",
+      "en": "It is always busy and noisy, but it is clean"
+    }
+  },
+  {
+    "text": {
+      "ru": "Здесь ученики и учителя обедают",
+      "en": "Here pupils and their teachers have their lunch"
+    }
+  },
+  {
+    "text": {
+      "ru": "На окнах в столовой висят голубые шторы, а на стенах красивые картины",
+      "en": "There are blue curtains on the windows and beautiful pictures on the walls"
+    }
+  },
+  {
+    "text": {
+      "ru": "Также на первом этаже расположен спортзал",
+      "en": "There is a gymnasium on the ground floor as well"
+    }
+  },
+  {
+    "text": {
+      "ru": "Наши уроки физкультуры проходят там",
+      "en": "Our physical training lessons are held there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Ученикам нравится приходить сюда даже после уроков, потому что там много спортивного инвентаря",
+      "en": "Pupils like to go there even after the lessons, because it has a lot of sport equipment"
+    }
+  },
+  {
+    "text": {
+      "ru": "В нашей школе много классных комнат",
+      "en": "Our school has many classrooms"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они светлые и просторные",
+      "en": "The classrooms are light and spacious"
+    }
+  },
+  {
+    "text": {
+      "ru": "В каждой есть три окна с цветочными горшками на подоконниках",
+      "en": "There are three large windows in each classroom with flower pots on the window sills"
+    }
+  },
+  {
+    "text": {
+      "ru": "В каждой комнате есть учительский стол, парты, доска, таблицы, портреты, карты на стенах",
+      "en": "Each room has teacher's table, pupils desks, blackboard, tables and charts on the wall, maps and portraits"
+    }
+  },
+  {
+    "text": {
+      "ru": "В нашей школе есть кабинеты химии, физики, биологии, истории, географии, английского, русского языков",
+      "en": "There are special classrooms for Chemistry, Physics, Biology, History, Geography, English, and Russian"
+    }
+  },
+  {
+    "text": {
+      "ru": "На третьем этаже расположен большой, красивый актовый зал",
+      "en": "On the third floor there is a big nice assemble hall"
+    }
+  },
+  {
+    "text": {
+      "ru": "Там проводятся многочисленные собрания, концерты, праздники",
+      "en": "A lot of meetings, concerts, festivals are held there"
+    }
+  },
+  {
+    "text": {
+      "ru": "Наша классная комната расположена на втором этаже",
+      "en": "Our classroom is on the second floor"
+    }
+  },
+  {
+    "text": {
+      "ru": "Окнами во двор",
+      "en": "Its windows face the school-yard"
+    }
+  },
+  {
+    "text": {
+      "ru": "Наша классная руководительница — учительница русского языка и литературы",
+      "en": "Our form-mistress is a teacher of Russian language and literature"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы ее очень уважаем, она очень добрая и знающая свой предмет учительница",
+      "en": "We respect her very much, she is a kind and knowledgeable teacher"
+    }
+  },
+  {
+    "text": {
+      "ru": "Она преподает нам русский язык, и ей так нравится ее предмет, что и нам невозможно не любить его",
+      "en": "She teaches us Russian and is so fond of her subject, that each of us can not help liking too"
+    }
+  },
+  {
+    "text": {
+      "ru": "Когда я думаю о своей школе, я не вспоминаю о ее партах и стенах; я вспоминаю о моих учителях и одноклассниках, которые всегда будут со мной",
+      "en": "When I think about my school I don't remember its walls and desks; it is my teachers and school-mates who will be always with me"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я очень благодарна нашим учителям за все, что они сделали для нас",
+      "en": "I am so thankful to our teachers for what they have done for us"
+    }
   }
 ]

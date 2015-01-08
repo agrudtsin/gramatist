@@ -55,12 +55,6 @@
   },
   {
     "text": {
-      "ru": "Я пришел домой, позвонил Марии и лег спать",
-      "en": "I came home, called Mary and went to bed"
-    }
-  },
-  {
-    "text": {
       "ru": "Ты пил со мной брэнди",
       "en": "You drank brandy with me"
     }
@@ -110,7 +104,7 @@
   {
     "text": {
       "ru": "Он кормил меня мёдом",
-      "en": "You fed me on honey"
+      "en": "He fed me on honey"
     }
   },
   {
@@ -206,7 +200,7 @@
   {
     "text": {
       "ru": "Моя дочь поступила в университет в 1999 году",
-      "en": "My daughter entered а university in 1999"
+      "en": "My daughter entered a University in 1999"
     }
   },
   {
@@ -278,31 +272,13 @@
   {
     "text": {
       "ru": "Она не знала этого",
-      "en": "She did not know this"
-    }
-  },
-  {
-    "text": {
-      "ru": "Я не видел тебя в темноте",
-      "en": "I didn't see you in the dark"
+      "en": "She did not know it"
     }
   },
   {
     "text": {
       "ru": "Почему вы не ответили на мой телефонный звонок?",
       "en": "Why did you not answer to my telephone call?"
-    }
-  },
-  {
-    "text": {
-      "ru": "Почему вы не ответили мне?",
-      "en": "Why didn't you answer me?"
-    }
-  },
-  {
-    "text": {
-      "ru": "Неужели вы не слышали меня?",
-      "en": "Didn't you hear me?"
     }
   },
   {
@@ -343,12 +319,6 @@
   },
   {
     "text": {
-      "ru": "Он не был готов идти туда",
-      "en": "He wasn't ready to go there"
-    }
-  },
-  {
-    "text": {
       "ru": "Они не боялись его",
       "en": "They weren't afraid of him"
     }
@@ -361,14 +331,8 @@
   },
   {
     "text": {
-      "ru": "В учеников были словари?",
+      "ru": "У учеников были словари?",
       "en": "Did the pupils have dictionaries?"
-    }
-  },
-  {
-    "text": {
-      "ru": "У него не было братьев",
-      "en": "He hadn't any brothers"
     }
   },
   {
@@ -393,12 +357,6 @@
     "text": {
       "ru": "Я не обедал",
       "en": "I didn't have a dinner"
-    }
-  },
-  {
-    "text": {
-      "ru": "Но у него не было работы",
-      "en": "But he didn't have a job"
     }
   },
   {
@@ -428,7 +386,7 @@
   {
     "text": {
       "ru": "Я оделся, сошел вниз, выпил в кухне кофе и пошел в гараж",
-      "en": "I dressed, went downstairs, had some coffee in the kitchen and went out to the garge"
+      "en": "I dressed, went downstairs, had some coffee in the kitchen and went out to the garage"
     }
   },
   {
@@ -452,7 +410,7 @@
   {
     "text": {
       "ru": "Мои родители обычно приходили к нам в воскресение",
-      "en": "My patents would come to our place on Sundays"
+      "en": "My parents would come to our place on Sundays"
     }
   },
   {
@@ -589,12 +547,6 @@
   },
   {
     "text": {
-      "ru": "Я оделся, сошел вниз, выпил в кухне кофе и пошел в гараж",
-      "en": "I dressed, went downstairs, had some coffee in the kitchen and went out to the garage"
-    }
-  },
-  {
-    "text": {
       "ru": "Я не работал вечером",
       "en": "I was not working in the evening"
     }
@@ -608,7 +560,7 @@
   {
     "text": {
       "ru": "Керри сидела у окна, когда он вошел",
-      "en": "Сarrie was sitting by the window when he came in"
+      "en": "Carrie was sitting by the window when he came in"
     }
   },
   {
@@ -662,7 +614,7 @@
   {
     "text": {
       "ru": "Когда папа красил потолок, он пролил немного краски на пол",
-      "en": "When my dad was painting the ceiling he split some paint on the floor"
+      "en": "When my father was painting the ceiling he split some paint on the floor"
     }
   },
   {
@@ -752,7 +704,7 @@
   {
     "text": {
       "ru": "Ты пришел к её работе к восьми часам?",
-      "en": "Had you come to her by 8 o'clock?"
+      "en": "Had you come to her by eight o'clock?"
     }
   },
   {
@@ -770,7 +722,7 @@
   {
     "text": {
       "ru": "Она пришла к шести часам?",
-      "en": "Had she come by 6 o'clock?"
+      "en": "Had she come by six o'clock?"
     }
   },
   {
@@ -788,7 +740,7 @@
   {
     "text": {
       "ru": "Как ты нашел это к восьми часам?",
-      "en": "How had you found that by 8 o'clock?"
+      "en": "How had you found that by eight o'clock?"
     }
   },
   {
@@ -842,7 +794,7 @@
   {
     "text": {
       "ru": "Анна была на работе, когда ты приехал? Нет, она уже ушла",
-      "en": "Was Ann at work when you arrived?» «No, she had gone"
+      "en": "Was Ann at work when you arrived? No, she had gone"
     }
   },
   {

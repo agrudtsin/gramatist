@@ -406,5 +406,383 @@
       "ru": "Зря вы сделали это",
       "en": "Now you've done it"
     }
+  },
+  {
+    "text": {
+      "ru": "Я бы хотел назначить встречу с мистером Н",
+      "en": "I'd like to make an appointment with Mr. N"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я бы хотел условиться о дате и времени",
+      "en": "I'd like to fix the date and the time"
+    }
+  },
+  {
+    "text": {
+      "ru": "Какое время было бы Вам удобно?",
+      "en": "What time would be convenient for you?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Не могли бы Вы принять меня завтра?",
+      "en": "Can you give me an appointment for tomorrow?"
+    }
+  },
+  {
+    "text": {
+      "ru": "В одиннадцать часов Вам будет удобно?",
+      "en": "Will eleven be convenient to you?"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня встреча с генеральным директором",
+      "en": "I have an appointment with the general manager"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я бы хотел обсудить условия контракта",
+      "en": "I'd like you discuss the terms of the contract"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы тщательно рассмотрели Ваше предложение",
+      "en": "I have careful considered your proposal"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы согласны на Ваше предложение",
+      "en": "We agree to your proposal"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы вынуждены отвергнуть Ваше предложение",
+      "en": "We'll have to reject your proposal"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы не удовлетворены предложенными Вами условиями",
+      "en": "We're not satisfied with the terms you suggested"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы бы хотели ознакомиться с Вашей продукцией",
+      "en": "We'd like to see your products"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы не могли бы прислать нам некоторые образцы?",
+      "en": "Could you send us some samples?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы хотели бы разместить заказ у Вашей фирмы",
+      "en": "We'd like to place an order with your firm"
+    }
+  },
+  {
+    "text": {
+      "ru": "Какова Ваша приблизительная цена?",
+      "en": "What's your idea of the price?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы не могли бы снизить цену?",
+      "en": "Could you lower the price?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы рассчитываем на продолжение нашего сотрудничества",
+      "en": "We'll looking forward to continuing our cooperation"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мы рассчитываем на Ваше содействие в этом деле",
+      "en": "We're looking forward to your cooperation in this matter"
+    }
+  },
+  {
+    "text": {
+      "ru": "Договорились",
+      "en": "Agreed"
+    }
+  },
+  {
+    "text": {
+      "ru": "Давайте пожмем друг другу руки в знак договорённости",
+      "en": "Let's shake hands on it"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вот мой паспорт",
+      "en": "Here's my pasport"
+    }
+  },
+  {
+    "text": {
+      "ru": "Поставьте мне, пожалуйста, штамп в паспорт",
+      "en": "Would you please stamp my passport?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Какова цель Вашей поездки?",
+      "en": "What is the purpose of your visit?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я турист",
+      "en": "I'm a tourist"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я в отпуске",
+      "en": "I am on vacation"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я в командировке",
+      "en": "I am on a business trip"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я приехал к родственникам",
+      "en": "I'm visiting my relatives"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я здесь проездом",
+      "en": "I am coming through"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это мой первый приезд",
+      "en": "This is my first visit"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я путешествую один",
+      "en": "I'm traveling alone"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я путешествую с семьёй",
+      "en": "I'm traveling with my family"
+    }
+  },
+  {
+    "text": {
+      "ru": "Как долго Вы здесь пробудите?",
+      "en": "How long will you stay here?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я ещё не знаю",
+      "en": "I don't know yet"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я собираюсь пробыть здесь две недели",
+      "en": "I plan to stay two weeks"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я здесь только проездом",
+      "en": "I'm just passing through"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вот моя транзитная виза",
+      "en": "Here is my transit pass"
+    }
+  },
+  {
+    "text": {
+      "ru": "Можно мне другой бланк декларации?",
+      "en": "May I have another customs form?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Помогите мне, пожалуйста, заполнить этот бланк",
+      "en": "Please help me to fill in this form"
+    }
+  },
+  {
+    "text": {
+      "ru": "Есть ли у Вас вещи, подлежащие обложению таможенной пошлиной?",
+      "en": "Have you anything to declare?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне нечего декларировать",
+      "en": "I have nothing to declare"
+    }
+  },
+  {
+    "text": {
+      "ru": "Пожалуйста, откройте свой чемодан для досмотра",
+      "en": "Open your case for examination, please"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня проблемы. Вы не могли бы мне помочь?",
+      "en": "I am in trouble. Can you help me?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это подарок для друга",
+      "en": "This is a gift for a friend"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это для моего личного пользования",
+      "en": "This is for my personal use"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня имеются только личные вещи",
+      "en": "I have only personal belongings"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне надо платить за это пошлину?",
+      "en": "Must I pay a duty on it?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Можно это провезти?",
+      "en": "May I bring this in?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне это открыть?",
+      "en": "Must I open this?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне можно закрыть сумку?",
+      "en": "May I close the bag?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне можно идти?",
+      "en": "May I go?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Всё в порядке. Вы можете проходить",
+      "en": "That's all right! You may pass on"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы должны заплатить за это пошлину",
+      "en": "You'll have to pay duty on this"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я вынужден конфисковать эти вещи",
+      "en": "I must confiscate these things"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне нужен переводчик",
+      "en": "I need an interpreter"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои документы пропали",
+      "en": "My papers are missing"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не знал",
+      "en": "I didn't know"
+    }
+  },
+  {
+    "text": {
+      "ru": "Меня встречают",
+      "en": "I am being met"
+    }
+  },
+  {
+    "text": {
+      "ru": "Позовите руководителя группы",
+      "en": "Call my leader"
+    }
+  },
+  {
+    "text": {
+      "ru": "Позовите моего местного делового партнёра",
+      "en": "Call my local business partner"
+    }
+  },
+  {
+    "text": {
+      "ru": "Позвоните по этому номеру",
+      "en": "Phone this number"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я протестую",
+      "en": "I protest"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это недоразумение",
+      "en": "This is a misunderstanding"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне нужна правовая помощь",
+      "en": "I need legal help"
+    }
   }
 ]

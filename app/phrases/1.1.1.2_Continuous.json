@@ -68,13 +68,13 @@
   {
     "text": {
       "ru": "Она сейчас не слушает радио",
-      "en": "She isn't listening in"
+      "en": "She isn't listening in radio"
     }
   },
   {
     "text": {
       "ru": "Они сейчас не слушают радио",
-      "en": "They aren't listening in"
+      "en": "They aren't listening in radio"
     }
   },
   {
@@ -259,7 +259,7 @@
   },
   {
     "text": {
-      "ru": "Кого ты ищешь?",
+      "ru": "Кого они ищут?",
       "en": "Who are they looking for?"
     }
   },

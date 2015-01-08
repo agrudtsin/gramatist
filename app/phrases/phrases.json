@@ -112,20 +112,32 @@
     "id": "3._Полезные_фразы_-_Useful_phrases"
   },
   {
-    "name": "3.1. Вопросы, уведомления - Questions",
-    "id": "3.1._Вопросы,_уведомления_-_Questions"
+    "name": "3.01. Вопросы, уведомления - Questions",
+    "id": "3.01._Вопросы,_уведомления_-_Questions"
   },
   {
-    "name": "3.2. Advising and persuading",
-    "id": "3.2._Advising_and_persuading"
+    "name": "3.02. Advising and persuading",
+    "id": "3.02._Advising_and_persuading"
   },
   {
-    "name": "3.3. Encouragement - Подбадривания",
-    "id": "3.3._Encouragement_-_Подбадривания"
+    "name": "3.03. Encouragement - Подбадривания",
+    "id": "3.03._Encouragement_-_Подбадривания"
   },
   {
-    "name": "4. Interjections - междометия",
-    "id": "4._Interjections_-_междометия"
+    "name": "3.04. Деловая встреча",
+    "id": "3.04._Деловая_встреча"
+  },
+  {
+    "name": "3.05. Interjections - междометия",
+    "id": "3.05._Interjections_-_междометия"
+  },
+  {
+    "name": "3.06. Туристу",
+    "id": "3.06._Туристу"
+  },
+  {
+    "name": "3.06.1. Паспортный контроль",
+    "id": "3.06.1._Паспортный_контроль"
   },
   {
     "name": "5. Пословицы - Proverbs",
@@ -146,5 +158,25 @@
   {
     "name": "7.01. Health in Switzerland",
     "id": "7.01._Health_in_Switzerland"
+  },
+  {
+    "name": "7.02. Мои часы (Марк Твэн)",
+    "id": "7.02._Мои_часы_(Марк_Твэн)"
+  },
+  {
+    "name": "7.03. My Family's Meals",
+    "id": "7.03._My_Family's_Meals"
+  },
+  {
+    "name": "7.04. О себе",
+    "id": "7.04._О_себе"
+  },
+  {
+    "name": "7.05. Моя семья",
+    "id": "7.05._Моя_семья"
+  },
+  {
+    "name": "7.06. Моя школа",
+    "id": "7.06._Моя_школа"
   }
 ]

@@ -1,0 +1,260 @@
+﻿[
+  {
+    "text": {
+      "ru": "Вот мой паспорт",
+      "en": "Here's my pasport"
+    }
+  },
+  {
+    "text": {
+      "ru": "Поставьте мне, пожалуйста, штамп в паспорт",
+      "en": "Would you please stamp my passport?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Какова цель Вашей поездки?",
+      "en": "What is the purpose of your visit?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я турист",
+      "en": "I'm a tourist"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я в отпуске",
+      "en": "I am on vacation"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я в командировке",
+      "en": "I am on a business trip"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я приехал к родственникам",
+      "en": "I'm visiting my relatives"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я здесь проездом",
+      "en": "I am coming through"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это мой первый приезд",
+      "en": "This is my first visit"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я путешествую один",
+      "en": "I'm traveling alone"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я путешествую с семьёй",
+      "en": "I'm traveling with my family"
+    }
+  },
+  {
+    "text": {
+      "ru": "Как долго Вы здесь пробудите?",
+      "en": "How long will you stay here?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я ещё не знаю",
+      "en": "I don't know yet"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я собираюсь пробыть здесь две недели",
+      "en": "I plan to stay two weeks"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я здесь только проездом",
+      "en": "I'm just passing through"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вот моя транзитная виза",
+      "en": "Here is my transit pass"
+    }
+  },
+  {
+    "text": {
+      "ru": "Можно мне другой бланк декларации?",
+      "en": "May I have another customs form?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Помогите мне, пожалуйста, заполнить этот бланк",
+      "en": "Please help me to fill in this form"
+    }
+  },
+  {
+    "text": {
+      "ru": "Есть ли у Вас вещи, подлежащие обложению таможенной пошлиной?",
+      "en": "Have you anything to declare?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне нечего декларировать",
+      "en": "I have nothing to declare"
+    }
+  },
+  {
+    "text": {
+      "ru": "Пожалуйста, откройте свой чемодан для досмотра",
+      "en": "Open your case for examination, please"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня проблемы. Вы не могли бы мне помочь?",
+      "en": "I am in trouble. Can you help me?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это подарок для друга",
+      "en": "This is a gift for a friend"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это для моего личного пользования",
+      "en": "This is for my personal use"
+    }
+  },
+  {
+    "text": {
+      "ru": "У меня имеются только личные вещи",
+      "en": "I have only personal belongings"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне надо платить за это пошлину?",
+      "en": "Must I pay a duty on it?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Можно это провезти?",
+      "en": "May I bring this in?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне это открыть?",
+      "en": "Must I open this?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне можно закрыть сумку?",
+      "en": "May I close the bag?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне можно идти?",
+      "en": "May I go?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Всё в порядке. Вы можете проходить",
+      "en": "That's all right! You may pass on"
+    }
+  },
+  {
+    "text": {
+      "ru": "Вы должны заплатить за это пошлину",
+      "en": "You'll have to pay duty on this"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я вынужден конфисковать эти вещи",
+      "en": "I must confiscate these things"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне нужен переводчик",
+      "en": "I need an interpreter"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мои документы пропали",
+      "en": "My papers are missing"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я не знал",
+      "en": "I didn't know"
+    }
+  },
+  {
+    "text": {
+      "ru": "Меня встречают",
+      "en": "I am being met"
+    }
+  },
+  {
+    "text": {
+      "ru": "Позовите руководителя группы",
+      "en": "Call my leader"
+    }
+  },
+  {
+    "text": {
+      "ru": "Позовите моего местного делового партнёра",
+      "en": "Call my local business partner"
+    }
+  },
+  {
+    "text": {
+      "ru": "Позвоните по этому номеру",
+      "en": "Phone this number"
+    }
+  },
+  {
+    "text": {
+      "ru": "Я протестую",
+      "en": "I protest"
+    }
+  },
+  {
+    "text": {
+      "ru": "Это недоразумение",
+      "en": "This is a misunderstanding"
+    }
+  },
+  {
+    "text": {
+      "ru": "Мне нужна правовая помощь",
+      "en": "I need legal help"
+    }
+  }
+]
