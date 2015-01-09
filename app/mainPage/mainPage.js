@@ -22,7 +22,7 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
         $scope.userText = "";
         $scope.redText = "";
         $scope.grayText = "";
-        $scope.underlinesText = "";
+        $scope.underlinesText = phrases.buildUnderlinedTextByString($scope.currentPhrase.text.en);
         $scope.wrongSpaces = "";
     };
     $scope.clearUserText();
@@ -119,7 +119,6 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
     //    }
         function useEnterInTheEndOfPhrase() {
             if ($scope.isPhrasesEqual()) {
-                $scope.userText = $scope.redText = $scope.underlinesText = $scope.grayText = "";
                 if ($scope.currentPhrase != _.last($scope.phrasesList)) setNextPhrase();
                 else setNextCategory();
                 return true;
@@ -127,7 +126,7 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
             return false;
 
             function setNextPhrase() {
-                $scope.currentPhrase = $scope.phrasesList[_.indexOf($scope.phrasesList, $scope.currentPhrase) + 1];
+                $scope.phraseOnChange($scope.phrasesList[_.indexOf($scope.phrasesList, $scope.currentPhrase) + 1])
             }
             function setNextCategory() {
                 if ($scope.categories != _.last($scope.currentCategory)) {
@@ -151,6 +150,7 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
     $scope.phraseOnChange = function(newPhrase){
         $scope.currentPhrase = newPhrase;
         $scope.clearUserText();
+
     };
 
     $scope.isPhrasesEqual = function () {
