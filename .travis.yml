@@ -11,7 +11,7 @@ before_script:
   - sleep 1 # give server time to start
 
 script:
-  - npm test
+  - node_modules/.bin/karma start karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox
 deploy:
   provider: heroku
   api_key: cf30875e-2cfd-43ff-ab8a-d150ff8af775
