@@ -41,9 +41,14 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
         $scope.onUserTextChange();
     };
     $scope.onUserTextChange = function () {
+
+
         if ($scope.incorrectCharTimeout){
             $timeout.cancel($scope.incorrectWordTimeout);
             $timeout.cancel($scope.incorrectCharTimeout);
+        }
+        if($scope.currentPhrase.text.en.length < $scope.userText.length){
+            $scope.userText = $scope.userText.slice(0,$scope.userText.length-1);
         }
         if(isContainErrors($scope.currentPhrase.text.en, $scope.userText)){
             $scope.redText = getBlankString($scope.userText.length - 1) + _.last($scope.userText);
