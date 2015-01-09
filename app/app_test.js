@@ -204,7 +204,7 @@ describe('myApp controller', function () {
        //expect($scope.userText).toEqual(""); //польз. текст очищен
         //expect($scope.currentPhrase.text.ru).toEqual("Фраза номер три");
     });
-    describe("При первом нажатии на Энтер выводим все почеркивания", function () {
+    xdescribe("При первом нажатии на Энтер выводим все почеркивания", function () {
         it("Пользовательский текст пустой; срузу жмем Энтер", function () {
             $scope.onUserTextEnter();
             expect($scope.underlinesText).toEqual("__ ____ __ ______"); //My name is Andrey
@@ -228,7 +228,7 @@ describe('myApp controller', function () {
 
 
     });
-    describe("При втором нажатии на энтер подсказываем слово серым текстом", function () {
+    xdescribe("При втором нажатии на энтер подсказываем слово серым текстом", function () {
         it("Пользовательский текст пустой; срузу жмем Энтер два раза", function () {
             $scope.onUserTextEnter();
             $scope.onUserTextEnter();

@@ -66,6 +66,7 @@ function Phrases($http, dataProvider) {
                 return "_";
             }
         },
+
         buildRedText: function (targetPhrase, userText) {
             var redText = "";
             for (var i = 0; i < userText.length; i += 1) {
