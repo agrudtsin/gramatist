@@ -9,7 +9,10 @@
     cursor:pointer;
     user-select:none;
 }
-
+select {
+    overflow:hidden;
+    max-width: 30%;
+}
 #usertext {
     Z-INDEX: 2;
     filter: alpha(opacity: 0.5);    

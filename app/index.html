@@ -15,23 +15,32 @@
     <!-- Background  -->
     <div class="Header">
         <img id="GrammatistLogo" src="resources/img/Logo2_32.png" title ="Граматист - практическое изучение английского языка"></img>
+          Группа 
         <select ng-model='currentCategory'
                 ng-change="categoryOnChange(currentCategory)"
-                ng-options="category.name for category in categories"></select>
+                ng-options="category.name for category in categories">
+        </select>
+          Фраза 
         <select ng-model='currentPhrase'
                 ng-change="phraseOnChange(currentPhrase)"
-                ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
+                ng-options="curPhrase.text.ru for curPhrase in phrasesList"
+                >
+        </select>
     </div>
     <div id="blackBackground" style = "position:absolute; z-index:1999;left:0px; right:0px;top:0px;bottom:0px; background:rgba(0,0,0,0.3); visibility:hidden ">
         <div id="CategoryChooseDivOnMobile" style="position:absolute; z-index:2000; left: 10%; top:10%; right:10%;padding-bottom:5%; background:#FFF; BORDER: #EEE solid 1px;   border-radius: 10px;  ">
-            <div style="margin-left:20px; float:center;">Группа</div> 
-            <select ng-model='currentCategory'
+            <div style="margin-left:20px; float:center;">Группа
+                <select ng-model='currentCategory'
                     ng-change="categoryOnChange(currentCategory)"
                     ng-options="category.name for category in categories" style="margin-left:20px; margin-top:10px;"></select>
+            </div> 
+            <div style="margin-left:20px; float:center;">Фраза
             <select ng-model='currentPhrase'
                 ng-change="phrasesListOnChange(currentPhrase)"
                 ng-options="curPhrase.text.ru for curPhrase in phrasesList"></select>
-            <input type="button" value=" OK " onclick="hideCategorySelect();"/>
+                <input type="button" value=" OK " onclick="hideCategorySelect();"/>
+            </div> 
+            
         </div>
     </div>
     <div class="Hint" ng-show="isContainErrors()">Нажмите Enter для подсказки</div>
@@ -166,8 +175,9 @@
         </div>
         
         <div id=Statistics class="StatisticsBlock">
-            <div class="StatisticsCaption">Phrases repeated: </div><div id=PhrasesRepeated class="StatisticsValue">{{PhrasesRepeated}}</div>
-            <div class="StatisticsCaption" style="display:none">Time for knowledges: <div id=PhrasesRepeated class="StatisticsValue">38:22</div></div>
+            <div class="StatisticsCaption">Пройдено фраз: </div><div id=PhrasesRepeated class="StatisticsValue">{{PhrasesRepeated}}</div>
+            <div class="StatisticsCaption">Повторено слов: <div id=WordsRepeated class="StatisticsValue">382</div></div>
+            <div class="StatisticsCaption" style="display:none">Time for knowledges: <div id=TimeElapsed class="StatisticsValue">38:22</div></div>
             <div class="StatisticsCaption" style="display:none">Number of typos: <div id=MistakeCount class="StatisticsValue" style="color:red;">15</div></div>
         </div>
         <div id=Statistics class="StatisticsBlock">
