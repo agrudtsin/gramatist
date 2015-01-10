@@ -261,7 +261,6 @@ describe('myApp controller', function () {
 
     //https://github.com/agrudtsin/gramatist/issues/20
     it("При выборе категории очищается пользовательский текст, почеркивание, красный и серый текст", function () {
-
         $scope.userText = "userText";
         $scope.grayText = "grayText";
         $scope.redText = "redText";
@@ -269,9 +268,8 @@ describe('myApp controller', function () {
         $scope.categoryOnChange(_.first($scope.categories ));
         expect($scope.userText).toEqual("");
         expect($scope.grayText).toEqual("");
-        expect($scope.underlinesText).toEqual("");
+        expect($scope.underlinesText).toEqual("__ ____ __ ______");
         expect($scope.redText).toEqual("");
-
     });
 
 

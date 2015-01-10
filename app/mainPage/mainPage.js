@@ -118,6 +118,13 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
     //        return $scope.currentPhrase.text.en.length == $scope.underlinesText.length
     //    }
         function useEnterInTheEndOfPhrase() {
+
+
+            //var sound = new Audio("http://translate.google.com/translate_tts?tl=en&q="+
+            //    $scope.currentPhrase.text.en.split(' ').join('+'));
+            //console.log(sound.load());
+            //console.log(sound.play());
+
             if ($scope.isPhrasesEqual()) {
                 if ($scope.currentPhrase != _.last($scope.phrasesList)) setNextPhrase();
                 else setNextCategory();
