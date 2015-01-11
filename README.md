@@ -1,8 +1,6 @@
 <h1>gramatist</h1>   
 =========
 <a href="https://travis-ci.org/agrudtsin/gramatist"> <img src="https://travis-ci.org/agrudtsin/gramatist.svg"/> </a>
-[![Coverage Status](https://img.shields.io/coveralls/agrudtsin/gramatist.svg)](https://coveralls.io/r/agrudtsin/gramatist)
-
 ### Install Dependencies
 
 We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
