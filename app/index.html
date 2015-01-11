@@ -15,7 +15,7 @@
     <!-- Background  -->
     <div class="Header">
 		<div id="GramatistStyleLogo"> Gr </div>   Группа 
-		<div id="CurrentCategoryTopic" onclick="showCategorySelect();">  {{currentCategory.name}}  </div>
+		<div id="CurrentCategoryTopic" onclick="showCategorySelect();" ng-bind="currentCategory.name"></div>
     </div>
     <div id="blackBackground">
         <div id="CategoryChooseDivOnMobile">
@@ -44,7 +44,7 @@
 						unselectable='on' 
 						onselectstart='return false;' 
 						onmousedown='return false;' 
-						>{{currentPhrase.text.ru}}
+						ng-bind="currentPhrase.text.ru">
 			</div>
             <div    id="DivBetweenNativeAndEnglish"
 					unselectable='on'
@@ -83,7 +83,8 @@
 					Z-INDEX: 10; 
 					Color: #bbb;
 					CURSOR: none; 
-					pointer-events: none;">{{underlinesText}}
+					pointer-events: none;"
+					ng-bind="underlinesText">
 			</textarea>
 				<!-- green background -->
 			<textarea 
@@ -107,7 +108,8 @@
 					Z-INDEX: 5; 
 					COLOR: #fdd;
 					CURSOR: none; 
-					pointer-events: none;">{{wrongSpaces}}
+					pointer-events: none;"
+					ng-bind="wrongSpaces">
 			</textarea>
 				<!-- GrayedText -->
 			<textarea 
@@ -119,7 +121,8 @@
 					Z-INDEX: 15; 
 					COLOR: #bbb; 
 					CURSOR: none; 
-					pointer-events: none">{{grayText}}
+					pointer-events: none"
+					ng-bind="grayText">
 			</textarea>
 				<!-- User Input -->
 			<textarea 
@@ -140,7 +143,8 @@
 					Z-INDEX: 30; 
 					COLOR: #F00; 
 					CURSOR: none; 
-					pointer-events: none" >{{redText}}
+					pointer-events: none"
+					ng-bind="redText">
 			</textarea>
 				<!-- margin to bottom! -->
 			<textarea 
@@ -154,7 +158,7 @@
 			</textarea>
 			<img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/Welldone32.png">
 			<div id=Statistics class="StatisticsBlock">
-				<div class="StatisticsCaption">Пройдено фраз: </div><div id=PhrasesRepeated class="StatisticsValue">{{PhrasesRepeated}}14</div>
+				<div class="StatisticsCaption">Пройдено фраз: </div><div id=PhrasesRepeated class="StatisticsValue">14</div>
 				<div class="StatisticsCaption">Повторено слов: <div id=WordsRepeated class="StatisticsValue">382</div></div>
 				<div class="StatisticsCaption" style="display:none">Time for knowledges: <div id=TimeElapsed class="StatisticsValue">38:22</div></div>
 				<div class="StatisticsCaption" style="display:none">Number of typos: <div id=MistakeCount class="StatisticsValue" style="color:red;">15</div></div>

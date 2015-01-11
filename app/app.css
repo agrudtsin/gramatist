@@ -220,7 +220,7 @@ textarea:focus{
 .FeedbackDiv {
     z-index:1000;
     position: absolute;
-    right: 20;
+    right: 20px;
     width: 300px;
     height: 200px;
     bottom: 35px;
@@ -239,7 +239,7 @@ textarea:focus{
 	BORDER: #7799D8 solid 1px; 
 	CURSOR:help;
 	display:none;//inline;
-	visibility:"hidden";
+	visibility:hidden;
 	
 }
 #formalPhrase {
@@ -285,7 +285,7 @@ textarea:focus{
 	padding-right:20px;
 	padding-left:10px;
 	padding-top:9px;
-	FONT-size:18;
+	FONT-size:18px;
 	color:#FFF
 }
 #ButtonPrevious {
@@ -388,8 +388,9 @@ textarea:focus{
 
 @media screen and (max-width: 400px) {
     .AllTextAreas {
-        width:75%;
-    }  
+        width: 75%;
+    }
+}
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none;
 }
