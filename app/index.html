@@ -39,6 +39,7 @@
                     onselectstart='return false;' 
                     onmousedown='return false;'
                     id="NativeTextDIV">
+<<<<<<< HEAD
             <div 	id="NativeLanguagePhrase" 
 						class="DivNativeText" 
 						unselectable='on' 
@@ -48,6 +49,18 @@
 			</div>
             <div    id="DivBetweenNativeAndEnglish"
 					unselectable='on'
+=======
+            <textarea id="NativeLanguagePhrase" rows="1"
+                      class="DivNativeText CommonFormat"
+                      unselectable='on'
+                      onselectstart='return false;'
+                      onmousedown='return false;'
+                      style="BORDER: #DDD solid 1px; "
+                      onclick="showCategorySelect();"
+                    ng-bind="currentPhrase.text.ru"></textarea>
+            <img class="grammatistLogoSmallScreen" id="GrammatistLogoNearNative" src="resources/img/Logo2_32.png" title ="Граматист - практическое изучение английского языка" onclick="showCategorySelect();"></img>
+            <div    unselectable='on'
+>>>>>>> b86bf4fe0cc6f1cdb584b3802d824b15066be27d
                     onselectstart='return false;' 
                     onmousedown='return false;'>
                 <div
@@ -71,6 +84,7 @@
 				<div id="ButtonNext" class="glyphicon glyphicon-chevron-right"></div>
 			</div>
         </div>
+<<<<<<< HEAD
 		<!-- Spaces and markup -->
 		<div id="LaeyredTextAreas">
 				<!-- underline -->
@@ -162,6 +176,96 @@
 		</div>
 
 
+=======
+        
+        <!-- Spaces and markup -->
+        <div id="LaeyredTextAreas">
+                <!-- underline -->
+            <textarea 
+                readonly
+                spellcheck="false"
+                id="UnderlinesForPhrase" 
+                class="AllTextAreas CommonFormat" 
+                style="
+                    Z-INDEX: -6; 
+                    COLOR: #bbb;                    
+                    margin-left:52px;
+                    margin-bottom:15px; 
+                    CURSOR: none; 
+                    pointer-events: none;"
+                    ng-bind="underlinesText">
+            </textarea>
+                <!-- green background -->
+            <textarea 
+                readonly
+                id="GreenBackAndRedSpaces"
+                ng-show="isPhrasesEqual()"
+                class="AllTextAreas CommonFormat positionabsolute" 
+                style="
+                    Z-INDEX: -4; 
+                    background:#EEFFCD;
+                    box-shadow: 2px 2px 3px 0px #D7E5B5 inset;
+                    CURSOR: none; 
+                    pointer-events: none;">
+            </textarea>
+                <!-- gray background -->
+            <textarea 
+                readonly
+                id="ShadowToInputField"
+                class="AllTextAreas CommonFormat positionabsolute backgroundInput" 
+                style="
+                    Z-INDEX: -5; 
+                    COLOR: #fdd;
+                    CURSOR: none; 
+                    pointer-events: none;"
+                    ng-bind="underlinesText">
+            </textarea>
+                <!-- GrayedText -->
+            <textarea 
+                readonly
+                spellcheck="false"
+                id="GrayedText" 
+                class="AllTextAreas CommonFormat positionabsolute" 
+                style="
+                    Z-INDEX: -3; 
+                    COLOR: #bbb; 
+                    CURSOR: none; 
+                    pointer-events: none"
+                    ng-bind="grayText">
+            </textarea>
+                <!-- User Input -->
+            <textarea 
+                autofocus 
+                id="userText" 
+                class="AllTextAreas CommonFormat positionabsolute"
+                ng-model="userText" 
+                ng-change="onUserTextChange()" 
+                ng-enter="onUserTextEnter()"
+                spellcheck="false" 
+                rows="1">
+            </textarea>
+                <!-- Red error text -->
+            <textarea 
+                readonly 
+                id="RedText" 
+                class="AllTextAreas CommonFormat positionabsolute" 
+                style="
+                    Z-INDEX: 5; 
+                    COLOR: #F00; 
+                    CURSOR: none; 
+                    pointer-events: none"
+                    ng-bind="redText">
+            </textarea>
+            <img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/Welldone32.png">
+        </div>
+        
+        <div id=Statistics class="StatisticsBlock">
+            <div class="StatisticsCaption">Пройдено фраз: </div><div id=PhrasesRepeated class="StatisticsValue"></div>
+            <div class="StatisticsCaption">Повторено слов: <div id=WordsRepeated class="StatisticsValue">382</div></div>
+            <div class="StatisticsCaption" style="display:none">Time for knowledges: <div id=TimeElapsed class="StatisticsValue">38:22</div></div>
+            <div class="StatisticsCaption" style="display:none">Number of typos: <div id=MistakeCount class="StatisticsValue" style="color:red;">15</div></div>
+        </div>
+>>>>>>> b86bf4fe0cc6f1cdb584b3802d824b15066be27d
         <div id=Statistics class="StatisticsBlock">
             <div class="StatisticsCaption" style="display:none">Category: <div id=PhrasesRepeated class="StatisticsValue">Proverbs</div></div>
             <div class="StatisticsCaption" style="display:none">Learned: <div id=PhrasesLearned class="StatisticsValue">1/345</div></div>
