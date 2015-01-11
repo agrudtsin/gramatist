@@ -1,21 +1,38 @@
 .DivNativeText {
-    FONT-FAMILY: Georgia, Verdana, Times;
-    margin-top:100px; 
-    margin-left:52px;
+    FONT-FAMILY: Verdana, Times;
+    margin-top:20px; 
+    margin-left:20px;
+	padding-top:20px;
     COLOR: #00a;
-    FONT-SIZE: 22px;
-    BORDER: #EEE solid 1px;    
-    background: #F3F3F3;
-    cursor:pointer;
+    FONT-SIZE: 22px;    
     user-select:none;
+}
+#NativeTextDIV{
+	background:#FFF;
+	border-top-left-radius: 10px;  
+	border-top-right-radius: 10px;  
+	margin-top:130px;
+	margin-left:30px;
+	margin-right:30px;
+	padding-bottom:30px;
+}
+#LaeyredTextAreas {
+	background:#B9DEFF; /*75E5FF;*/
+	border-bottom-left-radius: 10px;  
+	border-bottom-right-radius: 10px;  
+	margin-left:30px;
+	margin-right:30px;
+	padding-top:30px;
+	padding-bottom:20px;
+	border-bottom:solid 1px #
 }
 select {
     overflow:hidden;
     max-width: 30%;
 }
 #usertext {
-    Z-INDEX: 2;
-    filter: alpha(opacity: 0.5);    
+    Z-INDEX: 20;
+    filter: alpha(opacity: 0.5);   
 }
 .Hint {
     position:absolute;
@@ -33,7 +50,7 @@ select {
 }
 .positionabsolute {
     position:absolute;
-    FONT-FAMILY: "Verily Serif Mono", monospace;
+    FONT-FAMILY: monospace;  /* "Verily Serif Mono", */
     
 }
 .CommonFormat {
@@ -41,28 +58,28 @@ select {
     PADDING: 8px;
     PADDING-left: 12px;    
     overflow:hidden;
+	autoSize:left;
+	wordWrap:true;
     resize: none; 
-    BORDER: #BBB solid 1px;
-    left:52px;
-    width:90%;
+    BORDER: #CCE solid 1px;
 }
 .CommonDIVFormat {
 }
 .AllTextAreas {    
-    height: 51px;
-    FONT-FAMILY: "Verily Serif Mono", monospace;
+    
+    FONT-FAMILY: "Verily Serif Mono", monospace; /*"Verily Serif Mono",*/
+	Font-weight:normal;
     FONT-SIZE: 24px;
     BACKGROUND: none transparent scroll repeat 0% 0%;
+	margin-bottom:25px;
+	margin-left:30px;
+	width:90%;
 }
 
-.textarea {
-    opacity: 0;
-
-}
 .propersign {
     position:absolute;
-    margin-top:10px;
-    left: 10px;
+    margin-top:-45px;
+    left: 14px;
 
 }
 .grammatistLogoSmallScreen {
@@ -83,16 +100,19 @@ select {
 .backgroundInput {
     /*background: #FFF;   */
     box-shadow: 2px 2px 3px 0px #DDD inset;
+	background:#FFF;
 }
 .InputProperShadow {
     box-shadow: 0px 0px 20px 16px #88F inset;
 }
 
 body {
-    background-color:#AAB;
+    /*#AAB;*/
     /*background-image: url("resources/img/fon14.png");   */
     /*width: 85%;*/
     /*left: 5%;*/
+	FONT-FAMILY: Verdana, Times;
+	
 }
 
 .MiddleColumn {
@@ -101,16 +121,40 @@ body {
 
 .Header {
  POSITION: absolute; 
- FONT-FAMILY: Georgia, Verdana, Times;
  FONT-SIZE: 20px;
- top:0px;  
- left: 0px;
- width:100%;
- height: 42px;
- background: rgba(255,255,255,0.4);
+ top:10px;  
+ left: 5%;
+ width:90%;
  z-index:1000;
- border-bottom: solid 1px #BBB;
- PADDING: 5px;
+ 
+ font-family: "proximaSB",Tahoma,Verdana,Arial;
+border-radius: 6px;
+border-top: 1px solid #73CCFB;
+background: linear-gradient(#39B5FA, #2EA3F8);
+
+margin: 20px auto 0px;
+padding: 20px;
+box-shadow: 0px 1px 2px #48A8D9;
+color:#FFF;
+cursor:default;
+}
+
+#GramatistStyleLogo {
+	border-radius: 15px;
+	background: #00B;
+	color:#FFF;
+	display: inline;
+}
+#CurrentCategoryTopic {
+	border-radius: 15px;
+	color:#FFF;
+	background: #55C5FF;
+	margin-left:5px;
+	width:400px;
+	display: inline;
+	padding-top:3px;
+	padding-bottom:3px;
+	cursor:pointer;
 }
 
 .Footer {
@@ -131,10 +175,10 @@ textarea:focus{
 .StatisticsValue {
     FONT-FAMILY: Verdana, Times;
     FONT-SIZE: 12px;
-    BORDER: #BBB solid 1px;
+
     /*background: #EEE;*/
     width:40px;
-    border-radius: 3px;    
+    border-radius: 10px;    
     display: inline;
     padding-top:3px;
     padding-bottom:3px;
@@ -142,6 +186,7 @@ textarea:focus{
     width:100px;
     padding-left:10px;
     padding-right:10px;
+	background: #55C5FF;
 }
 .StatisticsBlock {
     FONT-FAMILY: Verdana, Times;
@@ -183,6 +228,54 @@ textarea:focus{
     FONT-FAMILY: Verdana, Times;
     BORDER: #BBB solid 1px;
 }
+#InformalPhrase {
+	FONT-FAMILY: Verdana, Arial;
+	background:#FFF; 
+	color:#336FD6; 
+	border-radius: 10px; 
+	BORDER: #7799D8 solid 1px; 
+	CURSOR:help;
+	display:none;//inline;
+	visibility:"hidden";
+	
+}
+#formalPhrase {
+	background:#7799D8;
+	border-radius: 10px; 
+	color:#FFF; 
+	BORDER: #7799D8 solid 1px; 
+	CURSOR:help;
+	display:none; //inline
+}
+#DivBetweenNativeAndEnglish {
+	FONT-FAMILY: Verdana, Arial;
+	font-size:10px;
+	margin-top:7px; 
+	margin-bottom:7px; 
+	display:none;
+	visible:"hidden";
+}
+#blackBackground {
+	position:absolute; 
+	z-index:1999;
+	left:0px; 
+	right:0px;
+	top:0px;
+	bottom:0px; 
+	background:rgba(0,0,0,0.3); 
+	visibility:hidden; 
+}
+#CategoryChooseDivOnMobile {
+	position:absolute; 
+	z-index:2000; 
+	left: 10%; 
+	top:10%; 
+	right:10%;
+	padding-bottom:5%; 
+	background:#FFF; 
+	BORDER: #EEE solid 1px;   
+	border-radius: 10px;  
+}
 
 @media screen and (max-height: 500px) {
         .Header {
@@ -206,6 +299,7 @@ textarea:focus{
         .AllTextAreas {    
             height: 25px;
             FONT-SIZE: 16px;
+			
         }
         .grammatistLogoSmallScreen {
             top:6px;
@@ -224,25 +318,37 @@ textarea:focus{
 
 }
 @media screen and (max-width: 1000px) {
-    .CommonFormat {
-        width:90%;
+    .AllTextAreas {
+        width:88%;
     }
 }    
 @media screen and (max-width: 800px) {
-    .CommonFormat {
+    .AllTextAreas {
         width:85%;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .Hint {
         FONT-SIZE: 10px;
         left:200px;
-    }        
+    }      
+    .AllTextAreas {
+        width:80%;
+    }	
+}
+
+@media screen and (max-width: 600px) {
+    .Hint {
+        FONT-SIZE: 10px;
+        left:200px;
+    }      
+    .AllTextAreas {
+        width:77%;
+    }	
 }
 
 @media screen and (max-width: 400px) {
-    .CommonFormat {
-        width:83%;
+    .AllTextAreas {
+        width:75%;
     }  
-}
