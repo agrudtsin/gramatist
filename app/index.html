@@ -53,7 +53,14 @@
                     onselectstart='return false;' 
                     onmousedown='return false;'
                     id="NativeTextDIV">
-            <textarea id="NativeLanguagePhrase" rows="1" class="DivNativeText CommonFormat" unselectable='on' onselectstart='return false;' onmousedown='return false;' style="BORDER: #DDD solid 1px; " onclick="showCategorySelect();">{{currentPhrase.text.ru}}</textarea>
+            <textarea id="NativeLanguagePhrase" rows="1"
+                      class="DivNativeText CommonFormat"
+                      unselectable='on'
+                      onselectstart='return false;'
+                      onmousedown='return false;'
+                      style="BORDER: #DDD solid 1px; "
+                      onclick="showCategorySelect();"
+                    ng-bind="currentPhrase.text.ru"></textarea>
             <img class="grammatistLogoSmallScreen" id="GrammatistLogoNearNative" src="resources/img/Logo2_32.png" title ="Граматист - практическое изучение английского языка" onclick="showCategorySelect();"></img>
             <div    unselectable='on'
                     onselectstart='return false;' 
@@ -111,7 +118,8 @@
                     margin-left:52px;
                     margin-bottom:15px; 
                     CURSOR: none; 
-                    pointer-events: none;">{{underlinesText}}
+                    pointer-events: none;"
+                    ng-bind="underlinesText">
             </textarea>
                 <!-- green background -->
             <textarea 
@@ -135,7 +143,8 @@
                     Z-INDEX: -5; 
                     COLOR: #fdd;
                     CURSOR: none; 
-                    pointer-events: none;">{{wrongSpaces}}
+                    pointer-events: none;"
+                    ng-bind="underlinesText">
             </textarea>
                 <!-- GrayedText -->
             <textarea 
@@ -147,7 +156,8 @@
                     Z-INDEX: -3; 
                     COLOR: #bbb; 
                     CURSOR: none; 
-                    pointer-events: none">{{grayText}}
+                    pointer-events: none"
+                    ng-bind="grayText">
             </textarea>
                 <!-- User Input -->
             <textarea 
@@ -169,13 +179,14 @@
                     Z-INDEX: 5; 
                     COLOR: #F00; 
                     CURSOR: none; 
-                    pointer-events: none" >{{redText}}
+                    pointer-events: none"
+                    ng-bind="redText">
             </textarea>
             <img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/Welldone32.png">
         </div>
         
         <div id=Statistics class="StatisticsBlock">
-            <div class="StatisticsCaption">Пройдено фраз: </div><div id=PhrasesRepeated class="StatisticsValue">{{PhrasesRepeated}}</div>
+            <div class="StatisticsCaption">Пройдено фраз: </div><div id=PhrasesRepeated class="StatisticsValue"></div>
             <div class="StatisticsCaption">Повторено слов: <div id=WordsRepeated class="StatisticsValue">382</div></div>
             <div class="StatisticsCaption" style="display:none">Time for knowledges: <div id=TimeElapsed class="StatisticsValue">38:22</div></div>
             <div class="StatisticsCaption" style="display:none">Number of typos: <div id=MistakeCount class="StatisticsValue" style="color:red;">15</div></div>

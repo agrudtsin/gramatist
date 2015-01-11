@@ -246,3 +246,7 @@ textarea:focus{
         width:83%;
     }  
 }
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
