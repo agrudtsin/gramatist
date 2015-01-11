@@ -7,19 +7,19 @@
   },
   {
     "text": {
-      "ru": "Он послал матери открытку вчера или два дня назад?",
+      "ru": "Он послал своей матери открытку вчера или два дня назад?",
       "en": "Did he send a postcard to his mother yesterday or two days ago?"
     }
   },
   {
     "text": {
-      "ru": "Он послал открытку матери или сестре?",
+      "ru": "Он послал открытку своей матери или своей сестре?",
       "en": "Did he send the postcard to his mother or his sister?"
     }
   },
   {
     "text": {
-      "ru": "На улице тепло или холодно?",
+      "ru": "На улице холодно или тепло?",
       "en": "Is it cold or warm outside?"
     }
   },
@@ -37,7 +37,7 @@
   },
   {
     "text": {
-      "ru": "Когда тебя прервали: в начале или середине речи?",
+      "ru": "Когда тебя прервали: в начале или середине твоей речи?",
       "en": "When were you interrupted: at the beginning or in the middle of your speech?"
     }
   },

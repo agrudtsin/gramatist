@@ -37,8 +37,8 @@
   },
   {
     "text": {
-      "ru": "Кто открыл Америку",
-      "en": "Who discovered America"
+      "ru": "Кто открыл Америку?",
+      "en": "Who discovered America?"
     }
   },
   {
@@ -67,7 +67,7 @@
   },
   {
     "text": {
-      "ru": "Они не классно проводят время",
+      "ru": "Они не классно проводят время сайчас",
       "en": "They aren't having a great time now"
     }
   },
@@ -1339,12 +1339,6 @@
   },
   {
     "text": {
-      "ru": "Я расскажу вам об этом после обеда",
-      "en": "I'll tell it to you after dinner"
-    }
-  },
-  {
-    "text": {
       "ru": "Он вернется через час",
       "en": "He'll be back in an hour"
     }
@@ -1395,12 +1389,6 @@
     "text": {
       "ru": "Я всегда буду возвращаться",
       "en": "I'll always come back"
-    }
-  },
-  {
-    "text": {
-      "ru": "В следующем году он будет работать на фабрике",
-      "en": "He'll work at the factory next year"
     }
   },
   {
@@ -1621,7 +1609,7 @@
   },
   {
     "text": {
-      "ru": "Ваш отец скоро вернется",
+      "ru": "Ваш отец вот-вот вернется",
       "en": "Your father will be back in a moment"
     }
   },
@@ -1669,7 +1657,7 @@
   },
   {
     "text": {
-      "ru": "В следующем года он будет работать на фабрике",
+      "ru": "В следующем году он будет работать на фабрике",
       "en": "He'll work at the factory next year"
     }
   },

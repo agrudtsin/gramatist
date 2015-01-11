@@ -121,12 +121,6 @@
   },
   {
     "text": {
-      "ru": "Я расскажу вам об этом после обеда",
-      "en": "I'll tell it to you after dinner"
-    }
-  },
-  {
-    "text": {
       "ru": "Он вернется через час",
       "en": "He'll be back in an hour"
     }
@@ -181,12 +175,6 @@
   },
   {
     "text": {
-      "ru": "В следующем году он будет работать на фабрике",
-      "en": "He'll work at the factory next year"
-    }
-  },
-  {
-    "text": {
       "ru": "Я дам это ему, когда он вернется",
       "en": "I'll give it him when he comes back"
     }
@@ -205,7 +193,7 @@
   },
   {
     "text": {
-      "ru": "Ваш отец скоро вернется",
+      "ru": "Ваш отец вот-вот вернется",
       "en": "Your father will be back in a moment"
     }
   },
@@ -253,7 +241,7 @@
   },
   {
     "text": {
-      "ru": "В следующем года он будет работать на фабрике",
+      "ru": "В следующем году он будет работать на фабрике",
       "en": "He'll work at the factory next year"
     }
   },

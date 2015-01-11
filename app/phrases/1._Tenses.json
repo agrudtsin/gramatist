@@ -37,8 +37,8 @@
   },
   {
     "text": {
-      "ru": "Кто открыл Америку",
-      "en": "Who discovered America"
+      "ru": "Кто открыл Америку?",
+      "en": "Who discovered America?"
     }
   },
   {
@@ -91,19 +91,19 @@
   },
   {
     "text": {
-      "ru": "Он послал матери открытку вчера или два дня назад?",
+      "ru": "Он послал своей матери открытку вчера или два дня назад?",
       "en": "Did he send a postcard to his mother yesterday or two days ago?"
     }
   },
   {
     "text": {
-      "ru": "Он послал открытку матери или сестре?",
+      "ru": "Он послал открытку своей матери или своей сестре?",
       "en": "Did he send the postcard to his mother or his sister?"
     }
   },
   {
     "text": {
-      "ru": "На улице тепло или холодно?",
+      "ru": "На улице холодно или тепло?",
       "en": "Is it cold or warm outside?"
     }
   },
@@ -121,7 +121,7 @@
   },
   {
     "text": {
-      "ru": "Когда тебя прервали: в начале или середине речи?",
+      "ru": "Когда тебя прервали: в начале или середине твоей речи?",
       "en": "When were you interrupted: at the beginning or in the middle of your speech?"
     }
   },
@@ -193,7 +193,7 @@
   },
   {
     "text": {
-      "ru": "Они не классно проводят время",
+      "ru": "Они не классно проводят время сайчас",
       "en": "They aren't having a great time now"
     }
   },
@@ -1495,12 +1495,6 @@
   },
   {
     "text": {
-      "ru": "Я расскажу вам об этом после обеда",
-      "en": "I'll tell it to you after dinner"
-    }
-  },
-  {
-    "text": {
       "ru": "Он вернется через час",
       "en": "He'll be back in an hour"
     }
@@ -1551,12 +1545,6 @@
     "text": {
       "ru": "Я всегда буду возвращаться",
       "en": "I'll always come back"
-    }
-  },
-  {
-    "text": {
-      "ru": "В следующем году он будет работать на фабрике",
-      "en": "He'll work at the factory next year"
     }
   },
   {
@@ -1777,7 +1765,7 @@
   },
   {
     "text": {
-      "ru": "Ваш отец скоро вернется",
+      "ru": "Ваш отец вот-вот вернется",
       "en": "Your father will be back in a moment"
     }
   },
@@ -1825,7 +1813,7 @@
   },
   {
     "text": {
-      "ru": "В следующем года он будет работать на фабрике",
+      "ru": "В следующем году он будет работать на фабрике",
       "en": "He'll work at the factory next year"
     }
   },
@@ -2883,6 +2871,60 @@
     "text": {
       "ru": "Едва мы прибыли в отель, как начался дождь",
       "en": "We had hardly arrived at the hotel, when it started to rain"
+    }
+  },
+  {
+    "text": {
+      "ru": "В английском есть такие артикли - the (определённый артикль), a, и an (неопределённый артикль)",
+      "en": "The articles in English are the (definite article), a, and an (indefinite articles)"
+    }
+  },
+  {
+    "text": {
+      "ru": "Артикли определяю существительное как конкретное и неконкретное",
+      "en": "Articles define a noun as specific or unspecific"
+    }
+  },
+  {
+    "text": {
+      "ru": "После долгого дня, чашка чая на вкус особенно хороша",
+      "en": "After the long day, the cup of tea tastes particularly good"
+    }
+  },
+  {
+    "text": {
+      "ru": "В английском the не следует ставить перед словом all",
+      "en": "In English, the should not come before the word all"
+    }
+  },
+  {
+    "text": {
+      "ru": "Они действуют в интересах всех стран",
+      "en": "They act in the interests of all the countries"
+    }
+  },
+  {
+    "text": {
+      "ru": "Партнеры и клиенты и конечно же все сотрудники",
+      "en": "Partners and customers and of course all the employees"
+    }
+  },
+  {
+    "text": {
+      "ru": "Почти все эксперты",
+      "en": "Almost all the experts"
+    }
+  },
+  {
+    "text": {
+      "ru": "Процессы, которые влияют на коллективную безопасность всех стран",
+      "en": "Processes that affect the collective security of all the nations equally"
+    }
+  },
+  {
+    "text": {
+      "ru": "Туда ходили все дети, живущие по соседству",
+      "en": "All the children from the neighbourhood went there"
     }
   }
 ]
