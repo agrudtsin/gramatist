@@ -386,13 +386,10 @@ textarea:focus{
     }	
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 400px) {
     .AllTextAreas {
         width:75%;
     }  
-=======
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none;
 }
->>>>>>> b86bf4fe0cc6f1cdb584b3802d824b15066be27d
