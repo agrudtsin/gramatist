@@ -95,28 +95,28 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
         }
     };
     $scope.onUserTextEnter = function () {
-        useEnterInTheEndOfPhrase();
+        if (useEnterInTheEndOfPhrase()) return;
         //if (useEntersToUnderlineText()) return;
-        //useTwoEntersToShowGrayedText();
+        useEnterToShowGrayedText();
 
-    //    function useTwoEntersToShowGrayedText() {
-    //        if ($scope.isContainErrorSpaces()){
-    //            $scope.userText = _.str.rtrim($scope.userText);
-    //        }
-    //        if ($scope.isContainErrors() || !$scope.isWordFinished()) {
-    //            $scope.userText = phrases.deleteLastWord($scope.userText);
-    //        }
-    //        $scope.grayText = phrases.buildGrayText($scope.currentPhrase.text.en, $scope.userText);
-    //        $scope.buildRedText();
-    //    }
-    //    function useEntersToUnderlineText() {
-    //        if (isAllPhraseAlreadyUnderlined()) return false; //phrase already underined
-    //        $scope.underlinesText = phrases.buildUnderlinedTextByString($scope.currentPhrase.text.en);
-    //        return true;
-    //    }
-    //    function isAllPhraseAlreadyUnderlined() {
-    //        return $scope.currentPhrase.text.en.length == $scope.underlinesText.length
-    //    }
+        function useEnterToShowGrayedText() {
+            if ($scope.isContainErrorSpaces()){
+                $scope.userText = _.str.rtrim($scope.userText);
+            }
+            if ($scope.isContainErrors() || !$scope.isWordFinished()) {
+                $scope.userText = phrases.deleteLastWord($scope.userText);
+            }
+            $scope.grayText = phrases.buildGrayText($scope.currentPhrase.text.en, $scope.userText);
+            $scope.buildRedText();
+        }
+        //function useEntersToUnderlineText() {
+        //    if (isAllPhraseAlreadyUnderlined()) return false; //phrase already underined
+        //    $scope.underlinesText = phrases.buildUnderlinedTextByString($scope.currentPhrase.text.en);
+        //    return true;
+        //}
+        function isAllPhraseAlreadyUnderlined() {
+            return $scope.currentPhrase.text.en.length == $scope.underlinesText.length
+        }
         function useEnterInTheEndOfPhrase() {
 
 
