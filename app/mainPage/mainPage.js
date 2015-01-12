@@ -7,7 +7,7 @@ angular.
     //    });
     //}])
     .controller('mainCtrl', MainCtrl);
-function MainCtrl($scope, $timeout, phrases, dataProvider) {
+function MainCtrl($rootScope, $scope, $timeout, phrases, dataProvider) {
     $scope.isDefined = true;
     $scope.currentPhrase = {
         text: {
@@ -99,6 +99,10 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
         //if (useEntersToUnderlineText()) return;
         useEnterToShowGrayedText();
 
+
+
+
+
         function useEnterToShowGrayedText() {
             if ($scope.isContainErrorSpaces()){
                 $scope.userText = _.str.rtrim($scope.userText);
@@ -126,6 +130,7 @@ function MainCtrl($scope, $timeout, phrases, dataProvider) {
             //console.log(sound.play());
 
             if ($scope.isPhrasesEqual()) {
+                $rootScope.$broadcast('TTS');
                 if ($scope.currentPhrase != _.last($scope.phrasesList)) setNextPhrase();
                 else setNextCategory();
                 return true;
