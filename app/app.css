@@ -69,7 +69,7 @@ select {
 }
 .AllTextAreas {    
     
-    FONT-FAMILY: "Verily Serif Mono", monospace; /*"Verily Serif Mono",*/
+    FONT-FAMILY: "PT Mono", monospace; /*"Verily Serif Mono",*/
 	Font-weight:normal;
     FONT-SIZE: 24px;
     BACKGROUND: none transparent scroll repeat 0% 0%;
