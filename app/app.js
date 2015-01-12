@@ -7,7 +7,8 @@ angular.
         'myApp.mainPage']).
     factory('dataProvider', ['$http', DataProvider]).
     factory('phrases', ['$http', 'dataProvider', Phrases]).
-    directive('ngEnter', ngEnter);
+    directive('ngEnter', ngEnter).
+    directive('googleTts', ['$document',googleTts]);
 
 
 
@@ -144,6 +145,18 @@ function ngEnter() {
                 });
                 event.preventDefault();
             }
+        });
+    };
+}
+function googleTts($document){
+    return function(scope, element, attrs) {
+        var section   = $document[0].getElementById("googleTTS");
+        var frame = $document[0].createElement("iframe" );
+        section.appendChild( frame );
+
+        scope.$on('TTS', function() {
+            frame.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q='+attrs.googleTts.split(' ').join('+');
+            console.log('Play', frame.src);
         });
     };
 }

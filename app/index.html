@@ -157,15 +157,15 @@
 					pointer-events: none" > 
 			</textarea>
 			<img ng-show="isPhrasesEqual()" class="propersign" id="propersign" src="resources/img/Welldone32.png">
-			<div id=Statistics class="StatisticsBlock">
+			<div id="Statistics" class="StatisticsBlock">
 				<div class="StatisticsCaption">Пройдено фраз: </div><div id=PhrasesRepeated class="StatisticsValue">14</div>
 				<div class="StatisticsCaption">Повторено слов: <div id=WordsRepeated class="StatisticsValue">382</div></div>
 				<div class="StatisticsCaption" style="display:none">Time for knowledges: <div id=TimeElapsed class="StatisticsValue">38:22</div></div>
 				<div class="StatisticsCaption" style="display:none">Number of typos: <div id=MistakeCount class="StatisticsValue" style="color:red;">15</div></div>
 			</div>		
 		</div>
-        <div id=Statistics class="StatisticsBlock">
-            <div class="StatisticsCaption" style="display:none">Category: <div id=PhrasesRepeated class="StatisticsValue">Proverbs</div></div>
+        <div id="Statistics" class="StatisticsBlock">
+            <div class="StatisticsCaption" style="display:none">Category: <div id="PhrasesRepeated" class="StatisticsValue">Proverbs</div></div>
             <div class="StatisticsCaption" style="display:none">Learned: <div id=PhrasesLearned class="StatisticsValue">1/345</div></div>
         </div>
         <!--<div id=picture><img class="BigPicture" src="resources/img/ExampleOfPhrasePhoto.jpg" oncontextmenu ="return false;" ></img></div> -->
@@ -183,7 +183,7 @@
         <a ref="">
         <a ref="#" style="float:center;" onclick="getElementById('FeedbackDIVBlock').style.display=none;">Send feedback</a>
     </div>
-
+	<div google-tts="{{userText}}" id="googleTTS" style="display: none"></div>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/underscore.string/lib/underscore.string.js"></script>
