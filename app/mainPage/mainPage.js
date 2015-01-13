@@ -42,8 +42,10 @@ function MainCtrl($rootScope, $scope, $timeout, phrases, dataProvider) {
     };
     $scope.onUserTextChange = function () {
 
-
-        if ($scope.incorrectCharTimeout){
+        if ($scope.isPhrasesEqual()) {
+            $rootScope.$broadcast('TTS');
+        }
+        if ($scope.incorrectCharTimeout || $scope.isPhrasesEqual()){
             $timeout.cancel($scope.incorrectWordTimeout);
             $timeout.cancel($scope.incorrectCharTimeout);
         }
@@ -130,7 +132,6 @@ function MainCtrl($rootScope, $scope, $timeout, phrases, dataProvider) {
             //console.log(sound.play());
 
             if ($scope.isPhrasesEqual()) {
-                $rootScope.$broadcast('TTS');
                 if ($scope.currentPhrase != _.last($scope.phrasesList)) setNextPhrase();
                 else setNextCategory();
                 return true;
