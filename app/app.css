@@ -17,7 +17,9 @@
 	margin-right:30px;
 	padding-top:20px;
 	padding-bottom:30px;
-}
+	padding-left:10px;
+	padding-right:10px;
+	}
 #LaeyredTextAreas {
 	background:#B9DEFF; /*75E5FF;*/
 	border-bottom-left-radius: 10px;  
@@ -30,7 +32,18 @@
 }
 select {
     overflow:hidden;
-    max-width: 30%;
+    max-width: 100%;
+	border-radius: 10px; 
+	padding:5px;
+	margin:5px;
+	border: 2px solid #55C5FF;
+}
+#CloseCategorySelect {
+	border-radius: 10px; 
+	padding:5px;
+	
+	border: 2px solid #55C5FF;
+	float:right;
 }
 #usertext {
     Z-INDEX: 20;
@@ -45,15 +58,13 @@ select {
     BORDER: #BBB solid 1px;
     PADDING: 3px;
     left:40%;
-    top:155px;
+    top:215px;
     background:#FF8;
     /*box-shadow: 1px 1px 1px 1px #DDD;*/
     CURSOR: pointer; 
 }
 .positionabsolute {
-    position:absolute;
-    FONT-FAMILY: monospace;  /* "Verily Serif Mono", */
-    
+    position:absolute;    
 }
 .CommonFormat {
     border-radius: 4px;    
@@ -157,6 +168,8 @@ border-bottom:solid 1px #1E93E0
 	display: inline;
 	padding-top:3px;
 	padding-bottom:3px;
+	padding-left:5px;
+	padding-right:5px;	
 	cursor:pointer;
 }
 
@@ -189,7 +202,7 @@ textarea:focus{
     width:100px;
     padding-left:10px;
     padding-right:10px;
-	background: #55C5FF;
+	border: 1px solid #55C5FF;
 }
 .StatisticsBlock {
     FONT-FAMILY: Verdana, Times;
@@ -206,7 +219,7 @@ textarea:focus{
     display: inline;
     FONT-FAMILY: Verdana, Times;
     FONT-SIZE: 12px;
-    padding-top:0px;
+    padding-top:2px;
     padding-bottom:6px;
     
 }
@@ -274,10 +287,10 @@ textarea:focus{
 	left: 10%; 
 	top:10%; 
 	right:10%;
-	padding-bottom:5%; 
-	background:#FFF; 
-	BORDER: #EEE solid 1px;   
+	BORDER: #EEE solid 2px;   
 	border-radius: 10px;  
+	padding:5%;
+	background:#B9DEFF;
 }
 #ButtonsPrevNext {
 	display:inline;
@@ -317,7 +330,13 @@ textarea:focus{
 
 @media screen and (max-height: 500px) {
         .Header {
-            display:none;
+			FONT-SIZE: 14px;
+			top:0px;  
+		    left:0px;
+			width:100%;
+			border-radius: 0px;
+			margin: 0px auto 0px;
+			padding: 3px;
         }
         .DivNativeText {
             margin-top:10px; 
@@ -327,7 +346,7 @@ textarea:focus{
             display: block;
         }
         .Hint {
-            top:40px;
+            top:70px;
             FONT-SIZE: 12px;
         }        
         .CommonFormat {
@@ -335,9 +354,8 @@ textarea:focus{
             PADDING-left: 3px;
         }
         .AllTextAreas {    
-            height: 25px;
             FONT-SIZE: 16px;
-			
+			margin-bottom:10px;
         }
         .grammatistLogoSmallScreen {
             top:6px;
@@ -347,12 +365,38 @@ textarea:focus{
             top:5px;
         }
         .propersign {
-            margin-top:-4px;
-            left: 10px;
+            margin-top:-25px;
+            left: 1px;
         }
         .backgroundInput {
             box-shadow: 1px 1px 2px 0px #DDD inset;
         }
+		#LaeyredTextAreas {
+			border-bottom-left-radius: 6px;  
+			border-bottom-right-radius: 6px;  
+			margin-left:17px;
+			margin-right:17px;
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		#NativeTextDIV{
+			border-top-left-radius: 6px;  
+			border-top-right-radius: 6px;  
+			margin-top:40px;
+			margin-left:17px;
+			margin-right:17px;
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		#ButtonsPrevNext {
+			padding-right:10px;
+			padding-top:5px;
+			FONT-size:18px;
+		}
+		.StatisticsBlock {
+			padding-left:20px;
+			margin-left:15px;
+		}
 
 }
 @media screen and (max-width: 1000px) {
@@ -384,6 +428,11 @@ textarea:focus{
     .AllTextAreas {
         width:77%;
     }	
+	.StatisticsCaption {
+		padding-left:10px;
+		display: block;
+		padding-bottom:6px;			
+	}
 }
 
 @media screen and (max-width: 400px) {
