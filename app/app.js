@@ -154,8 +154,8 @@ function googleTts($document){
         var frame = $document[0].createElement("iframe" );
         section.appendChild( frame );
 
-        scope.$on('TTS', function() {
-            frame.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q='+attrs.googleTts.split(' ').join('+');
+        scope.$on('TTS', function(event, userText) {
+            frame.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q='+userText.split(' ').join('+');
             console.log('Play', frame.src);
         });
     };

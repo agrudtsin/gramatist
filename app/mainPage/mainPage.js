@@ -43,7 +43,7 @@ function MainCtrl($rootScope, $scope, $timeout, phrases, dataProvider) {
     $scope.onUserTextChange = function () {
 
         if ($scope.isPhrasesEqual()) {
-            $rootScope.$broadcast('TTS');
+            $rootScope.$broadcast('TTS', $scope.userText);
         }
         if ($scope.incorrectCharTimeout || $scope.isPhrasesEqual()){
             $timeout.cancel($scope.incorrectWordTimeout);
@@ -120,9 +120,9 @@ function MainCtrl($rootScope, $scope, $timeout, phrases, dataProvider) {
         //    $scope.underlinesText = phrases.buildUnderlinedTextByString($scope.currentPhrase.text.en);
         //    return true;
         //}
-        function isAllPhraseAlreadyUnderlined() {
-            return $scope.currentPhrase.text.en.length == $scope.underlinesText.length
-        }
+        //function isAllPhraseAlreadyUnderlined() {
+        //    return $scope.currentPhrase.text.en.length == $scope.underlinesText.length
+        //}
         function useEnterInTheEndOfPhrase() {
 
 
