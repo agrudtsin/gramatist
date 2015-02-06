@@ -1,0 +1,38 @@
+﻿[
+  {
+    "text": {
+      "ru": "Class variables also known as static variables are declared with the static keyword in a class, but outside a method, constructor or a block",
+      "en": "What is a static variable?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Java provides access modifiers to set access levels for classes, variables, methods and constructors. A member has package or default accessibility when no accessibility modifier is specified",
+      "en": "What do you mean by Access Modifier?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Variables, methods and constructors which are declared protected in a superclass can be accessed only by the subclasses in other package or any class within the package of the protected members' class",
+      "en": "What is protected access modifier?"
+    }
+  },
+  {
+    "text": {
+      "ru": "Variables used in a switch statement can only be a byte, short, int, or char",
+      "en": "Variables used in a switch statement can be used with which datatypes?"
+    }
+  },
+  {
+    "text": {
+      "ru": "This method is used to get the primitive data type of a certain String",
+      "en": "When parseInt() method can be used?"
+    }
+  },
+  {
+    "text": {
+      "ru": "The String class is immutable, so that once it is created a String object cannot be changed. Since String is immutable it can safely be shared between many threads ,which is considered very important for multithreaded programming",
+      "en": "Why is String class considered immutable?"
+    }
+  }
+]
